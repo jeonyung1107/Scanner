@@ -14,9 +14,8 @@ import org.opencv.core.Point;
 import org.opencv.core.Scalar;
 
 import android.graphics.Bitmap;
-import android.hardware.Camera;
+import android.hardware.camera2.*;
 import android.util.Log;
-import android.content.Context;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -25,35 +24,27 @@ import java.util.Arrays;
 import Jama.Matrix;
 
 import java.io.IOException;
-
+// TODO: 18. 1. 8 need refactoring with Camera2 
 /**
  * Created by jeon on 17. 8. 7.
  */
 /*영역 인식과 관련된 기능을 담당하는 클래스*/
 public class Detector {
+    private static Detector instance = new Detector();
+
     private final static String TAG = "Detector";
-    private static int idx =0;
-    private Context context;
-    private Camera.Size size;
 
     /*constructors*/
-    public Detector() {
-        super();
-    }
-    public Detector(Context context, Camera.Size size){
-        this.context = context;
-        this.size = size;
+    private Detector() {
     }
 
-    public Camera.Size getSize(){
-        return size;
-    }
+    public static Detector getInstance(){ return instance; }
 
     /*영역 인식 메서드,
     * byte배열로 주어진 이미지에서 윤곽선을 찾아 반환한다.
     * 이미지는 연산 속도를 위해 축소되어 처리된다.
     * */
-    public ArrayList<MatOfPoint> detectPage(byte[] bytes){
+    public ArrayList<MatOfPoint> detectPage(byte[] bytes,){
 
         Mat input_image,output_image,inter_image;
         ArrayList<MatOfPoint> result_cnt = new ArrayList<MatOfPoint>();

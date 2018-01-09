@@ -18,6 +18,8 @@
         </activity>
         <activity android:name=".ModifyActivity" />
         <activity android:name=".ResultActivity"></activity>
+
     </application>
 
+    <uses-permission android:name="android.permission.CAMERA"/>
 </manifest>
