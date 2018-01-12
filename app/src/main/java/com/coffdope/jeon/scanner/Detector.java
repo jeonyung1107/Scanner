@@ -13,8 +13,9 @@ import org.opencv.android.Utils;
 import org.opencv.core.Point;
 import org.opencv.core.Scalar;
 
+
 import android.graphics.Bitmap;
-import android.hardware.camera2.*;
+import android.hardware.Camera;
 import android.util.Log;
 
 import java.util.ArrayList;
@@ -34,6 +35,8 @@ public class Detector {
 
     private final static String TAG = "Detector";
 
+    Size size;
+
     /*constructors*/
     private Detector() {
     }
@@ -44,7 +47,7 @@ public class Detector {
     * byte배열로 주어진 이미지에서 윤곽선을 찾아 반환한다.
     * 이미지는 연산 속도를 위해 축소되어 처리된다.
     * */
-    public ArrayList<MatOfPoint> detectPage(byte[] bytes,){
+    public ArrayList<MatOfPoint> detectPage(byte[] bytes){
 
         Mat input_image,output_image,inter_image;
         ArrayList<MatOfPoint> result_cnt = new ArrayList<MatOfPoint>();
@@ -53,7 +56,7 @@ public class Detector {
 
         ratio = (float)size.height/300;
 
-        input_image = new Mat(size.height,size.width,CvType.CV_8UC1);
+        input_image = new Mat((int)size.height,(int)size.width,CvType.CV_8UC1);
         inter_image = new Mat((int)(size.height/ratio),(int)(size.width/ratio),CvType.CV_8UC1);
         output_image = new Mat(inter_image.rows(),inter_image.cols(),CvType.CV_8UC1);
         input_image.put(0,0,bytes);
