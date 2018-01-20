@@ -35,8 +35,6 @@ public class Detector {
 
     private final static String TAG = "Detector";
 
-    Size size;
-
     /*constructors*/
     private Detector() {
     }
@@ -47,7 +45,7 @@ public class Detector {
     * byte배열로 주어진 이미지에서 윤곽선을 찾아 반환한다.
     * 이미지는 연산 속도를 위해 축소되어 처리된다.
     * */
-    public ArrayList<MatOfPoint> detectPage(byte[] bytes){
+    public static ArrayList<MatOfPoint> detectPage(byte[] bytes,Size size){
 
         Mat input_image,output_image,inter_image;
         ArrayList<MatOfPoint> result_cnt = new ArrayList<MatOfPoint>();
@@ -66,7 +64,6 @@ public class Detector {
         /*이미지 전처리*/
         Imgproc.GaussianBlur(inter_image,inter_image,new Size(5,5),8,8);
         Imgproc.Canny(inter_image,output_image,75,200,3,false);
-        MTB(output_image);
 
         /*contour*/
         Imgproc.findContours(output_image,cnt,new Mat(),0,2,new Point(0,0));
@@ -118,7 +115,7 @@ public class Detector {
     /*
     * 윤곽선과 이미지를 받아 perspective transform을 수행하는 함수
     * */
-    public Mat four_point_transform(MatOfPoint contour, Mat src){
+    public static Mat four_point_transform(MatOfPoint contour, Mat src){
         Point[] ordered = sortPoints(contour.toArray());
 
         Point tl = ordered[0];
@@ -154,7 +151,7 @@ public class Detector {
         return  result;
     }
 
-    private Point[] sortPoints( Point[] src ) {
+    private static Point[] sortPoints( Point[] src ) {
 
         ArrayList<Point> srcPoints = new ArrayList<>(Arrays.asList(src));
 
@@ -193,7 +190,7 @@ public class Detector {
     * 주어진 이미지에서 격자로 이루어진 사각형을 찾는다.
     * houghtransform을 이용한다.
     * */
-    public ArrayList<Point> findIntersections(Mat src){
+    public static ArrayList<Point> findIntersections(Mat src){
         Mat input,inter,hough, thres;
         input = new Mat(src.cols(),src.rows(),src.type());
         Core.rotate(src, input, Core.ROTATE_90_CLOCKWISE);
@@ -326,7 +323,7 @@ public class Detector {
     /*
     * crop image with rect given by pts
     * */
-    ArrayList<Mat> cropImage(Mat image,ArrayList<Point> pts){
+    public static ArrayList<Mat> cropImage(Mat image,ArrayList<Point> pts){
         ArrayList<Mat> result = new ArrayList<Mat>();
         for(int i=0; i<pts.size(); ++i){
             for(int j=0; j<pts.size();++j){
@@ -370,7 +367,7 @@ public class Detector {
         return result;
     }
 
-    Mat rotate(Mat src){
+    public static Mat rotate(Mat src){
         Mat roteted = new Mat(src.cols(), src.rows(), src.type());
         Core.rotate(src, roteted, Core.ROTATE_90_CLOCKWISE);
         return roteted;
@@ -378,7 +375,7 @@ public class Detector {
     /*
     * mat data to size matching bitmap
     * */
-    public Bitmap MTB(Mat src){
+    public static Bitmap MTB(Mat src){
         Bitmap result = Bitmap.createBitmap(src.cols(), src.rows(), Bitmap.Config.ARGB_8888);
         Utils.matToBitmap(src,result);
         return result;

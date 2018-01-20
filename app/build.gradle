@@ -27,4 +27,5 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
     implementation project(':openCVLibrary340')
     implementation files('libs/Jama-1.0.3.jar')
+    implementation 'com.android.support:design:27.0.2'
 }

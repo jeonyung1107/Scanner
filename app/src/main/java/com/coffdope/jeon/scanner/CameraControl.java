@@ -5,7 +5,11 @@ package com.coffdope.jeon.scanner;
  */
 
 import android.Manifest;
+import android.content.SearchRecentSuggestionsProvider;
 import android.content.pm.PackageManager;
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
+import android.graphics.ImageFormat;
 import android.hardware.camera2.CameraDevice;
 import android.hardware.camera2.CameraManager;
 import android.hardware.camera2.CameraCaptureSession;
@@ -15,17 +19,32 @@ import android.hardware.camera2.CameraAccessException;
 import android.hardware.camera2.CaptureResult;
 import android.hardware.camera2.TotalCaptureResult;
 import android.hardware.camera2.params.StreamConfigurationMap;
+import android.media.Image;
+import android.os.Handler;
+import android.os.HandlerThread;
 import android.support.annotation.NonNull;
+import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.util.Size;
+import android.view.SurfaceHolder;
+import android.view.SurfaceView;
 import android.view.TextureView;
 import android.view.Surface;
 import android.graphics.SurfaceTexture;
 import android.widget.Toast;
+import android.media.ImageReader;
 
+import org.opencv.core.Mat;
+import org.opencv.core.MatOfPoint;
+import org.opencv.imgproc.Imgproc;
+import org.opencv.imgcodecs.Imgcodecs;
+import org.opencv.core.CvType;
+
+import java.nio.ByteBuffer;
+import java.util.ArrayList;
 import java.util.Collections;
-
+import java.util.List;
 
 public class CameraControl {
     private static final String TAG = "CameraControl";
@@ -46,18 +65,43 @@ public class CameraControl {
 
     private TextureView mPreview;
     private SurfaceTexture texture;
-    private Surface surface;
+    private Surface surface,surface2;
+    private List<Surface> surfaces;
+
+    private Handler handler;
+
+    private static HandlerThread handlerThread;
+    private static Handler backgroundHandler;
+
+    private ImageReader imageReader;
+
+
 
 
     public static CameraControl getInstance(AppCompatActivity activity){
         if(null==cameraControl){
             cameraControl=new CameraControl(activity);
+        }else{
+            CameraControl.activity=activity;
         }
         return cameraControl;
+    }
+    public void cameraStop(){
+        closeCamera();
+        CameraControl.activity=null;
+        CameraControl.handlerThread.quitSafely();
+        CameraControl.cameraControl=null;
     }
 
     private CameraControl(AppCompatActivity activity){
         CameraControl.activity=activity;
+        handlerThread = new HandlerThread("background");
+        handlerThread.start();
+        backgroundHandler = new Handler(handlerThread.getLooper());
+    }
+
+    public static void setActivity(AppCompatActivity activity) {
+        CameraControl.activity = activity;
     }
 
     final CameraDevice.StateCallback mCameraDeviceStateCallback = new CameraDevice.StateCallback(){
@@ -70,12 +114,7 @@ public class CameraControl {
         public void onOpened(@NonNull CameraDevice cameraDevice) {
             mCameraDevice = cameraDevice;
             try {
-                mPreviewRequestBuilder = mCameraDevice.createCaptureRequest(CameraDevice.TEMPLATE_PREVIEW);
-                mPreviewRequestBuilder.addTarget(surface);
-                mPreviewRequestBuilder.set(CaptureRequest.CONTROL_AF_MODE,CaptureRequest.CONTROL_AF_MODE_CONTINUOUS_PICTURE);
-
-                mCameraDevice.createCaptureSession(Collections.singletonList(surface),mCaptureSessionCallback,null);
-
+                mCameraDevice.createCaptureSession(surfaces,mCaptureSessionCallback,backgroundHandler);
             }catch(CameraAccessException e){
                 Log.e(TAG,e.getMessage());
             }
@@ -84,11 +123,16 @@ public class CameraControl {
         @Override
         public void onDisconnected(@NonNull CameraDevice cameraDevice) {
             cameraDevice.close();
+            mCameraDevice=null;
         }
 
         @Override
         public void onError(@NonNull CameraDevice cameraDevice, int i) {
             cameraDevice.close();
+            mCameraDevice=null;
+            if(null!=activity){
+                activity.finish();
+            }
         }
     };
 
@@ -115,7 +159,12 @@ public class CameraControl {
             mCameraCaptureSession = cameraCaptureSession;
 
             try {
-                mCameraCaptureSession.setRepeatingRequest(mPreviewRequestBuilder.build(), mCaptureCallback, null);
+                mPreviewRequestBuilder = mCameraDevice.createCaptureRequest(CameraDevice.TEMPLATE_PREVIEW);
+                mPreviewRequestBuilder.addTarget(surface);
+                mPreviewRequestBuilder.addTarget(surface2);
+                mPreviewRequestBuilder.set(CaptureRequest.CONTROL_AF_MODE,CaptureRequest.CONTROL_AF_MODE_CONTINUOUS_PICTURE);
+
+                mCameraCaptureSession.setRepeatingRequest(mPreviewRequestBuilder.build(), mCaptureCallback, backgroundHandler);
             }catch (CameraAccessException e){
                 Log.e(TAG,e.getMessage());
             }
@@ -127,39 +176,68 @@ public class CameraControl {
         }
     };
 
+    final ImageReader.OnImageAvailableListener onImageAvailableListener = new ImageReader.OnImageAvailableListener() {
+        @Override
+        public void onImageAvailable(ImageReader imageReader) {
+            Image img = imageReader.acquireLatestImage();
+            try{
+                if(null==img) throw new NullPointerException("null img");
+
+                ByteBuffer buffer = img.getPlanes()[0].getBuffer();
+                byte[] data = new byte[buffer.remaining()];
+                buffer.get(data);
+
+                Detector.detectPage(data,new org.opencv.core.Size(mCameraSize.getWidth(),mCameraSize.getHeight()));
+
+            }catch (NullPointerException ne){
+                Log.e(TAG,ne.getMessage());
+            }finally {
+
+                if(null!=img){
+                    img.close();
+                }
+            }
+        }
+    };
+
     public boolean openCamera(){
         if(null==activity){
             return false;
         }else{
             mCameraManager=(CameraManager) activity.getSystemService(AppCompatActivity.CAMERA_SERVICE);
 
-
             try {
                 for (String cameraID : mCameraManager.getCameraIdList()) {
                     mCameraCharacteristics = mCameraManager.getCameraCharacteristics(cameraID);
                     if(mCameraCharacteristics.get(CameraCharacteristics.LENS_FACING)==
                             CameraCharacteristics.LENS_FACING_BACK){
+
                         mStreamConfigurationMap = mCameraCharacteristics.get(CameraCharacteristics.SCALER_STREAM_CONFIGURATION_MAP);
+
                         Size[] sizes = mStreamConfigurationMap.getOutputSizes(SurfaceTexture.class);
+                        mCameraSize = sizes[1];
+
                         mCameraID=cameraID;
-
-                        mCameraSize = sizes[0];
-                        for(Size size: sizes){
-                            if (size.getWidth()>mCameraSize.getWidth()){
-                                mCameraSize=size;
-                            }
-                        }
-
                     }
                 }
 
+                /*set target surfaces*/
                 mPreview = (TextureView) activity.findViewById(R.id.preview);
                 texture = mPreview.getSurfaceTexture();
+                texture.setDefaultBufferSize(mCameraSize.getWidth(),mCameraSize.getHeight());
                 surface = new Surface(texture);
+
+                imageReader = ImageReader.newInstance(mCameraSize.getWidth(),mCameraSize.getHeight(), ImageFormat.YUV_420_888,2);
+                imageReader.setOnImageAvailableListener(onImageAvailableListener,backgroundHandler);
+                surface2=imageReader.getSurface();
+
+                surfaces = new ArrayList<>(2);
+                surfaces.add(surface);
+                surfaces.add(surface2);
 
                 // TODO: 18. 1. 11 핸들러 처리 해야된다
                 if(activity.checkSelfPermission(Manifest.permission.CAMERA)== PackageManager.PERMISSION_GRANTED&&mCameraID!=null) {
-                    mCameraManager.openCamera(mCameraID, mCameraDeviceStateCallback, null);
+                    mCameraManager.openCamera(mCameraID, mCameraDeviceStateCallback, backgroundHandler);
                 }
                 Toast.makeText(activity,"Camera Opened",Toast.LENGTH_LONG).show();
 
@@ -171,6 +249,10 @@ public class CameraControl {
     }
 
     public void closeCamera(){
+        if(null!=imageReader){
+            imageReader.close();
+            imageReader=null;
+        }
         if(null!=mCameraCaptureSession){
             mCameraCaptureSession.close();
             mCameraCaptureSession=null;
@@ -178,6 +260,35 @@ public class CameraControl {
         if(null!=mCameraDevice){
             mCameraDevice.close();
             mCameraDevice=null;
+        }
+    }
+
+    public interface captureInterface{
+        void capture();
+    }
+
+    private class detectWorker implements Runnable {
+        @Override
+        public void run() {
+            Bitmap bitmap = mPreview.getBitmap();
+            ArrayList<MatOfPoint> ctr;
+            Mat overlayMat=new Mat(mCameraSize.getHeight(),mCameraSize.getWidth(),CvType.CV_8UC4);
+
+            int width = bitmap.getWidth();
+            int height = bitmap.getHeight();
+            int size = bitmap.getRowBytes() * bitmap.getHeight();
+            ByteBuffer byteBuffer = ByteBuffer.allocate(size);
+            bitmap.copyPixelsToBuffer(byteBuffer);
+            byte[] byteArray = byteBuffer.array();
+
+            ctr=Detector.detectPage(byteArray,new org.opencv.core.Size(bitmap.getWidth(),bitmap.getHeight()));
+
+            handler.post(new Runnable() {
+                @Override
+                public void run() {
+
+                }
+            });
         }
     }
 }
