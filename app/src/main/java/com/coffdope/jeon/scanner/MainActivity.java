@@ -23,18 +23,9 @@ import android.view.TextureView;
 import android.view.View;
 import android.view.WindowManager;
 
-import android.hardware.camera2.CameraDevice;
-import android.hardware.camera2.CameraManager;
-import android.hardware.camera2.CameraCaptureSession;
-import android.hardware.camera2.CameraCharacteristics;
-import android.hardware.camera2.CaptureRequest;
-import android.hardware.camera2.CameraAccessException;
-import android.hardware.camera2.params.StreamConfigurationMap;
 import android.widget.Toast;
 
 import org.opencv.android.OpenCVLoader;
-
-import java.util.Collections;
 
 public class MainActivity extends AppCompatActivity
         implements TextureView.SurfaceTextureListener {
@@ -49,8 +40,6 @@ public class MainActivity extends AppCompatActivity
 
     private SurfaceView overlay;
     private SurfaceHolder overlayHolder;
-
-    private Handler handler;
 
     static {
         if (OpenCVLoader.initDebug()) {

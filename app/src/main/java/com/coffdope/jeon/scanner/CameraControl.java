@@ -9,7 +9,9 @@ import android.content.SearchRecentSuggestionsProvider;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
+import android.graphics.Color;
 import android.graphics.ImageFormat;
+import android.graphics.PorterDuff;
 import android.hardware.camera2.CameraDevice;
 import android.hardware.camera2.CameraManager;
 import android.hardware.camera2.CameraCaptureSession;
@@ -35,8 +37,11 @@ import android.graphics.SurfaceTexture;
 import android.widget.Toast;
 import android.media.ImageReader;
 
+import org.opencv.android.Utils;
+import org.opencv.core.Core;
 import org.opencv.core.Mat;
 import org.opencv.core.MatOfPoint;
+import org.opencv.core.Scalar;
 import org.opencv.imgproc.Imgproc;
 import org.opencv.imgcodecs.Imgcodecs;
 import org.opencv.core.CvType;
@@ -73,8 +78,13 @@ public class CameraControl {
     private static HandlerThread handlerThread;
     private static Handler backgroundHandler;
 
+    private SurfaceView overlay;
+    private SurfaceHolder overlayHolder;
+
     private ImageReader imageReader;
 
+    private ArrayList<MatOfPoint> mContour = new ArrayList<MatOfPoint>();
+    private Mat matForTranmsform;
 
 
 
@@ -98,10 +108,7 @@ public class CameraControl {
         handlerThread = new HandlerThread("background");
         handlerThread.start();
         backgroundHandler = new Handler(handlerThread.getLooper());
-    }
-
-    public static void setActivity(AppCompatActivity activity) {
-        CameraControl.activity = activity;
+        overlayHolder = ((SurfaceView)activity.findViewById(R.id.overlay)).getHolder();
     }
 
     final CameraDevice.StateCallback mCameraDeviceStateCallback = new CameraDevice.StateCallback(){
@@ -187,7 +194,27 @@ public class CameraControl {
                 byte[] data = new byte[buffer.remaining()];
                 buffer.get(data);
 
-                Detector.detectPage(data,new org.opencv.core.Size(mCameraSize.getWidth(),mCameraSize.getHeight()));
+                mContour=Detector.detectPage(data,new org.opencv.core.Size(mCameraSize.getWidth(),mCameraSize.getHeight()));
+                // TODO: 18. 1. 20 create color  Canvas mCanvas = mOCR_holder.lockCanvas();
+
+                Canvas mCanvas = overlayHolder.lockCanvas();
+                Mat mat = new Mat(mCameraSize.getHeight(), mCameraSize.getWidth(),CvType.CV_8UC4);
+                Mat mat_rot = new Mat(mCameraSize.getWidth(),mCameraSize.getHeight(), CvType.CV_8UC4);
+                Mat mat_resize = new Mat(mCanvas.getHeight(), mCanvas.getWidth(), CvType.CV_8UC4);
+                Bitmap cntBitmap = Bitmap.createBitmap(mCanvas.getWidth(), mCanvas.getHeight(), Bitmap.Config.ARGB_8888);
+
+                try{
+                    synchronized (overlayHolder){
+                        mCanvas.drawColor(Color.TRANSPARENT, PorterDuff.Mode.CLEAR);
+                        Imgproc.drawContours(mat, mContour, -1, new Scalar(255, 0, 0), 5);
+                        Core.rotate(mat,mat_rot,Core.ROTATE_90_CLOCKWISE);
+                        Imgproc.resize(mat_rot, mat_resize, new org.opencv.core.Size(mat_resize.width(), mat_resize.height()));
+                        Utils.matToBitmap(mat_resize,cntBitmap);
+                        mCanvas.drawBitmap(cntBitmap,0,0,null);
+                    }
+                }finally {
+                    overlayHolder.unlockCanvasAndPost(mCanvas);
+                }
 
             }catch (NullPointerException ne){
                 Log.e(TAG,ne.getMessage());
