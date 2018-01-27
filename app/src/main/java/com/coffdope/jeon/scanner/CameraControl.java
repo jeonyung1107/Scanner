@@ -5,7 +5,6 @@ package com.coffdope.jeon.scanner;
  */
 
 import android.Manifest;
-import android.content.SearchRecentSuggestionsProvider;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
@@ -25,7 +24,6 @@ import android.media.Image;
 import android.os.Handler;
 import android.os.HandlerThread;
 import android.support.annotation.NonNull;
-import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.util.Size;
@@ -43,12 +41,10 @@ import org.opencv.core.Mat;
 import org.opencv.core.MatOfPoint;
 import org.opencv.core.Scalar;
 import org.opencv.imgproc.Imgproc;
-import org.opencv.imgcodecs.Imgcodecs;
 import org.opencv.core.CvType;
 
 import java.nio.ByteBuffer;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 public class CameraControl {
@@ -96,6 +92,7 @@ public class CameraControl {
         }
         return cameraControl;
     }
+
     public void cameraStop(){
         closeCamera();
         CameraControl.activity=null;
@@ -188,38 +185,32 @@ public class CameraControl {
         public void onImageAvailable(ImageReader imageReader) {
             Image img = imageReader.acquireLatestImage();
             try{
-                if(null==img) throw new NullPointerException("null img");
+                if(null==img) { throw new NullPointerException("null img"); }
 
                 ByteBuffer buffer = img.getPlanes()[0].getBuffer();
                 byte[] data = new byte[buffer.remaining()];
                 buffer.get(data);
 
-                mContour=Detector.detectPage(data,new org.opencv.core.Size(mCameraSize.getWidth(),mCameraSize.getHeight()));
-                // TODO: 18. 1. 20 create color  Canvas mCanvas = mOCR_holder.lockCanvas();
+                ArrayList<MatOfPoint> tmpCnt=Detector.detectPage(data,new org.opencv.core.Size(mCameraSize.getWidth(),mCameraSize.getHeight()));
 
-                Canvas mCanvas = overlayHolder.lockCanvas();
-                Mat mat = new Mat(mCameraSize.getHeight(), mCameraSize.getWidth(),CvType.CV_8UC4);
-                Mat mat_rot = new Mat(mCameraSize.getWidth(),mCameraSize.getHeight(), CvType.CV_8UC4);
-                Mat mat_resize = new Mat(mCanvas.getHeight(), mCanvas.getWidth(), CvType.CV_8UC4);
-                Bitmap cntBitmap = Bitmap.createBitmap(mCanvas.getWidth(), mCanvas.getHeight(), Bitmap.Config.ARGB_8888);
+                // FIXME: 18. 1. 28 서피스뷰 통제 필요
+                synchronized (overlayHolder){
+                    Canvas mCanvas = overlayHolder.lockCanvas();
+                    mCanvas.drawColor(Color.TRANSPARENT, PorterDuff.Mode.CLEAR);
 
-                try{
-                    synchronized (overlayHolder){
-                        mCanvas.drawColor(Color.TRANSPARENT, PorterDuff.Mode.CLEAR);
-                        Imgproc.drawContours(mat, mContour, -1, new Scalar(255, 0, 0), 5);
-                        Core.rotate(mat,mat_rot,Core.ROTATE_90_CLOCKWISE);
-                        Imgproc.resize(mat_rot, mat_resize, new org.opencv.core.Size(mat_resize.width(), mat_resize.height()));
-                        Utils.matToBitmap(mat_resize,cntBitmap);
-                        mCanvas.drawBitmap(cntBitmap,0,0,null);
+                    if(tmpCnt.size()!=0){
+                        mContour=(ArrayList<MatOfPoint>) tmpCnt.clone();
+
+                        Bitmap cntBitmap = drawCntOnOnverlay(mContour, mCameraSize, mCanvas);
+                        mCanvas.drawBitmap(cntBitmap, 0, 0, null);
                     }
-                }finally {
+
                     overlayHolder.unlockCanvasAndPost(mCanvas);
                 }
 
             }catch (NullPointerException ne){
                 Log.e(TAG,ne.getMessage());
             }finally {
-
                 if(null!=img){
                     img.close();
                 }
@@ -317,5 +308,18 @@ public class CameraControl {
                 }
             });
         }
+    }
+    private Bitmap drawCntOnOnverlay(ArrayList<MatOfPoint> mContour, Size mCameraSize, Canvas mCanvas){
+        Mat mat = new Mat(mCameraSize.getHeight(), mCameraSize.getWidth(),CvType.CV_8UC4);
+        Mat mat_rot = new Mat(mCameraSize.getWidth(),mCameraSize.getHeight(), CvType.CV_8UC4);
+        Mat mat_resize = new Mat(mCanvas.getHeight(), mCanvas.getWidth(), CvType.CV_8UC4);
+        Bitmap cntBitmap = Bitmap.createBitmap(mCanvas.getWidth(), mCanvas.getHeight(), Bitmap.Config.ARGB_8888);
+
+        Imgproc.drawContours(mat, mContour, -1, new Scalar(255, 0, 0), 5);
+        Core.rotate(mat,mat_rot,Core.ROTATE_90_CLOCKWISE);
+        Imgproc.resize(mat_rot, mat_resize, new org.opencv.core.Size(mat_resize.width(), mat_resize.height()));
+        Utils.matToBitmap(mat_resize,cntBitmap);
+
+        return cntBitmap;
     }
 }

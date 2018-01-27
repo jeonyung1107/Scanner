@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Scanner</string>
+    <string name="save_button">저장</string>
+    <string name="modify_button">수정</string>
 </resources>
