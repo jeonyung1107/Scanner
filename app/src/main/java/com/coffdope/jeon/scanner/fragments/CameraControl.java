@@ -394,8 +394,6 @@ implements TextureView.SurfaceTextureListener {
             captureBuilder.set(CaptureRequest.CONTROL_AF_MODE,
                     CaptureRequest.CONTROL_AF_MODE_CONTINUOUS_PICTURE);
 
-            int rotation = getActivity().getWindowManager().getDefaultDisplay().getRotation();
-            captureBuilder.set(CaptureRequest.JPEG_ORIENTATION,)
 
             mCameraCaptureSession.stopRepeating();
             mCameraCaptureSession.abortCaptures();
