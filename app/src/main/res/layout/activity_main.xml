@@ -4,25 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.coffdope.jeon.scanner.MainActivity">
+    tools:context="com.coffdope.jeon.scanner.Activities.MainActivity"
+    android:id="@+id/container">
 
-    <TextureView
-        android:id="@+id/preview"
+    <fragment
+        android:name="com.coffdope.jeon.scanner.fragments.CameraControl"
+        android:id="@+id/cameracontrol"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-
-    <SurfaceView
-        android:id="@+id/overlay"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:visibility="visible"/>
-
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|center"
-        android:layout_margin="16dp"
-        />
+        android:layout_height="match_parent"/>
 
 </FrameLayout>

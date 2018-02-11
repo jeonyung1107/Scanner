@@ -1,4 +1,4 @@
-package com.coffdope.jeon.scanner;
+package com.coffdope.jeon.scanner.func;
 
 import org.opencv.core.Core;
 import org.opencv.core.CvType;
@@ -8,14 +8,12 @@ import org.opencv.core.MatOfPoint2f;
 import org.opencv.core.Rect;
 import org.opencv.core.Size;
 import org.opencv.imgproc.Imgproc;
-import org.opencv.imgcodecs.Imgcodecs;
 import org.opencv.android.Utils;
 import org.opencv.core.Point;
 import org.opencv.core.Scalar;
 
 
 import android.graphics.Bitmap;
-import android.hardware.Camera;
 import android.util.Log;
 
 import java.util.ArrayList;
@@ -23,8 +21,6 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.Arrays;
 import Jama.Matrix;
-
-import java.io.IOException;
 // TODO: 18. 1. 8 need refactoring with Camera2 
 /**
  * Created by jeon on 17. 8. 7.
