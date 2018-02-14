@@ -34,6 +34,8 @@ import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.util.Size;
+import android.util.SparseArray;
+import android.util.SparseIntArray;
 import android.view.LayoutInflater;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
@@ -66,9 +68,17 @@ import java.util.List;
 
 public class CameraControl extends Fragment
 implements TextureView.SurfaceTextureListener {
+    private static final SparseIntArray ORIENTATION = new SparseIntArray();
     private static final String TAG = "CameraControl";
     private static final int PERMISSION_REQUEST_CODE = 100;
     private static final int RESULT_REQUEST = 1;
+
+    static{
+        ORIENTATION.append(Surface.ROTATION_0,90);
+        ORIENTATION.append(Surface.ROTATION_90,0);
+        ORIENTATION.append(Surface.ROTATION_180,270);
+        ORIENTATION.append(Surface.ROTATION_270,180);
+    }
 
     public static final String RESULT_IMG = "resultImg";
 
@@ -96,6 +106,9 @@ implements TextureView.SurfaceTextureListener {
 
     private ImageReader cntImageReader;
     private ImageReader resultImageReader;
+
+    private int mSensorOrientation;
+
 
     private ArrayList<MatOfPoint> mContour = new ArrayList<MatOfPoint>();
     private Mat matForTranmsform;
@@ -340,6 +353,8 @@ implements TextureView.SurfaceTextureListener {
                 surfaces.add(surface2);
                 surfaces.add(resultImageReader.getSurface());
 
+                mSensorOrientation = mCameraCharacteristics.get(CameraCharacteristics.SENSOR_ORIENTATION);
+
                 if(getActivity().checkSelfPermission(Manifest.permission.CAMERA)== PackageManager.PERMISSION_GRANTED&&mCameraID!=null) {
                     mCameraManager.openCamera(mCameraID, mCameraDeviceStateCallback, backgroundHandler);
                 }
@@ -394,6 +409,8 @@ implements TextureView.SurfaceTextureListener {
             captureBuilder.set(CaptureRequest.CONTROL_AF_MODE,
                     CaptureRequest.CONTROL_AF_MODE_CONTINUOUS_PICTURE);
 
+            int rotation = getActivity().getWindowManager().getDefaultDisplay().getRotation();
+            captureBuilder.set(CaptureRequest.JPEG_ORIENTATION,getOrientation(rotation));
 
             mCameraCaptureSession.stopRepeating();
             mCameraCaptureSession.abortCaptures();
@@ -402,6 +419,10 @@ implements TextureView.SurfaceTextureListener {
         }catch (CameraAccessException e){
             Log.e(TAG,e.getMessage());
         }
+    }
+
+    private int getOrientation(int rotation){
+        return ORIENTATION.get(rotation);
     }
 
     private static class ImageSaver implements Runnable{

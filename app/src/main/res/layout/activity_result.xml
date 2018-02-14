@@ -12,36 +12,48 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="이미지 이름"/>
-    <ImageView
-        android:id="@+id/resultview"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        />
 
-    <LinearLayout
+
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="horizontal"
         style="?attr/buttonBarStyle">
 
+        <ImageView
+            android:id="@+id/resultview"
+            android:scaleType="fitXY"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:rotation="90" />
 
-        <Button
-            android:id="@+id/save_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/save_button"
-            android:textSize="16sp"
-            android:layout_weight="1"
-            style="?android:attr/buttonBarButtonStyle"/>
+        <LinearLayout
+            android:layout_gravity="bottom"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-        <Button
-            android:id="@+id/modify_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/modify_button"
-            android:textSize="16sp"
-            android:layout_weight="1"
-            style="?attr/buttonBarButtonStyle"/>
-    </LinearLayout>
+            <Button
+                android:id="@+id/save_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/save_button"
+                android:textSize="16sp"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                style="?android:attr/buttonBarButtonStyle"/>
+
+            <Button
+                android:id="@+id/modify_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/modify_button"
+                android:textSize="16sp"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                style="?attr/buttonBarButtonStyle"/>
+
+        </LinearLayout>
+    </FrameLayout>
 
 </LinearLayout>
