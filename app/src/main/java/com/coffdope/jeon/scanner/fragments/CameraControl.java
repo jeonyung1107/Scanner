@@ -73,6 +73,7 @@ implements TextureView.SurfaceTextureListener {
     private static final String TAG = "CameraControl";
     private static final int PERMISSION_REQUEST_CODE = 100;
     private static final int RESULT_REQUEST = 1;
+    private static final String NO_CONTOUR = "null contour";
 
     static{
         ORIENTATION.append(Surface.ROTATION_0,90);
@@ -143,18 +144,23 @@ implements TextureView.SurfaceTextureListener {
             @Override
             public void onClick(View view) {
                 // TODO: 18. 2. 11 임시파일 생성
-                captureStillPicture();
 
-                Intent resultIntent = new Intent(getContext(), ResultActivity.class);
-                resultIntent.setData(Uri.fromFile(mFile));
-                resultIntent.putExtra(RESULT_CNT,mContour.get(0).getNativeObjAddr());
-                getActivity().startActivityForResult(resultIntent,RESULT_REQUEST);
+                if(null!=mContour&&mContour.size()>0) {
+                    captureStillPicture();
+
+                    Intent resultIntent = new Intent(getContext(), ResultActivity.class);
+                    resultIntent.setData(Uri.fromFile(mFile));
+                    resultIntent.putExtra(RESULT_CNT, mContour.get(0).getNativeObjAddr());
+                    getActivity().startActivityForResult(resultIntent, RESULT_REQUEST);
+                }else{
+                    Toast.makeText(getContext(),NO_CONTOUR,Toast.LENGTH_LONG).show();
+                }
             }
         });
 
         PackageManager pm = getActivity().getPackageManager();
         if(getActivity().checkSelfPermission(Manifest.permission.CAMERA)!=PackageManager.PERMISSION_GRANTED){
-            requestPermissions(new String[]{Manifest.permission.CAMERA,Manifest.permission.WRITE_EXTERNAL_STORAGE},PERMISSION_REQUEST_CODE);
+            requestPermissions(new String[]{Manifest.permission.CAMERA},PERMISSION_REQUEST_CODE);
         }
     }
 
@@ -443,9 +449,6 @@ implements TextureView.SurfaceTextureListener {
             buffer.get(bytes);
             FileOutputStream fos = null;
             try{
-                if(!mFile.exists()){
-                    mFile.createNewFile();
-                }
                 fos = new FileOutputStream(mFile);
                 fos.write(bytes);
             }catch (IOException e){

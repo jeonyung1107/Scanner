@@ -145,7 +145,6 @@ public class Detector {
         Mat m = Imgproc.getPerspectiveTransform(src_mat, dst_mat);
         Imgproc.warpPerspective(src, result, m, result.size());
 
-        MTB(result);
 
         return  result;
     }
@@ -374,65 +373,18 @@ public class Detector {
     /*
     * mat data to size matching bitmap
     * */
-    public static Bitmap MTB(Mat src){
+    public static Bitmap matToBitmap(Mat src){
         Bitmap result = Bitmap.createBitmap(src.cols(), src.rows(), Bitmap.Config.ARGB_8888);
         Utils.matToBitmap(src,result);
         return result;
     }
 
-    public static Mat imageToMat(Image image) {
-        ByteBuffer buffer;
-        int rowStride;
-        int pixelStride;
-        int width = image.getWidth();
-        int height = image.getHeight();
-        int offset = 0;
+    public static Bitmap bitMapTransform(Bitmap original,MatOfPoint contour){
+        Bitmap bmp = original;
+        Mat forTransform = new Mat(bmp.getHeight(),bmp.getWidth(), CvType.CV_8UC4);
+        Utils.bitmapToMat(bmp,forTransform);
+        Mat transformed = Detector.four_point_transform(contour,forTransform);
 
-        Image.Plane[] planes = image.getPlanes();
-        byte[] data = new byte[image.getWidth() * image.getHeight() * ImageFormat.getBitsPerPixel(ImageFormat.YUV_420_888) / 8];
-        byte[] rowData = new byte[planes[0].getRowStride()];
-
-        for (int i = 0; i < planes.length; i++) {
-            buffer = planes[i].getBuffer();
-            rowStride = planes[i].getRowStride();
-            pixelStride = planes[i].getPixelStride();
-            int w = (i == 0) ? width : width / 2;
-            int h = (i == 0) ? height : height / 2;
-            for (int row = 0; row < h; row++) {
-                int bytesPerPixel = ImageFormat.getBitsPerPixel(ImageFormat.YUV_420_888) / 8;
-                if (pixelStride == bytesPerPixel) {
-                    int length = w * bytesPerPixel;
-                    buffer.get(data, offset, length);
-
-                    // Advance buffer the remainder of the row stride, unless on the last row.
-                    // Otherwise, this will throw an IllegalArgumentException because the buffer
-                    // doesn't include the last padding.
-                    if (h - row != 1) {
-                        buffer.position(buffer.position() + rowStride - length);
-                    }
-                    offset += length;
-                } else {
-
-                    // On the last row only read the width of the image minus the pixel stride
-                    // plus one. Otherwise, this will throw a BufferUnderflowException because the
-                    // buffer doesn't include the last padding.
-                    if (h - row == 1) {
-                        buffer.get(rowData, 0, width - pixelStride + 1);
-                    } else {
-                        buffer.get(rowData, 0, rowStride);
-                    }
-
-                    for (int col = 0; col < w; col++) {
-                        data[offset++] = rowData[col * pixelStride];
-                    }
-                }
-            }
-        }
-
-        // Finally, create the Mat.
-        Mat mat = new Mat(height + height / 2, width, CvType.CV_8UC1);
-        mat.put(0, 0, data);
-
-        return mat;
+        return matToBitmap(transformed);
     }
 }
