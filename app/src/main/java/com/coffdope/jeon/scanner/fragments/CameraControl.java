@@ -8,6 +8,7 @@ import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.ImageFormat;
@@ -81,6 +82,7 @@ implements TextureView.SurfaceTextureListener {
     }
 
     public static final String RESULT_IMG = "resultImg";
+    public static final String RESULT_CNT = "contour";
 
     private CameraManager mCameraManager;
     private CameraDevice mCameraDevice;
@@ -108,7 +110,6 @@ implements TextureView.SurfaceTextureListener {
     private ImageReader resultImageReader;
 
     private int mSensorOrientation;
-
 
     private ArrayList<MatOfPoint> mContour = new ArrayList<MatOfPoint>();
     private Mat matForTranmsform;
@@ -146,6 +147,7 @@ implements TextureView.SurfaceTextureListener {
 
                 Intent resultIntent = new Intent(getContext(), ResultActivity.class);
                 resultIntent.setData(Uri.fromFile(mFile));
+                resultIntent.putExtra(RESULT_CNT,mContour.get(0).getNativeObjAddr());
                 getActivity().startActivityForResult(resultIntent,RESULT_REQUEST);
             }
         });
@@ -264,19 +266,19 @@ implements TextureView.SurfaceTextureListener {
                 ArrayList<MatOfPoint> tmpCnt= Detector.detectPage(data,new org.opencv.core.Size(mCameraSize.getWidth(),mCameraSize.getHeight()));
 
                 // FIXME: 18. 1. 28 서피스뷰 통제 필요
-                synchronized (overlayHolder){
-                    Canvas mCanvas = overlayHolder.lockCanvas();
-                    mCanvas.drawColor(Color.TRANSPARENT, PorterDuff.Mode.CLEAR);
 
                     if(tmpCnt.size()!=0){
                         mContour=(ArrayList<MatOfPoint>) tmpCnt.clone();
 
+                        Canvas mCanvas = overlayHolder.lockCanvas();
+                        mCanvas.drawColor(Color.TRANSPARENT, PorterDuff.Mode.CLEAR);
+
                         Bitmap cntBitmap = drawCntOnOnverlay(mContour, mCameraSize, mCanvas);
                         mCanvas.drawBitmap(cntBitmap, 0, 0, null);
+
+                        overlayHolder.unlockCanvasAndPost(mCanvas);
                     }
 
-                    overlayHolder.unlockCanvasAndPost(mCanvas);
-                }
 
             }catch (NullPointerException ne){
                 Log.e(TAG,ne.getMessage());
