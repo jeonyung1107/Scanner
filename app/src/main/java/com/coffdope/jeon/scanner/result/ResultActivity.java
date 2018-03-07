@@ -15,8 +15,8 @@ import android.widget.EditText;
 import android.widget.ImageView;
 
 import com.coffdope.jeon.scanner.R;
-import com.coffdope.jeon.scanner.camera.CameraControl;
-import com.coffdope.jeon.scanner.func.Detector;
+import com.coffdope.jeon.scanner.camera.CameraFragment;
+import com.coffdope.jeon.scanner.utils.Detector;
 
 import org.opencv.core.MatOfPoint;
 
@@ -49,7 +49,7 @@ public class ResultActivity extends AppCompatActivity {
 
         Intent imgintent = getIntent();
         File img = new File(imgintent.getData().getPath());
-        MatOfPoint contour = MatOfPoint.fromNativeAddr(imgintent.getLongExtra(CameraControl.RESULT_CNT,0L));
+        MatOfPoint contour = MatOfPoint.fromNativeAddr(imgintent.getLongExtra(CameraFragment.RESULT_CNT,0L));
 
 
         if(img.exists()&&null!=contour){

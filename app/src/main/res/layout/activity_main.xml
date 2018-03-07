@@ -8,7 +8,7 @@
     android:id="@+id/container">
 
     <fragment
-        android:name="com.coffdope.jeon.scanner.camera.CameraControl"
+        android:name="com.coffdope.jeon.scanner.camera.CameraFragment"
         android:id="@+id/cameracontrol"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>

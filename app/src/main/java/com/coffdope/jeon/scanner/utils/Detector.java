@@ -1,4 +1,4 @@
-package com.coffdope.jeon.scanner.func;
+package com.coffdope.jeon.scanner.utils;
 
 import org.opencv.core.Core;
 import org.opencv.core.CvType;
@@ -14,11 +14,8 @@ import org.opencv.core.Scalar;
 
 
 import android.graphics.Bitmap;
-import android.graphics.ImageFormat;
-import android.media.Image;
 import android.util.Log;
 
-import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;

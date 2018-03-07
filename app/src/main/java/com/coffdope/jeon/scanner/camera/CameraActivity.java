@@ -31,7 +31,7 @@ public class CameraActivity extends AppCompatActivity {
 
 //        if (null == savedInstanceState) {
 //            getSupportFragmentManager().beginTransaction()
-//                    .replace(R.id.container, CameraControl.newInstance())
+//                    .replace(R.id.container, CameraFragment.newInstance())
 //                    .commit();
 //        }
     }

@@ -10,7 +10,7 @@ import android.view.TextureView;
 public class SurfaceListenerForCameraControl implements TextureView.SurfaceTextureListener {
 
     private static SurfaceListenerForCameraControl surfaceListenerForCameraControl;
-    private CameraControl cameraControl;
+    private CameraFragment cameraFragment;
 
     public static SurfaceListenerForCameraControl getInstance(){
         if(null==surfaceListenerForCameraControl){
@@ -22,13 +22,13 @@ public class SurfaceListenerForCameraControl implements TextureView.SurfaceTextu
     private SurfaceListenerForCameraControl() {
     }
 
-    public void setCameraControl(CameraControl cameraControl) {
-        this.cameraControl = cameraControl;
+    public void setCameraFragment(CameraFragment cameraFragment) {
+        this.cameraFragment = cameraFragment;
     }
 
     @Override
     public void onSurfaceTextureAvailable(SurfaceTexture surfaceTexture, int i, int i1) {
-        cameraControl.openCamera();
+        cameraFragment.openCamera();
     }
 
     @Override
