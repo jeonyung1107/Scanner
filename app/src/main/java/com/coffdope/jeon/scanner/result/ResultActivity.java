@@ -1,4 +1,4 @@
-package com.coffdope.jeon.scanner.Activities;
+package com.coffdope.jeon.scanner.result;
 
 import android.Manifest;
 import android.content.Intent;
@@ -15,12 +15,9 @@ import android.widget.EditText;
 import android.widget.ImageView;
 
 import com.coffdope.jeon.scanner.R;
-import com.coffdope.jeon.scanner.fragments.CameraControl;
+import com.coffdope.jeon.scanner.camera.CameraControl;
 import com.coffdope.jeon.scanner.func.Detector;
 
-import org.opencv.android.Utils;
-import org.opencv.core.CvType;
-import org.opencv.core.Mat;
 import org.opencv.core.MatOfPoint;
 
 import java.io.File;

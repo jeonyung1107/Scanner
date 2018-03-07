@@ -1,4 +1,4 @@
-package com.coffdope.jeon.scanner.fragments;
+package com.coffdope.jeon.scanner.camera;
 
 /**
  * Created by jeon on 18. 1. 12.
@@ -8,7 +8,6 @@ import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.ImageFormat;
@@ -35,7 +34,6 @@ import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.util.Size;
-import android.util.SparseArray;
 import android.util.SparseIntArray;
 import android.view.LayoutInflater;
 import android.view.SurfaceHolder;
@@ -48,7 +46,7 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 import android.media.ImageReader;
 
-import com.coffdope.jeon.scanner.Activities.ResultActivity;
+import com.coffdope.jeon.scanner.result.ResultActivity;
 import com.coffdope.jeon.scanner.R;
 import com.coffdope.jeon.scanner.func.Detector;
 
@@ -67,8 +65,7 @@ import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CameraControl extends Fragment
-implements TextureView.SurfaceTextureListener {
+public class CameraControl extends Fragment {
     private static final SparseIntArray ORIENTATION = new SparseIntArray();
     private static final String TAG = "CameraControl";
     private static final int PERMISSION_REQUEST_CODE = 100;
@@ -116,10 +113,6 @@ implements TextureView.SurfaceTextureListener {
     private Mat matForTranmsform;
 
     private File mFile;
-
-    public static CameraControl newInstance(){
-        return new CameraControl();
-    }
 
     @Nullable
     @Override
@@ -173,12 +166,16 @@ implements TextureView.SurfaceTextureListener {
     @Override
     public void onResume() {
         super.onResume();
+        SurfaceListenerForCameraControl surfaceListenerForCameraControl =
+                SurfaceListenerForCameraControl.getInstance();
+        surfaceListenerForCameraControl.setCameraControl(this);
+
         startBackgroundThread();
 
         if(mPreview.isAvailable()){
             openCamera();
         }else{
-            mPreview.setSurfaceTextureListener(this);
+            mPreview.setSurfaceTextureListener(surfaceListenerForCameraControl);
         }
     }
 
@@ -218,23 +215,6 @@ implements TextureView.SurfaceTextureListener {
         }
     };
 
-    final CameraCaptureSession.CaptureCallback mCaptureCallback = new CameraCaptureSession.CaptureCallback() {
-        @Override
-        public void onCaptureStarted(@NonNull CameraCaptureSession session, @NonNull CaptureRequest request, long timestamp, long frameNumber) {
-            super.onCaptureStarted(session, request, timestamp, frameNumber);
-        }
-
-        @Override
-        public void onCaptureProgressed(@NonNull CameraCaptureSession session, @NonNull CaptureRequest request, @NonNull CaptureResult partialResult) {
-            super.onCaptureProgressed(session, request, partialResult);
-        }
-
-        @Override
-        public void onCaptureCompleted(@NonNull CameraCaptureSession session, @NonNull CaptureRequest request, @NonNull TotalCaptureResult result) {
-            super.onCaptureCompleted(session, request, result);
-        }
-    };
-
     final CameraCaptureSession.StateCallback mCaptureSessionCallback = new CameraCaptureSession.StateCallback() {
         @Override
         public void onConfigured(@NonNull CameraCaptureSession cameraCaptureSession) {
@@ -258,6 +238,25 @@ implements TextureView.SurfaceTextureListener {
         }
     };
 
+    final CameraCaptureSession.CaptureCallback mCaptureCallback = new CameraCaptureSession.CaptureCallback() {
+        @Override
+        public void onCaptureStarted(@NonNull CameraCaptureSession session, @NonNull CaptureRequest request, long timestamp, long frameNumber) {
+            super.onCaptureStarted(session, request, timestamp, frameNumber);
+        }
+
+        @Override
+        public void onCaptureProgressed(@NonNull CameraCaptureSession session, @NonNull CaptureRequest request, @NonNull CaptureResult partialResult) {
+            super.onCaptureProgressed(session, request, partialResult);
+        }
+
+        @Override
+        public void onCaptureCompleted(@NonNull CameraCaptureSession session, @NonNull CaptureRequest request, @NonNull TotalCaptureResult result) {
+            super.onCaptureCompleted(session, request, result);
+        }
+    };
+
+    /*
+    * this listner is used for page detection*/
     final ImageReader.OnImageAvailableListener onImageAvailableListener = new ImageReader.OnImageAvailableListener() {
         @Override
         public void onImageAvailable(ImageReader imageReader) {
@@ -296,6 +295,7 @@ implements TextureView.SurfaceTextureListener {
         }
     };
 
+    /*this listner is used to capture single frame*/
     final ImageReader.OnImageAvailableListener captureListener = new ImageReader.OnImageAvailableListener() {
         @Override
         public void onImageAvailable(ImageReader imageReader) {
@@ -303,25 +303,10 @@ implements TextureView.SurfaceTextureListener {
         }
     };
 
-    public void onSurfaceTextureAvailable(SurfaceTexture surfaceTexture, int i, int i1) {
-        openCamera();
-    }
 
-    @Override
-    public void onSurfaceTextureSizeChanged(SurfaceTexture surfaceTexture, int i, int i1) {
-
-    }
-
-    @Override
-    public boolean onSurfaceTextureDestroyed(SurfaceTexture surfaceTexture) {
-        return false;
-    }
-
-    @Override
-    public void onSurfaceTextureUpdated(SurfaceTexture surfaceTexture) {
-
-    }
-
+    /*this method set and open the camera
+    * it check whether the device has camera which face back
+    * and it set the target surfaces*/
     public boolean openCamera(){
         if(null==getActivity()){
             return false;
@@ -349,6 +334,7 @@ implements TextureView.SurfaceTextureListener {
                 surface = new Surface(texture);
 
                 cntImageReader = ImageReader.newInstance(mCameraSize.getWidth(),mCameraSize.getHeight(), ImageFormat.YUV_420_888,2);
+                // FIXME: 18. 2. 23 이부분 스레드 조정해야 될것 같다
                 cntImageReader.setOnImageAvailableListener(onImageAvailableListener,backgroundHandler);
                 surface2= cntImageReader.getSurface();
 
@@ -373,6 +359,27 @@ implements TextureView.SurfaceTextureListener {
             }
         }
         return true;
+    }
+
+    private void captureStillPicture(){
+        try{
+            final CaptureRequest.Builder captureBuilder =
+                    mCameraDevice.createCaptureRequest(CameraDevice.TEMPLATE_STILL_CAPTURE);
+            captureBuilder.addTarget(resultImageReader.getSurface());
+
+            captureBuilder.set(CaptureRequest.CONTROL_AF_MODE,
+                    CaptureRequest.CONTROL_AF_MODE_CONTINUOUS_PICTURE);
+
+            int rotation = getActivity().getWindowManager().getDefaultDisplay().getRotation();
+            captureBuilder.set(CaptureRequest.JPEG_ORIENTATION,getOrientation(rotation));
+
+            mCameraCaptureSession.stopRepeating();
+            mCameraCaptureSession.abortCaptures();
+            mCameraCaptureSession.capture(captureBuilder.build(),null,null);
+
+        }catch (CameraAccessException e){
+            Log.e(TAG,e.getMessage());
+        }
     }
 
     public void closeCamera(){
@@ -408,30 +415,10 @@ implements TextureView.SurfaceTextureListener {
         }
     }
 
-    private void captureStillPicture(){
-        try{
-            final CaptureRequest.Builder captureBuilder =
-                    mCameraDevice.createCaptureRequest(CameraDevice.TEMPLATE_STILL_CAPTURE);
-            captureBuilder.addTarget(resultImageReader.getSurface());
-
-            captureBuilder.set(CaptureRequest.CONTROL_AF_MODE,
-                    CaptureRequest.CONTROL_AF_MODE_CONTINUOUS_PICTURE);
-
-            int rotation = getActivity().getWindowManager().getDefaultDisplay().getRotation();
-            captureBuilder.set(CaptureRequest.JPEG_ORIENTATION,getOrientation(rotation));
-
-            mCameraCaptureSession.stopRepeating();
-            mCameraCaptureSession.abortCaptures();
-            mCameraCaptureSession.capture(captureBuilder.build(),null,null);
-
-        }catch (CameraAccessException e){
-            Log.e(TAG,e.getMessage());
-        }
-    }
-
     private int getOrientation(int rotation){
         return ORIENTATION.get(rotation);
     }
+
 
     private static class ImageSaver implements Runnable{
         private final Image mImage;

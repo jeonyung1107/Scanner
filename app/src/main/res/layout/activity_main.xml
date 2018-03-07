@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.coffdope.jeon.scanner.Activities.MainActivity"
+    tools:context="com.coffdope.jeon.scanner.camera.CameraActivity"
     android:id="@+id/container">
 
     <fragment
-        android:name="com.coffdope.jeon.scanner.fragments.CameraControl"
+        android:name="com.coffdope.jeon.scanner.camera.CameraControl"
         android:id="@+id/cameracontrol"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>

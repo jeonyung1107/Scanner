@@ -1,4 +1,4 @@
-package com.coffdope.jeon.scanner.Activities;
+package com.coffdope.jeon.scanner.modify;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

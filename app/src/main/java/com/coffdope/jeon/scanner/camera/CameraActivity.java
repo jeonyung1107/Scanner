@@ -1,4 +1,4 @@
-package com.coffdope.jeon.scanner.Activities;
+package com.coffdope.jeon.scanner.camera;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -9,7 +9,7 @@ import com.coffdope.jeon.scanner.R;
 
 import org.opencv.android.OpenCVLoader;
 
-public class MainActivity extends AppCompatActivity {
+public class CameraActivity extends AppCompatActivity {
 
     private static final String TAG = "Scanner_Main";
     private static final int PERMISSION_REQUEST_CODE = 100;
