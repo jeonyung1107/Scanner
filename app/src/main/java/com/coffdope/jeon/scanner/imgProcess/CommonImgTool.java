@@ -64,27 +64,16 @@ public class CommonImgTool {
         return result;
     }
 
-    public static Mat rotate(Mat src){
+    public static Mat rotateMat(Mat src){
         Mat roteted = new Mat(src.cols(), src.rows(), src.type());
         Core.rotate(src, roteted, Core.ROTATE_90_CLOCKWISE);
         return roteted;
     }
 
-    /*
-        * mat data to size matching bitmap
-        * */
     public static Bitmap matToBitmap(Mat src){
         Bitmap result = Bitmap.createBitmap(src.cols(), src.rows(), Bitmap.Config.ARGB_8888);
         Utils.matToBitmap(src,result);
         return result;
     }
 
-    public static Bitmap bitMapTransform(Bitmap original, MatOfPoint contour){
-        Bitmap bmp = original;
-        Mat forTransform = new Mat(bmp.getHeight(),bmp.getWidth(), CvType.CV_8UC4);
-        Utils.bitmapToMat(bmp,forTransform);
-        Mat transformed = PerspectiveTransformer.four_point_transform(contour,forTransform);
-
-        return matToBitmap(transformed);
-    }
 }

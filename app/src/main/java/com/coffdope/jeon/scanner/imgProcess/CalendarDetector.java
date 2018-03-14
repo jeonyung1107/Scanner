@@ -125,17 +125,23 @@ public class CalendarDetector {
 
         sortIntersectionPointsByCoordinate(intersectionPoints);
 
-        /*remove duplicate points*/
-        ArrayList<Point> intPoints = new ArrayList<Point>();
+        ArrayList<Point> resultIntersectionPoints = removeDuplicatePoints(intersectionPoints);
+
+        return resultIntersectionPoints;
+    }
+
+    private static ArrayList<Point> removeDuplicatePoints(ArrayList<Point> intersectionPoints){
+        ArrayList<Point> resultIntersectionPoints = new ArrayList<>();
+
         Point pivotP = intersectionPoints.get(0);
         for(Point i:intersectionPoints){
             if(i==intersectionPoints.get(0)||Math.sqrt(Math.pow(pivotP.x-i.x,2)+Math.pow(pivotP.y-i.y,2))>50) {
-                intPoints.add(i);
+                resultIntersectionPoints.add(i);
                 pivotP = i;
             }
         }
-        // TODO: 17. 11. 4  점들 x,y 기준으로 정렬 필요
-        return intPoints;
+
+        return resultIntersectionPoints;
     }
 
     private static void sortIntersectionPointsByCoordinate(ArrayList<Point> intersectionPoints){

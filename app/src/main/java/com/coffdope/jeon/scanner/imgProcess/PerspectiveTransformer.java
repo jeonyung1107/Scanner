@@ -1,5 +1,8 @@
 package com.coffdope.jeon.scanner.imgProcess;
 
+import android.graphics.Bitmap;
+
+import org.opencv.android.Utils;
 import org.opencv.core.CvType;
 import org.opencv.core.Mat;
 import org.opencv.core.MatOfPoint;
@@ -87,5 +90,14 @@ public class PerspectiveTransformer {
         // bottom-left corner = maximal diference
         result[3] = Collections.max(srcPoints, diffComparator);
         return result;
+    }
+
+    public static Bitmap bitmapPerspectiveTransform(Bitmap original, MatOfPoint contour){
+        Bitmap bmp = original;
+        Mat forTransform = new Mat(bmp.getHeight(),bmp.getWidth(), CvType.CV_8UC4);
+        Utils.bitmapToMat(bmp,forTransform);
+        Mat transformed = four_point_transform(contour,forTransform);
+
+        return CommonImgTool.matToBitmap(transformed);
     }
 }
