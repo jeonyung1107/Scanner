@@ -22,8 +22,8 @@ public class PerspectiveTransformer {
     /*
         * 윤곽선과 이미지를 받아 perspective transform을 수행하는 함수
         * */
-    public static Mat four_point_transform(MatOfPoint contour, Mat src){
-        Point[] ordered = sortPoints(contour.toArray());
+    public static Mat matFourPointPerspectiveTransform(MatOfPoint contour, Mat src){
+        Point[] ordered = sortPointsForPerspectiveTransform(contour.toArray());
 
         Point tl = ordered[0];
         Point tr = ordered[1];
@@ -57,7 +57,7 @@ public class PerspectiveTransformer {
         return  result;
     }
 
-    private static Point[] sortPoints(Point[] src ) {
+    private static Point[] sortPointsForPerspectiveTransform(Point[] src ) {
 
         ArrayList<Point> srcPoints = new ArrayList<>(Arrays.asList(src));
 
@@ -96,7 +96,7 @@ public class PerspectiveTransformer {
         Bitmap bmp = original;
         Mat forTransform = new Mat(bmp.getHeight(),bmp.getWidth(), CvType.CV_8UC4);
         Utils.bitmapToMat(bmp,forTransform);
-        Mat transformed = four_point_transform(contour,forTransform);
+        Mat transformed = matFourPointPerspectiveTransform(contour,forTransform);
 
         return CommonImgTool.matToBitmap(transformed);
     }

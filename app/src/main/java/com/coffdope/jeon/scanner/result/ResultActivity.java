@@ -16,7 +16,7 @@ import android.widget.ImageView;
 
 import com.coffdope.jeon.scanner.R;
 import com.coffdope.jeon.scanner.camera.CameraFragment;
-import com.coffdope.jeon.scanner.imgProcess.CommonImgTool;
+import com.coffdope.jeon.scanner.imgProcess.PerspectiveTransformer;
 
 import org.opencv.core.MatOfPoint;
 
@@ -54,7 +54,7 @@ public class ResultActivity extends AppCompatActivity {
 
         if(img.exists()&&null!=contour){
             Bitmap bmp = BitmapFactory.decodeFile(img.getAbsolutePath());
-            transformed = CommonImgTool.bitMapTransform(bmp,contour);
+            transformed = PerspectiveTransformer.bitmapPerspectiveTransform(bmp,contour);
 
             resultView.setImageBitmap(transformed);
         }
