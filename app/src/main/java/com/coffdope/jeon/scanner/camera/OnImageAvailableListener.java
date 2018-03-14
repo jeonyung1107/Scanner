@@ -9,7 +9,7 @@ import android.media.ImageReader;
 import android.util.Log;
 import android.util.Size;
 
-import com.coffdope.jeon.scanner.utils.Detector;
+import com.coffdope.jeon.scanner.utils.RectangleDetector;
 
 import org.opencv.android.Utils;
 import org.opencv.core.Core;
@@ -57,7 +57,7 @@ public class OnImageAvailableListener implements ImageReader.OnImageAvailableLis
             byte[] data = new byte[buffer.remaining()];
             buffer.get(data);
 
-            ArrayList<MatOfPoint> tmpCnt = Detector.detectPage(data, new org.opencv.core.Size(cameraFragment.mCameraSize.getWidth(), cameraFragment.mCameraSize.getHeight()));
+            ArrayList<MatOfPoint> tmpCnt = RectangleDetector.detectPage(data, new org.opencv.core.Size(cameraFragment.mCameraSize.getWidth(), cameraFragment.mCameraSize.getHeight()));
 
             // FIXME: 18. 1. 28 서피스뷰 통제 필요
 

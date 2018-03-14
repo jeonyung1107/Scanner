@@ -138,6 +138,52 @@ public class CameraFragment extends Fragment {
         }
     }
 
+    private void setCallbacks(){
+        cameraDeviceStateCallback = CameraDeviceStateCallback.getInstance();
+        cameraDeviceStateCallback.setCameraFragment(this);
+
+        captureSessionCallback = CaptureSessionCallback.getInstance();
+        captureSessionCallback.setCameraFragment(this);
+
+        captureCallback = CaptureCallback.getInstance();
+
+        onImageAvailableListener = OnImageAvailableListener.getInstance();
+        onImageAvailableListener.setCameraFragment(this);
+
+        captureListener = CaptureListener.getInstance();
+        captureListener.setCameraFragment(this);
+    }
+
+    private void setViews(@NonNull View view, @NonNull Bundle savedInstanceState){
+
+        mPreview = (TextureView)view.findViewById(R.id.preview);
+        overlay = (SurfaceView)view.findViewById(R.id.overlay);
+        overlay.setZOrderOnTop(true);
+
+        overlayHolder = overlay.getHolder();
+        overlayHolder.setFormat(PixelFormat.TRANSPARENT);
+
+        FloatingActionButton captureButton = (FloatingActionButton)view.findViewById(R.id.fab);
+
+        captureButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                // TODO: 18. 2. 11 임시파일 생성
+
+                if(null!=mContour&&mContour.size()>0) {
+                    captureStillPicture();
+
+                    Intent resultIntent = new Intent(getContext(), ResultActivity.class);
+                    resultIntent.setData(Uri.fromFile(mFile));
+                    resultIntent.putExtra(RESULT_CNT, mContour.get(0).getNativeObjAddr());
+                    getActivity().startActivityForResult(resultIntent, RESULT_REQUEST);
+                }else{
+                    Toast.makeText(getContext(),NO_CONTOUR,Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+    }
+
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
@@ -281,49 +327,4 @@ public class CameraFragment extends Fragment {
         return ORIENTATION.get(rotation);
     }
 
-    private void setCallbacks(){
-        cameraDeviceStateCallback = CameraDeviceStateCallback.getInstance();
-        cameraDeviceStateCallback.setCameraFragment(this);
-
-        captureSessionCallback = CaptureSessionCallback.getInstance();
-        captureSessionCallback.setCameraFragment(this);
-
-        captureCallback = CaptureCallback.getInstance();
-
-        onImageAvailableListener = OnImageAvailableListener.getInstance();
-        onImageAvailableListener.setCameraFragment(this);
-
-        captureListener = CaptureListener.getInstance();
-        captureListener.setCameraFragment(this);
-    }
-
-    private void setViews(@NonNull View view, @NonNull Bundle savedInstanceState){
-
-        mPreview = (TextureView)view.findViewById(R.id.preview);
-        overlay = (SurfaceView)view.findViewById(R.id.overlay);
-        overlay.setZOrderOnTop(true);
-
-        overlayHolder = overlay.getHolder();
-        overlayHolder.setFormat(PixelFormat.TRANSPARENT);
-
-        FloatingActionButton captureButton = (FloatingActionButton)view.findViewById(R.id.fab);
-
-        captureButton.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view) {
-                // TODO: 18. 2. 11 임시파일 생성
-
-                if(null!=mContour&&mContour.size()>0) {
-                    captureStillPicture();
-
-                    Intent resultIntent = new Intent(getContext(), ResultActivity.class);
-                    resultIntent.setData(Uri.fromFile(mFile));
-                    resultIntent.putExtra(RESULT_CNT, mContour.get(0).getNativeObjAddr());
-                    getActivity().startActivityForResult(resultIntent, RESULT_REQUEST);
-                }else{
-                    Toast.makeText(getContext(),NO_CONTOUR,Toast.LENGTH_LONG).show();
-                }
-            }
-        });
-    }
 }

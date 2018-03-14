@@ -29,11 +29,6 @@ public class CameraActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
-//        if (null == savedInstanceState) {
-//            getSupportFragmentManager().beginTransaction()
-//                    .replace(R.id.container, CameraFragment.newInstance())
-//                    .commit();
-//        }
     }
 
     @Override
