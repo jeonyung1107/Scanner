@@ -1,4 +1,4 @@
-package com.coffdope.jeon.scanner.utils;
+package com.coffdope.jeon.scanner.imgProcess;
 
 import org.opencv.core.Core;
 import org.opencv.core.CvType;
@@ -39,7 +39,7 @@ public class CalendarDetector {
 
         /*ArrayList for intersect parameters*/
         ArrayList<ArrayList<Double>> intersect = new ArrayList<ArrayList<Double>>();
-        ArrayList<Point> intersetionPoints = new ArrayList<Point>();
+        ArrayList<Point> intersectionPoints = new ArrayList<Point>();
         double data[][] = new double[hough.rows()][2];
 
         for(int i=0; i<hough.rows();++i){
@@ -117,14 +117,29 @@ public class CalendarDetector {
 
                       Matrix x = cosSin.solve(rho_mat);
 
-                      intersetionPoints.add(new Point(x.get(0, 0), x.get(1, 0)));
+                      intersectionPoints.add(new Point(x.get(0, 0), x.get(1, 0)));
                   }
                }
            }
         }
 
-        /*sort intersectionPoints*/
-        Collections.sort(intersetionPoints, new Comparator<Point>() {
+        sortIntersectionPointsByCoordinate(intersectionPoints);
+
+        /*remove duplicate points*/
+        ArrayList<Point> intPoints = new ArrayList<Point>();
+        Point pivotP = intersectionPoints.get(0);
+        for(Point i:intersectionPoints){
+            if(i==intersectionPoints.get(0)||Math.sqrt(Math.pow(pivotP.x-i.x,2)+Math.pow(pivotP.y-i.y,2))>50) {
+                intPoints.add(i);
+                pivotP = i;
+            }
+        }
+        // TODO: 17. 11. 4  점들 x,y 기준으로 정렬 필요
+        return intPoints;
+    }
+
+    private static void sortIntersectionPointsByCoordinate(ArrayList<Point> intersectionPoints){
+        Collections.sort(intersectionPoints, new Comparator<Point>() {
             @Override
             public int compare(Point point, Point t1) {
                 if(point.y<t1.y-100){
@@ -141,16 +156,5 @@ public class CalendarDetector {
             }
         });
 
-        /*remove duplicate points*/
-        ArrayList<Point> intPoints = new ArrayList<Point>();
-        Point pivotP = intersetionPoints.get(0);
-        for(Point i:intersetionPoints){
-            if(i==intersetionPoints.get(0)||Math.sqrt(Math.pow(pivotP.x-i.x,2)+Math.pow(pivotP.y-i.y,2))>50) {
-                intPoints.add(i);
-                pivotP = i;
-            }
-        }
-        // TODO: 17. 11. 4  점들 x,y 기준으로 정렬 필요
-        return intPoints;
     }
 }

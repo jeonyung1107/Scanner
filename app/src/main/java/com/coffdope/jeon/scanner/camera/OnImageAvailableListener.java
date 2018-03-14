@@ -9,7 +9,7 @@ import android.media.ImageReader;
 import android.util.Log;
 import android.util.Size;
 
-import com.coffdope.jeon.scanner.utils.RectangleDetector;
+import com.coffdope.jeon.scanner.imgProcess.RectangleDetector;
 
 import org.opencv.android.Utils;
 import org.opencv.core.Core;

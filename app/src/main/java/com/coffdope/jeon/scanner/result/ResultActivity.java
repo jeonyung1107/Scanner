@@ -16,7 +16,7 @@ import android.widget.ImageView;
 
 import com.coffdope.jeon.scanner.R;
 import com.coffdope.jeon.scanner.camera.CameraFragment;
-import com.coffdope.jeon.scanner.utils.CommonImgTool;
+import com.coffdope.jeon.scanner.imgProcess.CommonImgTool;
 
 import org.opencv.core.MatOfPoint;
 

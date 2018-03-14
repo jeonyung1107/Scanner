@@ -1,4 +1,4 @@
-package com.coffdope.jeon.scanner.utils;
+package com.coffdope.jeon.scanner.imgProcess;
 
 import org.opencv.core.CvType;
 import org.opencv.core.Mat;

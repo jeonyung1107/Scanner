@@ -1,4 +1,4 @@
-package com.coffdope.jeon.scanner.utils;
+package com.coffdope.jeon.scanner.imgProcess;
 
 import android.graphics.Bitmap;
 
