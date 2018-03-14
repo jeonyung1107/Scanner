@@ -16,21 +16,9 @@ import android.util.Log;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
-// TODO: 18. 1. 8 need refactoring with Camera2 
-/**
- * Created by jeon on 17. 8. 7.
- */
-/*영역 인식과 관련된 기능을 담당하는 클래스*/
 public class RectangleDetector {
-    private static RectangleDetector instance = new RectangleDetector();
 
     private final static String TAG = "RectangleDetector";
-
-    /*constructors*/
-    private RectangleDetector() {
-    }
-
-    public static RectangleDetector getInstance(){ return instance; }
 
     /*영역 인식 메서드,
     * byte배열로 주어진 이미지에서 윤곽선을 찾아 반환한다.
