@@ -7,8 +7,6 @@ package com.coffdope.jeon.scanner.camera;
 import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.graphics.Bitmap;
-import android.graphics.Canvas;
 import android.graphics.ImageFormat;
 import android.graphics.PixelFormat;
 import android.hardware.camera2.CameraDevice;
@@ -18,7 +16,6 @@ import android.hardware.camera2.CameraCharacteristics;
 import android.hardware.camera2.CaptureRequest;
 import android.hardware.camera2.CameraAccessException;
 import android.hardware.camera2.params.StreamConfigurationMap;
-import android.media.Image;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
@@ -45,18 +42,9 @@ import android.media.ImageReader;
 import com.coffdope.jeon.scanner.result.ResultActivity;
 import com.coffdope.jeon.scanner.R;
 
-import org.opencv.android.Utils;
-import org.opencv.core.Core;
-import org.opencv.core.Mat;
 import org.opencv.core.MatOfPoint;
-import org.opencv.core.Scalar;
-import org.opencv.imgproc.Imgproc;
-import org.opencv.core.CvType;
 
 import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -77,7 +65,6 @@ public class CameraFragment extends Fragment {
     public static final String RESULT_IMG = "resultImg";
     public static final String RESULT_CNT = "contour";
 
-    CameraManager mCameraManager;
     CameraDevice mCameraDevice;
     CameraCaptureSession mCameraCaptureSession;
     CaptureRequest mCaptureRequest;
@@ -94,7 +81,7 @@ public class CameraFragment extends Fragment {
     List<Surface> surfaces;
 
     private CameraDeviceStateCallback cameraDeviceStateCallback;
-    private CaptureSessionCallback captureSessionCallback;
+    private CaptureSessionStateCallback captureSessionStateCallback;
     private CaptureCallback captureCallback;
     private OnImageAvailableListener onImageAvailableListener;
     private CaptureListener captureListener;
@@ -111,8 +98,8 @@ public class CameraFragment extends Fragment {
     ArrayList<MatOfPoint> mContour = new ArrayList<MatOfPoint>();
     File mFile;
 
-    public CaptureSessionCallback getCaptureSessionCallback() {
-        return captureSessionCallback;
+    public CaptureSessionStateCallback getCaptureSessionStateCallback() {
+        return captureSessionStateCallback;
     }
 
     public CaptureCallback getCaptureCallback() {
@@ -142,8 +129,8 @@ public class CameraFragment extends Fragment {
         cameraDeviceStateCallback = CameraDeviceStateCallback.getInstance();
         cameraDeviceStateCallback.setCameraFragment(this);
 
-        captureSessionCallback = CaptureSessionCallback.getInstance();
-        captureSessionCallback.setCameraFragment(this);
+        captureSessionStateCallback = CaptureSessionStateCallback.getInstance();
+        captureSessionStateCallback.setCameraFragment(this);
 
         captureCallback = CaptureCallback.getInstance();
 
@@ -200,7 +187,7 @@ public class CameraFragment extends Fragment {
         startBackgroundThread();
 
         if(mPreview.isAvailable()){
-            openCamera();
+            setAndOpenCamera();
         }else{
             mPreview.setSurfaceTextureListener(surfaceListenerForCameraControl);
         }
@@ -216,50 +203,23 @@ public class CameraFragment extends Fragment {
     /*this method set and open the camera
     * it check whether the device has camera which face back
     * and it set the target surfaces*/
-    public boolean openCamera(){
+    public boolean setAndOpenCamera(){
+
+        CameraManager cameraManager;
+
         if(null==getActivity()){
             return false;
         }else{
-            mCameraManager=(CameraManager) getActivity().getSystemService(AppCompatActivity.CAMERA_SERVICE);
+            cameraManager =(CameraManager) getActivity().getSystemService(AppCompatActivity.CAMERA_SERVICE);
 
             try {
-                for (String cameraID : mCameraManager.getCameraIdList()) {
-                    mCameraCharacteristics = mCameraManager.getCameraCharacteristics(cameraID);
-                    if(mCameraCharacteristics.get(CameraCharacteristics.LENS_FACING)==
-                            CameraCharacteristics.LENS_FACING_BACK){
-
-                        mStreamConfigurationMap = mCameraCharacteristics.get(CameraCharacteristics.SCALER_STREAM_CONFIGURATION_MAP);
-
-                        Size[] sizes = mStreamConfigurationMap.getOutputSizes(SurfaceTexture.class);
-                        mCameraSize = sizes[1];
-
-                        mCameraID=cameraID;
-                    }
-                }
-
-                /*set target surfaces*/
-                texture = mPreview.getSurfaceTexture();
-                texture.setDefaultBufferSize(mCameraSize.getWidth(),mCameraSize.getHeight());
-                surface = new Surface(texture);
-
-                cntImageReader = ImageReader.newInstance(mCameraSize.getWidth(),mCameraSize.getHeight(), ImageFormat.YUV_420_888,2);
-                // FIXME: 18. 2. 23 이부분 스레드 조정해야 될것 같다
-                cntImageReader.setOnImageAvailableListener(onImageAvailableListener,backgroundHandler);
-                surface2= cntImageReader.getSurface();
-
-                resultImageReader = ImageReader.newInstance(mCameraSize.getWidth(),mCameraSize.getHeight(),
-                        ImageFormat.JPEG,2);
-                resultImageReader.setOnImageAvailableListener(captureListener,backgroundHandler);
-
-                surfaces = new ArrayList<>(2);
-                surfaces.add(surface);
-                surfaces.add(surface2);
-                surfaces.add(resultImageReader.getSurface());
-
+                setCameraSize(cameraManager);
+                setTargetSurfaces();
 
                 if(getActivity().checkSelfPermission(Manifest.permission.CAMERA)== PackageManager.PERMISSION_GRANTED&&mCameraID!=null) {
-                    mCameraManager.openCamera(mCameraID, cameraDeviceStateCallback, backgroundHandler);
+                    cameraManager.openCamera(mCameraID, cameraDeviceStateCallback, backgroundHandler);
                 }
+
                 Toast.makeText(getContext(),"Camera Opened",Toast.LENGTH_LONG).show();
 
             }catch(CameraAccessException e){
@@ -267,6 +227,44 @@ public class CameraFragment extends Fragment {
             }
         }
         return true;
+    }
+
+    private void setTargetSurfaces(){
+        texture = mPreview.getSurfaceTexture();
+        texture.setDefaultBufferSize(mCameraSize.getWidth(),mCameraSize.getHeight());
+        surface = new Surface(texture);
+
+        cntImageReader = ImageReader.newInstance(mCameraSize.getWidth(),mCameraSize.getHeight(), ImageFormat.YUV_420_888,2);
+        // FIXME: 18. 2. 23 이부분 스레드 조정해야 될것 같다
+        cntImageReader.setOnImageAvailableListener(onImageAvailableListener,backgroundHandler);
+        surface2= cntImageReader.getSurface();
+
+        resultImageReader = ImageReader.newInstance(mCameraSize.getWidth(),mCameraSize.getHeight(),
+                ImageFormat.JPEG,2);
+        resultImageReader.setOnImageAvailableListener(captureListener,backgroundHandler);
+
+        surfaces = new ArrayList<>(2);
+        surfaces.add(surface);
+        surfaces.add(surface2);
+        surfaces.add(resultImageReader.getSurface());
+
+    }
+
+    private void setCameraSize(CameraManager cameraManager)throws CameraAccessException{
+
+        for (String cameraID : cameraManager.getCameraIdList()) {
+            mCameraCharacteristics = cameraManager.getCameraCharacteristics(cameraID);
+            if(mCameraCharacteristics.get(CameraCharacteristics.LENS_FACING)==
+                    CameraCharacteristics.LENS_FACING_BACK){
+
+                mStreamConfigurationMap = mCameraCharacteristics.get(CameraCharacteristics.SCALER_STREAM_CONFIGURATION_MAP);
+
+                Size[] sizes = mStreamConfigurationMap.getOutputSizes(SurfaceTexture.class);
+                mCameraSize = sizes[1];
+
+                mCameraID=cameraID;
+            }
+        }
     }
 
     public void closeCamera(){

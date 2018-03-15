@@ -13,18 +13,18 @@ import static com.coffdope.jeon.scanner.camera.CameraFragment.backgroundHandler;
  * Created by jeon on 18. 3. 7.
  */
 
-public class CaptureSessionCallback extends CameraCaptureSession.StateCallback {
-    private static final String TAG = "CaptureSessionCallback";
-    private static CaptureSessionCallback captureSessionCallback;
+public class CaptureSessionStateCallback extends CameraCaptureSession.StateCallback {
+    private static final String TAG = "CaptureSessionStateCallback";
+    private static CaptureSessionStateCallback captureSessionStateCallback;
     private CameraFragment cameraFragment;
 
-    private CaptureSessionCallback(){}
+    private CaptureSessionStateCallback(){}
 
-    public static CaptureSessionCallback getInstance(){
-        if(null==captureSessionCallback){
-            captureSessionCallback = new CaptureSessionCallback();
+    public static CaptureSessionStateCallback getInstance(){
+        if(null== captureSessionStateCallback){
+            captureSessionStateCallback = new CaptureSessionStateCallback();
         }
-        return captureSessionCallback;
+        return captureSessionStateCallback;
     }
 
     public void setCameraFragment(CameraFragment cameraFragment){

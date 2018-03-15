@@ -38,7 +38,7 @@ public class CameraDeviceStateCallback extends CameraDevice.StateCallback {
         cameraFragment.mCameraDevice = cameraDevice;
         try {
             // TODO: 18. 3. 7 세션 콜백 넣어야됨 
-            cameraFragment.mCameraDevice.createCaptureSession(cameraFragment.surfaces, cameraFragment.getCaptureSessionCallback(), cameraFragment.backgroundHandler);
+            cameraFragment.mCameraDevice.createCaptureSession(cameraFragment.surfaces, cameraFragment.getCaptureSessionStateCallback(), cameraFragment.backgroundHandler);
         }catch(CameraAccessException e){
             Log.e(TAG,e.getMessage());
         }

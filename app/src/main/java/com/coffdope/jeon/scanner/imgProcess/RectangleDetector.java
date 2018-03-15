@@ -24,46 +24,29 @@ public class RectangleDetector {
     * byte배열로 주어진 이미지에서 윤곽선을 찾아 반환한다.
     * 이미지는 연산 속도를 위해 축소되어 처리된다.
     * */
-    public static ArrayList<MatOfPoint> detectPage(byte[] bytes,Size size){
+    public static ArrayList<MatOfPoint> detectRectangleContour(byte[] imgBytes, Size openCVSize){
 
         Mat input_image,output_image,inter_image;
         ArrayList<MatOfPoint> result_cnt = new ArrayList<MatOfPoint>();
         ArrayList<MatOfPoint> cnt = new ArrayList<MatOfPoint>();
         float ratio;
 
-        ratio = (float)size.height/300;
+        ratio = (float)openCVSize.height/300;
 
-        input_image = new Mat((int)size.height,(int)size.width,CvType.CV_8UC1);
-        inter_image = new Mat((int)(size.height/ratio),(int)(size.width/ratio),CvType.CV_8UC1);
+        input_image = new Mat((int)openCVSize.height,(int)openCVSize.width,CvType.CV_8UC1);
+        inter_image = new Mat((int)(openCVSize.height/ratio),(int)(openCVSize.width/ratio),CvType.CV_8UC1);
         output_image = new Mat(inter_image.rows(),inter_image.cols(),CvType.CV_8UC1);
-        input_image.put(0,0,bytes);
+        input_image.put(0,0,imgBytes);
 
         Imgproc.resize(input_image,inter_image,new Size(inter_image.width(),inter_image.height()));
 
-        /*이미지 전처리*/
         Imgproc.GaussianBlur(inter_image,inter_image,new Size(5,5),8,8);
         Imgproc.Canny(inter_image,output_image,75,200,3,false);
 
-        /*contour*/
         Imgproc.findContours(output_image,cnt,new Mat(),0,2,new Point(0,0));
-        Collections.sort( cnt, new Comparator<MatOfPoint>() {
-            @Override
-            public int compare(MatOfPoint matOfPoint, MatOfPoint t1) {
-                double a = Imgproc.contourArea(matOfPoint);
-                double b = Imgproc.contourArea(t1);
-                if(a> b) return -1;
-                else if (a<b) return 1;
-                else return 0;
-            }
-        });
 
-        /*top 5 저장*/
-        if(cnt.size()>5){
-            int cnt_size = cnt.size();
-            for(int i = cnt_size; i>5; i--){
-                cnt.remove(i-5);
-            }
-        }
+        sortContoursBySize(cnt);
+        leaveTopNSizeContours(cnt,5);
 
         /*가장 큰 영역부터 4개의 꼭지점을 가지는 contour찾는다.*/
         double arclength;
@@ -80,15 +63,33 @@ public class RectangleDetector {
                 Log.i(TAG,"success!!");
                 break;
             }
-
         }
 
-        /*결과물 반환*/
         if(!result_cnt.isEmpty()) {
-            Core.multiply(result_cnt.get(0), new Scalar(ratio, ratio), result_cnt.get(0)); //원래 크기로 복구
+            Core.multiply(result_cnt.get(0), new Scalar(ratio, ratio), result_cnt.get(0));
         }
 
         return result_cnt; //contour 반환
     }
 
+    private static void sortContoursBySize(ArrayList<MatOfPoint> contours){
+        Collections.sort( contours, new Comparator<MatOfPoint>() {
+            @Override
+            public int compare(MatOfPoint matOfPoint, MatOfPoint t1) {
+                double a = Imgproc.contourArea(matOfPoint);
+                double b = Imgproc.contourArea(t1);
+                if(a> b) return -1;
+                else if (a<b) return 1;
+                else return 0;
+            }
+        });
+    }
+    private static void leaveTopNSizeContours(ArrayList<MatOfPoint> contour, int n){
+        if(contour.size()>n){
+            int cnt_size = contour.size();
+            for(int i = cnt_size; i>n; i--){
+                contour.remove(i-n);
+            }
+        }
+    }
 }

@@ -57,7 +57,7 @@ public class OnImageAvailableListener implements ImageReader.OnImageAvailableLis
             byte[] data = new byte[buffer.remaining()];
             buffer.get(data);
 
-            ArrayList<MatOfPoint> tmpCnt = RectangleDetector.detectPage(data, new org.opencv.core.Size(cameraFragment.mCameraSize.getWidth(), cameraFragment.mCameraSize.getHeight()));
+            ArrayList<MatOfPoint> tmpCnt = RectangleDetector.detectRectangleContour(data, new org.opencv.core.Size(cameraFragment.mCameraSize.getWidth(), cameraFragment.mCameraSize.getHeight()));
 
             // FIXME: 18. 1. 28 서피스뷰 통제 필요
 

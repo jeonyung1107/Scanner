@@ -28,7 +28,7 @@ public class SurfaceListenerForCameraControl implements TextureView.SurfaceTextu
 
     @Override
     public void onSurfaceTextureAvailable(SurfaceTexture surfaceTexture, int i, int i1) {
-        cameraFragment.openCamera();
+        cameraFragment.setAndOpenCamera();
     }
 
     @Override
