@@ -74,6 +74,7 @@ public class OnImageAvailableListener implements ImageReader.OnImageAvailableLis
                 cameraFragment.overlayHolder.unlockCanvasAndPost(mCanvas);
 
                 mCanvas = cameraFragment.overlayHolder.lockCanvas();
+                adjustPoints(points);
                 drawRectOnOverlayWithPoints(mCanvas,points);
 
                 cameraFragment.overlayHolder.unlockCanvasAndPost(mCanvas);
@@ -88,6 +89,10 @@ public class OnImageAvailableListener implements ImageReader.OnImageAvailableLis
             }
         }
     }
+    private void adjustPoints(Point[] points){
+
+    }
+
     private void drawRectOnOverlayWithPoints(Canvas canvas, Point[] points){
         Paint paint = new Paint();
         paint.setColor(Color.RED);
@@ -95,8 +100,8 @@ public class OnImageAvailableListener implements ImageReader.OnImageAvailableLis
         paint.setStyle(Paint.Style.FILL);
 
         for(int i = 0; i<4; ++i){
-            canvas.drawLine((float) points[i].y/2,(float)points[i].x/2,
-                    (float)points[(i+1)%4].y/2,(float)points[(i+1)%4].x/2,paint);
+            canvas.drawLine((float) points[i].x,(float)points[i].y,
+                    (float)points[(i+1)%4].x,(float)points[(i+1)%4].y,paint);
         }
 
     }
