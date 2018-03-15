@@ -60,7 +60,6 @@ public class RectangleDetector {
             Imgproc.approxPolyDP(mat2,approx,0.1*arclength,true); //단순화
             if(approx.toArray().length==4&&Imgproc.contourArea(c)>1000){
                 result_cnt.add(new MatOfPoint(approx.toArray())); //선택된 contour만 추가한다.
-                Log.i(TAG,"success!!");
                 break;
             }
         }
@@ -69,7 +68,7 @@ public class RectangleDetector {
             Core.multiply(result_cnt.get(0), new Scalar(ratio, ratio), result_cnt.get(0));
         }
 
-        return result_cnt; //contour 반환
+        return result_cnt;
     }
 
     private static void sortContoursBySize(ArrayList<MatOfPoint> contours){
