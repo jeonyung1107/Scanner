@@ -53,16 +53,17 @@ public class OnImageAvailableListener implements ImageReader.OnImageAvailableLis
                 throw new NullPointerException("null img");
             }
 
-            ByteBuffer buffer = img.getPlanes()[0].getBuffer();
-            byte[] data = new byte[buffer.remaining()];
-            buffer.get(data);
+            ByteBuffer imageBuffer = img.getPlanes()[0].getBuffer();
+            byte[] imageData = new byte[imageBuffer.remaining()];
+            imageBuffer.get(imageData);
 
-            ArrayList<MatOfPoint> tmpCnt = RectangleDetector.detectRectangleContour(data, new org.opencv.core.Size(cameraFragment.mCameraSize.getWidth(), cameraFragment.mCameraSize.getHeight()));
+            ArrayList<MatOfPoint> tmpContour = RectangleDetector.detectRectangleContour(
+                    imageData, new org.opencv.core.Size(cameraFragment.mCameraSize.getWidth(), cameraFragment.mCameraSize.getHeight()));
 
             // FIXME: 18. 1. 28 서피스뷰 통제 필요
 
-            if (tmpCnt.size() != 0) {
-                cameraFragment.mContour = (ArrayList<MatOfPoint>) tmpCnt.clone();
+            if (tmpContour.size() != 0) {
+                cameraFragment.mContour = (ArrayList<MatOfPoint>) tmpContour.clone();
 
                 Canvas mCanvas = cameraFragment.overlayHolder.lockCanvas();
                 mCanvas.drawColor(Color.TRANSPARENT, PorterDuff.Mode.CLEAR);

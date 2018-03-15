@@ -65,6 +65,21 @@ public class CameraFragment extends Fragment {
     public static final String RESULT_IMG = "resultImg";
     public static final String RESULT_CNT = "contour";
 
+    private CameraDeviceStateCallback cameraDeviceStateCallback;
+    private CaptureSessionStateCallback captureSessionStateCallback;
+    private CaptureCallback captureCallback;
+    private OnImageAvailableListener onImageAvailableListener;
+    private CaptureListener captureListener;
+
+    private ImageReader contourImageReader;
+    private ImageReader resultImageReader;
+
+    static HandlerThread handlerThread;
+    static Handler backgroundHandler;
+
+    SurfaceView overlay;
+    SurfaceHolder overlayHolder;
+
     CameraDevice mCameraDevice;
     CameraCaptureSession mCameraCaptureSession;
     CaptureRequest mCaptureRequest;
@@ -80,20 +95,6 @@ public class CameraFragment extends Fragment {
     Surface surface,surface2;
     List<Surface> surfaces;
 
-    private CameraDeviceStateCallback cameraDeviceStateCallback;
-    private CaptureSessionStateCallback captureSessionStateCallback;
-    private CaptureCallback captureCallback;
-    private OnImageAvailableListener onImageAvailableListener;
-    private CaptureListener captureListener;
-
-    static HandlerThread handlerThread;
-    static Handler backgroundHandler;
-
-    SurfaceView overlay;
-    SurfaceHolder overlayHolder;
-
-    private ImageReader cntImageReader;
-    private ImageReader resultImageReader;
 
     ArrayList<MatOfPoint> mContour = new ArrayList<MatOfPoint>();
     File mFile;
@@ -200,9 +201,6 @@ public class CameraFragment extends Fragment {
         super.onPause();
     }
 
-    /*this method set and open the camera
-    * it check whether the device has camera which face back
-    * and it set the target surfaces*/
     public boolean setAndOpenCamera(){
 
         CameraManager cameraManager;
@@ -216,9 +214,7 @@ public class CameraFragment extends Fragment {
                 setCameraSize(cameraManager);
                 setTargetSurfaces();
 
-                if(getActivity().checkSelfPermission(Manifest.permission.CAMERA)== PackageManager.PERMISSION_GRANTED&&mCameraID!=null) {
-                    cameraManager.openCamera(mCameraID, cameraDeviceStateCallback, backgroundHandler);
-                }
+                checkPermissionOpenCamera(cameraManager);
 
                 Toast.makeText(getContext(),"Camera Opened",Toast.LENGTH_LONG).show();
 
@@ -229,15 +225,21 @@ public class CameraFragment extends Fragment {
         return true;
     }
 
+    private void checkPermissionOpenCamera(CameraManager cameraManager) throws CameraAccessException{
+        if(getActivity().checkSelfPermission(Manifest.permission.CAMERA)== PackageManager.PERMISSION_GRANTED&&mCameraID!=null) {
+            cameraManager.openCamera(mCameraID, cameraDeviceStateCallback, backgroundHandler);
+        }
+    }
+
     private void setTargetSurfaces(){
         texture = mPreview.getSurfaceTexture();
         texture.setDefaultBufferSize(mCameraSize.getWidth(),mCameraSize.getHeight());
         surface = new Surface(texture);
 
-        cntImageReader = ImageReader.newInstance(mCameraSize.getWidth(),mCameraSize.getHeight(), ImageFormat.YUV_420_888,2);
+        contourImageReader = ImageReader.newInstance(mCameraSize.getWidth(),mCameraSize.getHeight(), ImageFormat.YUV_420_888,2);
         // FIXME: 18. 2. 23 이부분 스레드 조정해야 될것 같다
-        cntImageReader.setOnImageAvailableListener(onImageAvailableListener,backgroundHandler);
-        surface2= cntImageReader.getSurface();
+        contourImageReader.setOnImageAvailableListener(onImageAvailableListener,backgroundHandler);
+        surface2= contourImageReader.getSurface();
 
         resultImageReader = ImageReader.newInstance(mCameraSize.getWidth(),mCameraSize.getHeight(),
                 ImageFormat.JPEG,2);
@@ -268,9 +270,9 @@ public class CameraFragment extends Fragment {
     }
 
     public void closeCamera(){
-        if(null!= cntImageReader){
-            cntImageReader.close();
-            cntImageReader =null;
+        if(null!= contourImageReader){
+            contourImageReader.close();
+            contourImageReader =null;
         }
         if(null!=mCameraCaptureSession){
             mCameraCaptureSession.close();
