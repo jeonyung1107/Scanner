@@ -71,9 +71,6 @@ public class OnImageAvailableListener implements ImageReader.OnImageAvailableLis
                 Canvas mCanvas = cameraFragment.overlayHolder.lockCanvas();
                 mCanvas.drawColor(Color.TRANSPARENT, PorterDuff.Mode.CLEAR);
 
-                cameraFragment.overlayHolder.unlockCanvasAndPost(mCanvas);
-
-                mCanvas = cameraFragment.overlayHolder.lockCanvas();
                 drawRectOnOverlayWithPoints(mCanvas,points);
 
                 cameraFragment.overlayHolder.unlockCanvasAndPost(mCanvas);
