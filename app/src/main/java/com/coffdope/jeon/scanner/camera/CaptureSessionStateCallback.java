@@ -7,7 +7,6 @@ import android.hardware.camera2.CaptureRequest;
 import android.support.annotation.NonNull;
 import android.util.Log;
 
-import static com.coffdope.jeon.scanner.camera.CameraFragment.backgroundHandler;
 
 /**
  * Created by jeon on 18. 3. 7.
@@ -42,7 +41,7 @@ public class CaptureSessionStateCallback extends CameraCaptureSession.StateCallb
             cameraFragment.mPreviewRequestBuilder.addTarget(cameraFragment.surface2);
             cameraFragment.mPreviewRequestBuilder.set(CaptureRequest.CONTROL_AF_MODE,CaptureRequest.CONTROL_AF_MODE_CONTINUOUS_PICTURE);
 
-            cameraFragment.mCameraCaptureSession.setRepeatingRequest(cameraFragment.mPreviewRequestBuilder.build(), cameraFragment.getCaptureCallback(), backgroundHandler);
+            cameraFragment.mCameraCaptureSession.setRepeatingRequest(cameraFragment.mPreviewRequestBuilder.build(), cameraFragment.getCaptureCallback(), cameraFragment.backgroundHandler);
         }catch (CameraAccessException e){
             Log.e(TAG,e.getMessage());
         }
