@@ -86,6 +86,7 @@ public class OnImageAvailableListener implements ImageReader.OnImageAvailableLis
                 img.close();
             }
         }
+        cameraFragment.backgroundHandler.removeCallbacksAndMessages(null);
     }
     private void adjustPoints(Point[] points, int canvasWidth, float ratio){
         for(int i=0;i<4;++i){
