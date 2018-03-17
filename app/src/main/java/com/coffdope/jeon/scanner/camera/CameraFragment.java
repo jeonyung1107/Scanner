@@ -76,8 +76,6 @@ public class CameraFragment extends Fragment {
 
     HandlerThread handlerThread;
     Handler backgroundHandler;
-    HandlerThread pageDetactThread;
-    Handler pageDetectHandler;
 
     SurfaceView overlay;
     SurfaceHolder overlayHolder;
@@ -240,7 +238,7 @@ public class CameraFragment extends Fragment {
 
         contourImageReader = ImageReader.newInstance(mCameraSize.getWidth(),mCameraSize.getHeight(), ImageFormat.YUV_420_888,2);
         // FIXME: 18. 2. 23 이부분 스레드 조정해야 될것 같다
-        contourImageReader.setOnImageAvailableListener(onImageAvailableListener,pageDetectHandler);
+        contourImageReader.setOnImageAvailableListener(onImageAvailableListener,backgroundHandler);
         surface2= contourImageReader.getSurface();
 
         resultImageReader = ImageReader.newInstance(mCameraSize.getWidth(),mCameraSize.getHeight(),
@@ -291,24 +289,14 @@ public class CameraFragment extends Fragment {
         handlerThread = new HandlerThread("background");
         handlerThread.start();
         backgroundHandler = new Handler(handlerThread.getLooper());
-
-        pageDetactThread = new HandlerThread("pageDetect");
-        pageDetactThread.start();
-        pageDetectHandler = new Handler(pageDetactThread.getLooper());
-
     }
 
     private void stopBackgroundThread(){
         handlerThread.quitSafely();
-        pageDetactThread.quit();
         try{
             handlerThread.join();
             handlerThread = null;
             backgroundHandler = null;
-
-            pageDetactThread.join();
-            pageDetactThread = null;
-            pageDetectHandler = null;
 
         }catch (InterruptedException e){
             Log.e(TAG,e.getMessage());
@@ -329,7 +317,6 @@ public class CameraFragment extends Fragment {
 
             mCameraCaptureSession.stopRepeating();
             mCameraCaptureSession.abortCaptures();
-            pageDetactThread.quit();
             mCameraCaptureSession.capture(captureBuilder.build(),null,null);
 
         }catch (CameraAccessException e){

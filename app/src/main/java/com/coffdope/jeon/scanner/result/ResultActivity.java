@@ -71,6 +71,7 @@ public class ResultActivity extends AppCompatActivity {
                 }
                 String fileName = imageName.getText().toString();
                 saveResult(fileName,transformed);
+                Toast.makeText(view.getContext(),fileName+" Saved",Toast.LENGTH_LONG).show();
             }
         });
 
