@@ -53,15 +53,15 @@ public class ResultActivity extends AppCompatActivity {
         MatOfPoint contour = MatOfPoint.fromNativeAddr(imgintent.getLongExtra(CameraFragment.RESULT_CNT,0L));
 
 
-        if(img.exists()&&null!=contour&&contour.toArray().length>0){
-            Bitmap bmp = BitmapFactory.decodeFile(img.getAbsolutePath());
-            transformed = PerspectiveTransformer.bitmapPerspectiveTransform(bmp,contour);
+            if (img.exists() && null != contour && contour.toArray().length > 0) {
+                Bitmap bmp = BitmapFactory.decodeFile(img.getAbsolutePath());
+                transformed = PerspectiveTransformer.bitmapPerspectiveTransform(bmp, contour);
 
-            resultView.setImageBitmap(transformed);
-        }else{
-            Toast.makeText(this,"No Contour",Toast.LENGTH_LONG).show();
-            finish();
-        }
+                resultView.setImageBitmap(transformed);
+            } else {
+                Toast.makeText(this, "No Contour", Toast.LENGTH_LONG).show();
+                finish();
+            }
 
         saveButton.setOnClickListener(new View.OnClickListener() {
             @Override
