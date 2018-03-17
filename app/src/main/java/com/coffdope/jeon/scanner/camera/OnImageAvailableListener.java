@@ -64,7 +64,7 @@ public class OnImageAvailableListener implements ImageReader.OnImageAvailableLis
 
             // FIXME: 18. 1. 28 서피스뷰 통제 필요
 
-            if (tmpContour.size() != 0) {
+            if (tmpContour.size() != 0&&tmpContour.get(0).toArray().length>0) {
                 cameraFragment.mContour = (ArrayList<MatOfPoint>) tmpContour.clone();
                 Point[] points = cameraFragment.mContour.get(0).toArray();
 
@@ -86,6 +86,7 @@ public class OnImageAvailableListener implements ImageReader.OnImageAvailableLis
                 img.close();
             }
         }
+        cameraFragment.pageDetectHandler.removeCallbacksAndMessages(null);
     }
     private void adjustPoints(Point[] points, int canvasWidth, float ratio){
         for(int i=0;i<4;++i){
