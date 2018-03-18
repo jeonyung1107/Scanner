@@ -76,6 +76,8 @@ public class CameraFragment extends Fragment {
 
     HandlerThread handlerThread;
     Handler backgroundHandler;
+    HandlerThread pageDetectThread;
+    Handler pageDetectHandler;
 
     SurfaceView overlay;
     SurfaceHolder overlayHolder;
@@ -97,6 +99,7 @@ public class CameraFragment extends Fragment {
 
 
     ArrayList<MatOfPoint> mContour = new ArrayList<MatOfPoint>();
+    ArrayList<MatOfPoint> resultContour = new ArrayList<>();
     File mFile;
 
     public CaptureSessionStateCallback getCaptureSessionStateCallback() {
@@ -159,6 +162,8 @@ public class CameraFragment extends Fragment {
 
                 if(null!=mContour&&mContour.size()>0) {
                     captureStillPicture();
+                    pageDetectThread.quit();
+                    resultContour.add(new MatOfPoint(mContour.get(0).toArray()));
 
                     Intent resultIntent = new Intent(getContext(), ResultActivity.class);
                     resultIntent.setData(Uri.fromFile(mFile));
@@ -237,7 +242,7 @@ public class CameraFragment extends Fragment {
 
         contourImageReader = ImageReader.newInstance(mCameraSize.getWidth(),mCameraSize.getHeight(), ImageFormat.YUV_420_888,2);
         // FIXME: 18. 2. 23 이부분 스레드 조정해야 될것 같다
-        contourImageReader.setOnImageAvailableListener(onImageAvailableListener,backgroundHandler);
+        contourImageReader.setOnImageAvailableListener(onImageAvailableListener,pageDetectHandler);
         surface2= contourImageReader.getSurface();
 
         resultImageReader = ImageReader.newInstance(mCameraSize.getWidth(),mCameraSize.getHeight(),
@@ -288,14 +293,23 @@ public class CameraFragment extends Fragment {
         handlerThread = new HandlerThread("background");
         handlerThread.start();
         backgroundHandler = new Handler(handlerThread.getLooper());
+
+        pageDetectThread = new HandlerThread("pageDetect");
+        pageDetectThread.start();
+        pageDetectHandler = new Handler(pageDetectThread.getLooper());
     }
 
     private void stopBackgroundThread(){
         handlerThread.quitSafely();
+        pageDetectThread.quit();
         try{
             handlerThread.join();
             handlerThread = null;
             backgroundHandler = null;
+
+            pageDetectThread.join();
+            pageDetectThread = null;
+            pageDetectHandler = null;
 
         }catch (InterruptedException e){
             Log.e(TAG,e.getMessage());
