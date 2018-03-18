@@ -159,22 +159,16 @@ public class CameraFragment extends Fragment {
         captureButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                MatOfPoint resultContour = new MatOfPoint(mContour.get(0).toArray());
 
-                if(null!=resultContour&&resultContour.toArray().length>0) {
+                if(null!=mContour&&mContour.get(0).toArray().length>0) {
                     captureStillPicture();
                     pageDetectThread.quit();
 
-                    double[] resultContourPointsInDouble = new double[8];
-                    Point[] resultContourPointArray = resultContour.toArray();
-                    for(int i=0; i<4;++i){
-                        resultContourPointsInDouble[i*2] = resultContourPointArray[i].x;
-                        resultContourPointsInDouble[i*2 + 1] = resultContourPointArray[i].y;
-                    }
+                    double[] resultContourPointsDoubleArray = getDoubleArrayFromContour(mContour.get(0));
 
                     Intent resultIntent = new Intent(getContext(), ResultActivity.class);
                     resultIntent.setData(Uri.fromFile(mFile));
-                    resultIntent.putExtra(RESULT_CNT, resultContourPointsInDouble);
+                    resultIntent.putExtra(RESULT_CNT, resultContourPointsDoubleArray);
                     getActivity().startActivityForResult(resultIntent, RESULT_REQUEST);
                 }else{
                     Toast.makeText(getContext(),NO_CONTOUR,Toast.LENGTH_LONG).show();
@@ -183,6 +177,17 @@ public class CameraFragment extends Fragment {
         });
     }
 
+    private double[] getDoubleArrayFromContour(MatOfPoint contour){
+        double[] resultContourPointsDoubleArray = new double[8];
+        Point[] resultContourPointArray = contour.toArray();
+
+        for(int i=0; i<4;++i){
+            resultContourPointsDoubleArray[i*2] = resultContourPointArray[i].x;
+            resultContourPointsDoubleArray[i*2 + 1] = resultContourPointArray[i].y;
+        }
+
+        return resultContourPointsDoubleArray;
+    }
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
