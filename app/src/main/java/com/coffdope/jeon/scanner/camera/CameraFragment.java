@@ -156,7 +156,6 @@ public class CameraFragment extends Fragment {
         captureButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                // TODO: 18. 2. 11 임시파일 생성
 
                 if(null!=mContour&&mContour.size()>0) {
                     captureStillPicture();

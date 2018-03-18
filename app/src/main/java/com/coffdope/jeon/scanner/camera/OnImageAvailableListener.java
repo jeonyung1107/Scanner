@@ -62,11 +62,16 @@ public class OnImageAvailableListener implements ImageReader.OnImageAvailableLis
             ArrayList<MatOfPoint> tmpContour = RectangleDetector.detectRectangleContour(
                     imageData, new org.opencv.core.Size(cameraFragment.mCameraSize.getWidth(), cameraFragment.mCameraSize.getHeight()));
 
-            // FIXME: 18. 1. 28 서피스뷰 통제 필요
+            if(null == cameraFragment.mContour){
+                cameraFragment.mContour = new ArrayList<>();
+                cameraFragment.mContour.add(new MatOfPoint());
+            }
 
             if (tmpContour.size() != 0&&tmpContour.get(0).toArray().length>0) {
                 cameraFragment.mContour = (ArrayList<MatOfPoint>) tmpContour.clone();
                 Point[] points = cameraFragment.mContour.get(0).toArray();
+                cameraFragment.mContour = new ArrayList<>();
+                cameraFragment.mContour.add(new MatOfPoint(points));
 
                 Canvas mCanvas = cameraFragment.overlayHolder.lockCanvas();
                 mCanvas.drawColor(Color.TRANSPARENT, PorterDuff.Mode.CLEAR);
