@@ -99,7 +99,6 @@ public class CameraFragment extends Fragment {
 
 
     ArrayList<MatOfPoint> mContour = new ArrayList<MatOfPoint>();
-    ArrayList<MatOfPoint> resultContour = new ArrayList<>();
     File mFile;
 
     public CaptureSessionStateCallback getCaptureSessionStateCallback() {
@@ -159,15 +158,15 @@ public class CameraFragment extends Fragment {
         captureButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
+                MatOfPoint resultContour = new MatOfPoint(mContour.get(0).toArray());
 
-                if(null!=mContour&&mContour.size()>0) {
+                if(null!=resultContour&&resultContour.toArray().length>0) {
                     captureStillPicture();
                     pageDetectThread.quit();
-                    resultContour.add(new MatOfPoint(mContour.get(0).toArray()));
 
                     Intent resultIntent = new Intent(getContext(), ResultActivity.class);
                     resultIntent.setData(Uri.fromFile(mFile));
-                    resultIntent.putExtra(RESULT_CNT, mContour.get(0).getNativeObjAddr());
+                    resultIntent.putExtra(RESULT_CNT, resultContour.toArray());
                     getActivity().startActivityForResult(resultIntent, RESULT_REQUEST);
                 }else{
                     Toast.makeText(getContext(),NO_CONTOUR,Toast.LENGTH_LONG).show();
