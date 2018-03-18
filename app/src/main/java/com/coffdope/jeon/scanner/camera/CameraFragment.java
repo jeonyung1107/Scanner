@@ -43,6 +43,7 @@ import com.coffdope.jeon.scanner.result.ResultActivity;
 import com.coffdope.jeon.scanner.R;
 
 import org.opencv.core.MatOfPoint;
+import org.opencv.core.Point;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -164,9 +165,16 @@ public class CameraFragment extends Fragment {
                     captureStillPicture();
                     pageDetectThread.quit();
 
+                    double[] resultContourPointsInDouble = new double[8];
+                    Point[] resultContourPointArray = resultContour.toArray();
+                    for(int i=0; i<4;++i){
+                        resultContourPointsInDouble[i*2] = resultContourPointArray[i].x;
+                        resultContourPointsInDouble[i*2 + 1] = resultContourPointArray[i].y;
+                    }
+
                     Intent resultIntent = new Intent(getContext(), ResultActivity.class);
                     resultIntent.setData(Uri.fromFile(mFile));
-                    resultIntent.putExtra(RESULT_CNT, resultContour.toArray());
+                    resultIntent.putExtra(RESULT_CNT, resultContourPointsInDouble);
                     getActivity().startActivityForResult(resultIntent, RESULT_REQUEST);
                 }else{
                     Toast.makeText(getContext(),NO_CONTOUR,Toast.LENGTH_LONG).show();

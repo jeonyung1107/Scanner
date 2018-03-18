@@ -20,6 +20,7 @@ import com.coffdope.jeon.scanner.camera.CameraFragment;
 import com.coffdope.jeon.scanner.imgProcess.PerspectiveTransformer;
 
 import org.opencv.core.MatOfPoint;
+import org.opencv.core.Point;
 
 import java.io.File;
 import java.io.IOException;
@@ -50,7 +51,16 @@ public class ResultActivity extends AppCompatActivity {
 
         Intent imgintent = getIntent();
         File img = new File(imgintent.getData().getPath());
-        MatOfPoint contour = MatOfPoint.fromNativeAddr(imgintent.getLongExtra(CameraFragment.RESULT_CNT,0L));
+        double[] resultContourInDouble = imgintent.getDoubleArrayExtra(CameraFragment.RESULT_CNT);
+        Point[] resultContourPoints = new Point[4];
+
+        for(int i = 0; i<4; ++i){
+            resultContourPoints[i] = new Point();
+            resultContourPoints[i].x = resultContourInDouble[i*2];
+            resultContourPoints[i].y = resultContourInDouble[i*2 + 1];
+        }
+
+        MatOfPoint contour = new MatOfPoint(resultContourPoints);
 
 
             if (img.exists() && null != contour && contour.toArray().length > 0) {
