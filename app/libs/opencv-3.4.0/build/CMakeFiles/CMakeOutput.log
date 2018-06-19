@@ -1,0 +1,1513 @@
+The system is: Linux - 4.4.0-124-generic - x86_64
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler: /usr/bin/c++ 
+Build flags: 
+Id flags: 
+
+The output was:
+0
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+
+The CXX compiler identification is GNU, found in "/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/3.5.1/CompilerIdCXX/a.out"
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: /usr/bin/cc 
+Build flags: 
+Id flags: 
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+
+The C compiler identification is GNU, found in "/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/3.5.1/CompilerIdC/a.out"
+
+Determining if the CXX compiler works passed with the following output:
+Change Dir: /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_12c3c/fast"
+/usr/bin/make -f CMakeFiles/cmTC_12c3c.dir/build.make CMakeFiles/cmTC_12c3c.dir/build
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 들어감
+Building CXX object CMakeFiles/cmTC_12c3c.dir/testCXXCompiler.cxx.o
+/usr/bin/c++     -fPIE   -o CMakeFiles/cmTC_12c3c.dir/testCXXCompiler.cxx.o -c /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTC_12c3c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_12c3c.dir/link.txt --verbose=1
+/usr/bin/c++        CMakeFiles/cmTC_12c3c.dir/testCXXCompiler.cxx.o  -o cmTC_12c3c -rdynamic 
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 나감
+
+
+Detecting CXX compiler ABI info compiled with the following output:
+Change Dir: /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_d3262/fast"
+/usr/bin/make -f CMakeFiles/cmTC_d3262.dir/build.make CMakeFiles/cmTC_d3262.dir/build
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 들어감
+Building CXX object CMakeFiles/cmTC_d3262.dir/CMakeCXXCompilerABI.cpp.o
+/usr/bin/c++     -fPIE   -o CMakeFiles/cmTC_d3262.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.5/Modules/CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTC_d3262
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d3262.dir/link.txt --verbose=1
+/usr/bin/c++       -v CMakeFiles/cmTC_d3262.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_d3262 -rdynamic  
+Using built-in specs.
+COLLECT_GCC=/usr/bin/c++
+COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper
+Target: x86_64-linux-gnu
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu 5.4.0-6ubuntu1~16.04.9' --with-bugurl=file:///usr/share/doc/gcc-5/README.Bugs --enable-languages=c,ada,c++,java,go,d,fortran,objc,obj-c++ --prefix=/usr --program-suffix=-5 --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --with-system-zlib --disable-browser-plugin --enable-java-awt=gtk --enable-gtk-cairo --with-java-home=/usr/lib/jvm/java-1.5.0-gcj-5-amd64/jre --enable-java-home --with-jvm-root-dir=/usr/lib/jvm/java-1.5.0-gcj-5-amd64 --with-jvm-jar-dir=/usr/lib/jvm-exports/java-1.5.0-gcj-5-amd64 --with-arch-directory=amd64 --with-ecj-jar=/usr/share/java/eclipse-ecj.jar --enable-objc-gc --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu
+Thread model: posix
+gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.9) 
+COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/
+LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_d3262' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccqtp9AB.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_d3262 /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_d3262.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 나감
+
+
+Parsed CXX implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_d3262/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_d3262.dir/build.make CMakeFiles/cmTC_d3262.dir/build]
+  ignore line: [make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 들어감]
+  ignore line: [Building CXX object CMakeFiles/cmTC_d3262.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/usr/bin/c++     -fPIE   -o CMakeFiles/cmTC_d3262.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.5/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Linking CXX executable cmTC_d3262]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d3262.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/c++       -v CMakeFiles/cmTC_d3262.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_d3262 -rdynamic  ]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/usr/bin/c++]
+  ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper]
+  ignore line: [Target: x86_64-linux-gnu]
+  ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 5.4.0-6ubuntu1~16.04.9' --with-bugurl=file:///usr/share/doc/gcc-5/README.Bugs --enable-languages=c,ada,c++,java,go,d,fortran,objc,obj-c++ --prefix=/usr --program-suffix=-5 --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --with-system-zlib --disable-browser-plugin --enable-java-awt=gtk --enable-gtk-cairo --with-java-home=/usr/lib/jvm/java-1.5.0-gcj-5-amd64/jre --enable-java-home --with-jvm-root-dir=/usr/lib/jvm/java-1.5.0-gcj-5-amd64 --with-jvm-jar-dir=/usr/lib/jvm-exports/java-1.5.0-gcj-5-amd64 --with-arch-directory=amd64 --with-ecj-jar=/usr/share/java/eclipse-ecj.jar --enable-objc-gc --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.9) ]
+  ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/]
+  ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_d3262' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccqtp9AB.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_d3262 /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_d3262.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o]
+    arg [/usr/lib/gcc/x86_64-linux-gnu/5/collect2] ==> ignore
+    arg [-plugin] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so] ==> ignore
+    arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccqtp9AB.res] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [--sysroot=/] ==> ignore
+    arg [--build-id] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-m] ==> ignore
+    arg [elf_x86_64] ==> ignore
+    arg [--hash-style=gnu] ==> ignore
+    arg [--as-needed] ==> ignore
+    arg [-export-dynamic] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+    arg [-zrelro] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_d3262] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o] ==> ignore
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/5] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/5]
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu]
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib]
+    arg [-L/lib/x86_64-linux-gnu] ==> dir [/lib/x86_64-linux-gnu]
+    arg [-L/lib/../lib] ==> dir [/lib/../lib]
+    arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
+    arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/5/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../..]
+    arg [CMakeFiles/cmTC_d3262.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [-lstdc++] ==> lib [stdc++]
+    arg [-lm] ==> lib [m]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [-lc] ==> lib [c]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [/usr/lib/gcc/x86_64-linux-gnu/5/crtend.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o] ==> ignore
+  remove lib [gcc_s]
+  remove lib [gcc]
+  remove lib [gcc_s]
+  remove lib [gcc]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/5] ==> [/usr/lib/gcc/x86_64-linux-gnu/5]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib] ==> [/usr/lib]
+  collapse library dir [/lib/x86_64-linux-gnu] ==> [/lib/x86_64-linux-gnu]
+  collapse library dir [/lib/../lib] ==> [/lib]
+  collapse library dir [/usr/lib/x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+  collapse library dir [/usr/lib/../lib] ==> [/usr/lib]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../..] ==> [/usr/lib]
+  implicit libs: [stdc++;m;c]
+  implicit dirs: [/usr/lib/gcc/x86_64-linux-gnu/5;/usr/lib/x86_64-linux-gnu;/usr/lib;/lib/x86_64-linux-gnu;/lib]
+  implicit fwks: []
+
+
+
+
+Detecting CXX [-std=c++14] compiler features compiled with the following output:
+Change Dir: /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_7f43f/fast"
+/usr/bin/make -f CMakeFiles/cmTC_7f43f.dir/build.make CMakeFiles/cmTC_7f43f.dir/build
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 들어감
+Building CXX object CMakeFiles/cmTC_7f43f.dir/feature_tests.cxx.o
+/usr/bin/c++     -fPIE   -std=c++14 -o CMakeFiles/cmTC_7f43f.dir/feature_tests.cxx.o -c /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_7f43f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7f43f.dir/link.txt --verbose=1
+/usr/bin/c++        CMakeFiles/cmTC_7f43f.dir/feature_tests.cxx.o  -o cmTC_7f43f -rdynamic 
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 나감
+
+
+    Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
+    Feature record: CXX_FEATURE:1cxx_alias_templates
+    Feature record: CXX_FEATURE:1cxx_alignas
+    Feature record: CXX_FEATURE:1cxx_alignof
+    Feature record: CXX_FEATURE:1cxx_attributes
+    Feature record: CXX_FEATURE:1cxx_attribute_deprecated
+    Feature record: CXX_FEATURE:1cxx_auto_type
+    Feature record: CXX_FEATURE:1cxx_binary_literals
+    Feature record: CXX_FEATURE:1cxx_constexpr
+    Feature record: CXX_FEATURE:1cxx_contextual_conversions
+    Feature record: CXX_FEATURE:1cxx_decltype
+    Feature record: CXX_FEATURE:1cxx_decltype_auto
+    Feature record: CXX_FEATURE:1cxx_decltype_incomplete_return_types
+    Feature record: CXX_FEATURE:1cxx_default_function_template_args
+    Feature record: CXX_FEATURE:1cxx_defaulted_functions
+    Feature record: CXX_FEATURE:1cxx_defaulted_move_initializers
+    Feature record: CXX_FEATURE:1cxx_delegating_constructors
+    Feature record: CXX_FEATURE:1cxx_deleted_functions
+    Feature record: CXX_FEATURE:1cxx_digit_separators
+    Feature record: CXX_FEATURE:1cxx_enum_forward_declarations
+    Feature record: CXX_FEATURE:1cxx_explicit_conversions
+    Feature record: CXX_FEATURE:1cxx_extended_friend_declarations
+    Feature record: CXX_FEATURE:1cxx_extern_templates
+    Feature record: CXX_FEATURE:1cxx_final
+    Feature record: CXX_FEATURE:1cxx_func_identifier
+    Feature record: CXX_FEATURE:1cxx_generalized_initializers
+    Feature record: CXX_FEATURE:1cxx_generic_lambdas
+    Feature record: CXX_FEATURE:1cxx_inheriting_constructors
+    Feature record: CXX_FEATURE:1cxx_inline_namespaces
+    Feature record: CXX_FEATURE:1cxx_lambdas
+    Feature record: CXX_FEATURE:1cxx_lambda_init_captures
+    Feature record: CXX_FEATURE:1cxx_local_type_template_args
+    Feature record: CXX_FEATURE:1cxx_long_long_type
+    Feature record: CXX_FEATURE:1cxx_noexcept
+    Feature record: CXX_FEATURE:1cxx_nonstatic_member_init
+    Feature record: CXX_FEATURE:1cxx_nullptr
+    Feature record: CXX_FEATURE:1cxx_override
+    Feature record: CXX_FEATURE:1cxx_range_for
+    Feature record: CXX_FEATURE:1cxx_raw_string_literals
+    Feature record: CXX_FEATURE:1cxx_reference_qualified_functions
+    Feature record: CXX_FEATURE:1cxx_relaxed_constexpr
+    Feature record: CXX_FEATURE:1cxx_return_type_deduction
+    Feature record: CXX_FEATURE:1cxx_right_angle_brackets
+    Feature record: CXX_FEATURE:1cxx_rvalue_references
+    Feature record: CXX_FEATURE:1cxx_sizeof_member
+    Feature record: CXX_FEATURE:1cxx_static_assert
+    Feature record: CXX_FEATURE:1cxx_strong_enums
+    Feature record: CXX_FEATURE:1cxx_template_template_parameters
+    Feature record: CXX_FEATURE:1cxx_thread_local
+    Feature record: CXX_FEATURE:1cxx_trailing_return_types
+    Feature record: CXX_FEATURE:1cxx_unicode_literals
+    Feature record: CXX_FEATURE:1cxx_uniform_initialization
+    Feature record: CXX_FEATURE:1cxx_unrestricted_unions
+    Feature record: CXX_FEATURE:1cxx_user_literals
+    Feature record: CXX_FEATURE:1cxx_variable_templates
+    Feature record: CXX_FEATURE:1cxx_variadic_macros
+    Feature record: CXX_FEATURE:1cxx_variadic_templates
+
+
+Detecting CXX [-std=c++11] compiler features compiled with the following output:
+Change Dir: /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_1dc6f/fast"
+/usr/bin/make -f CMakeFiles/cmTC_1dc6f.dir/build.make CMakeFiles/cmTC_1dc6f.dir/build
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 들어감
+Building CXX object CMakeFiles/cmTC_1dc6f.dir/feature_tests.cxx.o
+/usr/bin/c++     -fPIE   -std=c++11 -o CMakeFiles/cmTC_1dc6f.dir/feature_tests.cxx.o -c /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_1dc6f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1dc6f.dir/link.txt --verbose=1
+/usr/bin/c++        CMakeFiles/cmTC_1dc6f.dir/feature_tests.cxx.o  -o cmTC_1dc6f -rdynamic 
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 나감
+
+
+    Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
+    Feature record: CXX_FEATURE:1cxx_alias_templates
+    Feature record: CXX_FEATURE:1cxx_alignas
+    Feature record: CXX_FEATURE:1cxx_alignof
+    Feature record: CXX_FEATURE:1cxx_attributes
+    Feature record: CXX_FEATURE:0cxx_attribute_deprecated
+    Feature record: CXX_FEATURE:1cxx_auto_type
+    Feature record: CXX_FEATURE:0cxx_binary_literals
+    Feature record: CXX_FEATURE:1cxx_constexpr
+    Feature record: CXX_FEATURE:0cxx_contextual_conversions
+    Feature record: CXX_FEATURE:1cxx_decltype
+    Feature record: CXX_FEATURE:0cxx_decltype_auto
+    Feature record: CXX_FEATURE:1cxx_decltype_incomplete_return_types
+    Feature record: CXX_FEATURE:1cxx_default_function_template_args
+    Feature record: CXX_FEATURE:1cxx_defaulted_functions
+    Feature record: CXX_FEATURE:1cxx_defaulted_move_initializers
+    Feature record: CXX_FEATURE:1cxx_delegating_constructors
+    Feature record: CXX_FEATURE:1cxx_deleted_functions
+    Feature record: CXX_FEATURE:0cxx_digit_separators
+    Feature record: CXX_FEATURE:1cxx_enum_forward_declarations
+    Feature record: CXX_FEATURE:1cxx_explicit_conversions
+    Feature record: CXX_FEATURE:1cxx_extended_friend_declarations
+    Feature record: CXX_FEATURE:1cxx_extern_templates
+    Feature record: CXX_FEATURE:1cxx_final
+    Feature record: CXX_FEATURE:1cxx_func_identifier
+    Feature record: CXX_FEATURE:1cxx_generalized_initializers
+    Feature record: CXX_FEATURE:0cxx_generic_lambdas
+    Feature record: CXX_FEATURE:1cxx_inheriting_constructors
+    Feature record: CXX_FEATURE:1cxx_inline_namespaces
+    Feature record: CXX_FEATURE:1cxx_lambdas
+    Feature record: CXX_FEATURE:0cxx_lambda_init_captures
+    Feature record: CXX_FEATURE:1cxx_local_type_template_args
+    Feature record: CXX_FEATURE:1cxx_long_long_type
+    Feature record: CXX_FEATURE:1cxx_noexcept
+    Feature record: CXX_FEATURE:1cxx_nonstatic_member_init
+    Feature record: CXX_FEATURE:1cxx_nullptr
+    Feature record: CXX_FEATURE:1cxx_override
+    Feature record: CXX_FEATURE:1cxx_range_for
+    Feature record: CXX_FEATURE:1cxx_raw_string_literals
+    Feature record: CXX_FEATURE:1cxx_reference_qualified_functions
+    Feature record: CXX_FEATURE:0cxx_relaxed_constexpr
+    Feature record: CXX_FEATURE:0cxx_return_type_deduction
+    Feature record: CXX_FEATURE:1cxx_right_angle_brackets
+    Feature record: CXX_FEATURE:1cxx_rvalue_references
+    Feature record: CXX_FEATURE:1cxx_sizeof_member
+    Feature record: CXX_FEATURE:1cxx_static_assert
+    Feature record: CXX_FEATURE:1cxx_strong_enums
+    Feature record: CXX_FEATURE:1cxx_template_template_parameters
+    Feature record: CXX_FEATURE:1cxx_thread_local
+    Feature record: CXX_FEATURE:1cxx_trailing_return_types
+    Feature record: CXX_FEATURE:1cxx_unicode_literals
+    Feature record: CXX_FEATURE:1cxx_uniform_initialization
+    Feature record: CXX_FEATURE:1cxx_unrestricted_unions
+    Feature record: CXX_FEATURE:1cxx_user_literals
+    Feature record: CXX_FEATURE:0cxx_variable_templates
+    Feature record: CXX_FEATURE:1cxx_variadic_macros
+    Feature record: CXX_FEATURE:1cxx_variadic_templates
+
+
+Detecting CXX [-std=c++98] compiler features compiled with the following output:
+Change Dir: /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_cf085/fast"
+/usr/bin/make -f CMakeFiles/cmTC_cf085.dir/build.make CMakeFiles/cmTC_cf085.dir/build
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 들어감
+Building CXX object CMakeFiles/cmTC_cf085.dir/feature_tests.cxx.o
+/usr/bin/c++     -fPIE   -std=c++98 -o CMakeFiles/cmTC_cf085.dir/feature_tests.cxx.o -c /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_cf085
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cf085.dir/link.txt --verbose=1
+/usr/bin/c++        CMakeFiles/cmTC_cf085.dir/feature_tests.cxx.o  -o cmTC_cf085 -rdynamic 
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 나감
+
+
+    Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
+    Feature record: CXX_FEATURE:0cxx_alias_templates
+    Feature record: CXX_FEATURE:0cxx_alignas
+    Feature record: CXX_FEATURE:0cxx_alignof
+    Feature record: CXX_FEATURE:0cxx_attributes
+    Feature record: CXX_FEATURE:0cxx_attribute_deprecated
+    Feature record: CXX_FEATURE:0cxx_auto_type
+    Feature record: CXX_FEATURE:0cxx_binary_literals
+    Feature record: CXX_FEATURE:0cxx_constexpr
+    Feature record: CXX_FEATURE:0cxx_contextual_conversions
+    Feature record: CXX_FEATURE:0cxx_decltype
+    Feature record: CXX_FEATURE:0cxx_decltype_auto
+    Feature record: CXX_FEATURE:0cxx_decltype_incomplete_return_types
+    Feature record: CXX_FEATURE:0cxx_default_function_template_args
+    Feature record: CXX_FEATURE:0cxx_defaulted_functions
+    Feature record: CXX_FEATURE:0cxx_defaulted_move_initializers
+    Feature record: CXX_FEATURE:0cxx_delegating_constructors
+    Feature record: CXX_FEATURE:0cxx_deleted_functions
+    Feature record: CXX_FEATURE:0cxx_digit_separators
+    Feature record: CXX_FEATURE:0cxx_enum_forward_declarations
+    Feature record: CXX_FEATURE:0cxx_explicit_conversions
+    Feature record: CXX_FEATURE:0cxx_extended_friend_declarations
+    Feature record: CXX_FEATURE:0cxx_extern_templates
+    Feature record: CXX_FEATURE:0cxx_final
+    Feature record: CXX_FEATURE:0cxx_func_identifier
+    Feature record: CXX_FEATURE:0cxx_generalized_initializers
+    Feature record: CXX_FEATURE:0cxx_generic_lambdas
+    Feature record: CXX_FEATURE:0cxx_inheriting_constructors
+    Feature record: CXX_FEATURE:0cxx_inline_namespaces
+    Feature record: CXX_FEATURE:0cxx_lambdas
+    Feature record: CXX_FEATURE:0cxx_lambda_init_captures
+    Feature record: CXX_FEATURE:0cxx_local_type_template_args
+    Feature record: CXX_FEATURE:0cxx_long_long_type
+    Feature record: CXX_FEATURE:0cxx_noexcept
+    Feature record: CXX_FEATURE:0cxx_nonstatic_member_init
+    Feature record: CXX_FEATURE:0cxx_nullptr
+    Feature record: CXX_FEATURE:0cxx_override
+    Feature record: CXX_FEATURE:0cxx_range_for
+    Feature record: CXX_FEATURE:0cxx_raw_string_literals
+    Feature record: CXX_FEATURE:0cxx_reference_qualified_functions
+    Feature record: CXX_FEATURE:0cxx_relaxed_constexpr
+    Feature record: CXX_FEATURE:0cxx_return_type_deduction
+    Feature record: CXX_FEATURE:0cxx_right_angle_brackets
+    Feature record: CXX_FEATURE:0cxx_rvalue_references
+    Feature record: CXX_FEATURE:0cxx_sizeof_member
+    Feature record: CXX_FEATURE:0cxx_static_assert
+    Feature record: CXX_FEATURE:0cxx_strong_enums
+    Feature record: CXX_FEATURE:1cxx_template_template_parameters
+    Feature record: CXX_FEATURE:0cxx_thread_local
+    Feature record: CXX_FEATURE:0cxx_trailing_return_types
+    Feature record: CXX_FEATURE:0cxx_unicode_literals
+    Feature record: CXX_FEATURE:0cxx_uniform_initialization
+    Feature record: CXX_FEATURE:0cxx_unrestricted_unions
+    Feature record: CXX_FEATURE:0cxx_user_literals
+    Feature record: CXX_FEATURE:0cxx_variable_templates
+    Feature record: CXX_FEATURE:0cxx_variadic_macros
+    Feature record: CXX_FEATURE:0cxx_variadic_templates
+Determining if the C compiler works passed with the following output:
+Change Dir: /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_e3b6f/fast"
+/usr/bin/make -f CMakeFiles/cmTC_e3b6f.dir/build.make CMakeFiles/cmTC_e3b6f.dir/build
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 들어감
+Building C object CMakeFiles/cmTC_e3b6f.dir/testCCompiler.c.o
+/usr/bin/cc    -fPIE   -o CMakeFiles/cmTC_e3b6f.dir/testCCompiler.c.o   -c /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_e3b6f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e3b6f.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_e3b6f.dir/testCCompiler.c.o  -o cmTC_e3b6f -rdynamic 
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 나감
+
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_b99da/fast"
+/usr/bin/make -f CMakeFiles/cmTC_b99da.dir/build.make CMakeFiles/cmTC_b99da.dir/build
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 들어감
+Building C object CMakeFiles/cmTC_b99da.dir/CMakeCCompilerABI.c.o
+/usr/bin/cc    -fPIE   -o CMakeFiles/cmTC_b99da.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.5/Modules/CMakeCCompilerABI.c
+Linking C executable cmTC_b99da
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b99da.dir/link.txt --verbose=1
+/usr/bin/cc      -v CMakeFiles/cmTC_b99da.dir/CMakeCCompilerABI.c.o  -o cmTC_b99da -rdynamic  
+Using built-in specs.
+COLLECT_GCC=/usr/bin/cc
+COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper
+Target: x86_64-linux-gnu
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu 5.4.0-6ubuntu1~16.04.9' --with-bugurl=file:///usr/share/doc/gcc-5/README.Bugs --enable-languages=c,ada,c++,java,go,d,fortran,objc,obj-c++ --prefix=/usr --program-suffix=-5 --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --with-system-zlib --disable-browser-plugin --enable-java-awt=gtk --enable-gtk-cairo --with-java-home=/usr/lib/jvm/java-1.5.0-gcj-5-amd64/jre --enable-java-home --with-jvm-root-dir=/usr/lib/jvm/java-1.5.0-gcj-5-amd64 --with-jvm-jar-dir=/usr/lib/jvm-exports/java-1.5.0-gcj-5-amd64 --with-arch-directory=amd64 --with-ecj-jar=/usr/share/java/eclipse-ecj.jar --enable-objc-gc --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu
+Thread model: posix
+gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.9) 
+COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/
+LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_b99da' '-rdynamic' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccT4YsQ3.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_b99da /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_b99da.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 나감
+
+
+Parsed C implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_b99da/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_b99da.dir/build.make CMakeFiles/cmTC_b99da.dir/build]
+  ignore line: [make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 들어감]
+  ignore line: [Building C object CMakeFiles/cmTC_b99da.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/bin/cc    -fPIE   -o CMakeFiles/cmTC_b99da.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.5/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTC_b99da]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b99da.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/cc      -v CMakeFiles/cmTC_b99da.dir/CMakeCCompilerABI.c.o  -o cmTC_b99da -rdynamic  ]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/usr/bin/cc]
+  ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper]
+  ignore line: [Target: x86_64-linux-gnu]
+  ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 5.4.0-6ubuntu1~16.04.9' --with-bugurl=file:///usr/share/doc/gcc-5/README.Bugs --enable-languages=c,ada,c++,java,go,d,fortran,objc,obj-c++ --prefix=/usr --program-suffix=-5 --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --with-system-zlib --disable-browser-plugin --enable-java-awt=gtk --enable-gtk-cairo --with-java-home=/usr/lib/jvm/java-1.5.0-gcj-5-amd64/jre --enable-java-home --with-jvm-root-dir=/usr/lib/jvm/java-1.5.0-gcj-5-amd64 --with-jvm-jar-dir=/usr/lib/jvm-exports/java-1.5.0-gcj-5-amd64 --with-arch-directory=amd64 --with-ecj-jar=/usr/share/java/eclipse-ecj.jar --enable-objc-gc --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.9) ]
+  ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/]
+  ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_b99da' '-rdynamic' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccT4YsQ3.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_b99da /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_b99da.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o]
+    arg [/usr/lib/gcc/x86_64-linux-gnu/5/collect2] ==> ignore
+    arg [-plugin] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so] ==> ignore
+    arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccT4YsQ3.res] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [--sysroot=/] ==> ignore
+    arg [--build-id] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-m] ==> ignore
+    arg [elf_x86_64] ==> ignore
+    arg [--hash-style=gnu] ==> ignore
+    arg [--as-needed] ==> ignore
+    arg [-export-dynamic] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+    arg [-zrelro] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_b99da] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o] ==> ignore
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/5] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/5]
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu]
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib]
+    arg [-L/lib/x86_64-linux-gnu] ==> dir [/lib/x86_64-linux-gnu]
+    arg [-L/lib/../lib] ==> dir [/lib/../lib]
+    arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
+    arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/5/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../..]
+    arg [CMakeFiles/cmTC_b99da.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [-lgcc] ==> lib [gcc]
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--no-as-needed] ==> ignore
+    arg [-lc] ==> lib [c]
+    arg [-lgcc] ==> lib [gcc]
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--no-as-needed] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/5/crtend.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o] ==> ignore
+  remove lib [gcc]
+  remove lib [gcc_s]
+  remove lib [gcc]
+  remove lib [gcc_s]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/5] ==> [/usr/lib/gcc/x86_64-linux-gnu/5]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib] ==> [/usr/lib]
+  collapse library dir [/lib/x86_64-linux-gnu] ==> [/lib/x86_64-linux-gnu]
+  collapse library dir [/lib/../lib] ==> [/lib]
+  collapse library dir [/usr/lib/x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+  collapse library dir [/usr/lib/../lib] ==> [/usr/lib]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../..] ==> [/usr/lib]
+  implicit libs: [c]
+  implicit dirs: [/usr/lib/gcc/x86_64-linux-gnu/5;/usr/lib/x86_64-linux-gnu;/usr/lib;/lib/x86_64-linux-gnu;/lib]
+  implicit fwks: []
+
+
+
+
+Detecting C [-std=c11] compiler features compiled with the following output:
+Change Dir: /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_6b09f/fast"
+/usr/bin/make -f CMakeFiles/cmTC_6b09f.dir/build.make CMakeFiles/cmTC_6b09f.dir/build
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 들어감
+Building C object CMakeFiles/cmTC_6b09f.dir/feature_tests.c.o
+/usr/bin/cc    -fPIE   -std=c11 -o CMakeFiles/cmTC_6b09f.dir/feature_tests.c.o   -c /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_6b09f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6b09f.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_6b09f.dir/feature_tests.c.o  -o cmTC_6b09f -rdynamic 
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 나감
+
+
+    Feature record: C_FEATURE:1c_function_prototypes
+    Feature record: C_FEATURE:1c_restrict
+    Feature record: C_FEATURE:1c_static_assert
+    Feature record: C_FEATURE:1c_variadic_macros
+
+
+Detecting C [-std=c99] compiler features compiled with the following output:
+Change Dir: /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_f9ea9/fast"
+/usr/bin/make -f CMakeFiles/cmTC_f9ea9.dir/build.make CMakeFiles/cmTC_f9ea9.dir/build
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 들어감
+Building C object CMakeFiles/cmTC_f9ea9.dir/feature_tests.c.o
+/usr/bin/cc    -fPIE   -std=c99 -o CMakeFiles/cmTC_f9ea9.dir/feature_tests.c.o   -c /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_f9ea9
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f9ea9.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_f9ea9.dir/feature_tests.c.o  -o cmTC_f9ea9 -rdynamic 
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 나감
+
+
+    Feature record: C_FEATURE:1c_function_prototypes
+    Feature record: C_FEATURE:1c_restrict
+    Feature record: C_FEATURE:0c_static_assert
+    Feature record: C_FEATURE:1c_variadic_macros
+
+
+Detecting C [-std=c90] compiler features compiled with the following output:
+Change Dir: /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_0b764/fast"
+/usr/bin/make -f CMakeFiles/cmTC_0b764.dir/build.make CMakeFiles/cmTC_0b764.dir/build
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 들어감
+Building C object CMakeFiles/cmTC_0b764.dir/feature_tests.c.o
+/usr/bin/cc    -fPIE   -std=c90 -o CMakeFiles/cmTC_0b764.dir/feature_tests.c.o   -c /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_0b764
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0b764.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_0b764.dir/feature_tests.c.o  -o cmTC_0b764 -rdynamic 
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 나감
+
+
+    Feature record: C_FEATURE:1c_function_prototypes
+    Feature record: C_FEATURE:0c_restrict
+    Feature record: C_FEATURE:0c_static_assert
+    Feature record: C_FEATURE:0c_variadic_macros
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_ad1da/fast"
+/usr/bin/make -f CMakeFiles/cmTC_ad1da.dir/build.make CMakeFiles/cmTC_ad1da.dir/build
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 들어감
+Building C object CMakeFiles/cmTC_ad1da.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -O3 -DNDEBUG -fPIE   -o CMakeFiles/cmTC_ad1da.dir/CheckIncludeFile.c.o   -c /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_ad1da
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ad1da.dir/link.txt --verbose=1
+/usr/bin/cc     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -O3 -DNDEBUG    -Wl,--gc-sections  CMakeFiles/cmTC_ad1da.dir/CheckIncludeFile.c.o  -o cmTC_ad1da -rdynamic 
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 나감
+
+
+Determining if the posix_memalign exist passed with the following output:
+Change Dir: /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_2caad/fast"
+/usr/bin/make -f CMakeFiles/cmTC_2caad.dir/build.make CMakeFiles/cmTC_2caad.dir/build
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 들어감
+Building C object CMakeFiles/cmTC_2caad.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -O3 -DNDEBUG -fPIE   -o CMakeFiles/cmTC_2caad.dir/CheckSymbolExists.c.o   -c /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_2caad
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2caad.dir/link.txt --verbose=1
+/usr/bin/cc     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -O3 -DNDEBUG    -Wl,--gc-sections  CMakeFiles/cmTC_2caad.dir/CheckSymbolExists.c.o  -o cmTC_2caad -rdynamic 
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 나감
+
+File /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdlib.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef posix_memalign
+  return ((int*)(&posix_memalign))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the include file malloc.h exists passed with the following output:
+Change Dir: /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_afe64/fast"
+/usr/bin/make -f CMakeFiles/cmTC_afe64.dir/build.make CMakeFiles/cmTC_afe64.dir/build
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 들어감
+Building C object CMakeFiles/cmTC_afe64.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -O3 -DNDEBUG -fPIE   -o CMakeFiles/cmTC_afe64.dir/CheckIncludeFile.c.o   -c /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_afe64
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_afe64.dir/link.txt --verbose=1
+/usr/bin/cc     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -O3 -DNDEBUG    -Wl,--gc-sections  CMakeFiles/cmTC_afe64.dir/CheckIncludeFile.c.o  -o cmTC_afe64 -rdynamic 
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 나감
+
+
+Determining if the memalign exist passed with the following output:
+Change Dir: /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_be49a/fast"
+/usr/bin/make -f CMakeFiles/cmTC_be49a.dir/build.make CMakeFiles/cmTC_be49a.dir/build
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 들어감
+Building C object CMakeFiles/cmTC_be49a.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -O3 -DNDEBUG -fPIE   -o CMakeFiles/cmTC_be49a.dir/CheckSymbolExists.c.o   -c /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_be49a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_be49a.dir/link.txt --verbose=1
+/usr/bin/cc     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -O3 -DNDEBUG    -Wl,--gc-sections  CMakeFiles/cmTC_be49a.dir/CheckSymbolExists.c.o  -o cmTC_be49a -rdynamic 
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 나감
+
+File /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <malloc.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef memalign
+  return ((int*)(&memalign))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the include file sys/types.h exists passed with the following output:
+Change Dir: /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_07012/fast"
+/usr/bin/make -f CMakeFiles/cmTC_07012.dir/build.make CMakeFiles/cmTC_07012.dir/build
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 들어감
+Building C object CMakeFiles/cmTC_07012.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -O3 -DNDEBUG -fPIE   -o CMakeFiles/cmTC_07012.dir/CheckIncludeFile.c.o   -c /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_07012
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_07012.dir/link.txt --verbose=1
+/usr/bin/cc     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -O3 -DNDEBUG    -Wl,--gc-sections  CMakeFiles/cmTC_07012.dir/CheckIncludeFile.c.o  -o cmTC_07012 -rdynamic 
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 나감
+
+
+Determining if the include file stdint.h exists passed with the following output:
+Change Dir: /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_5d712/fast"
+/usr/bin/make -f CMakeFiles/cmTC_5d712.dir/build.make CMakeFiles/cmTC_5d712.dir/build
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 들어감
+Building C object CMakeFiles/cmTC_5d712.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -O3 -DNDEBUG -fPIE   -o CMakeFiles/cmTC_5d712.dir/CheckIncludeFile.c.o   -c /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_5d712
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5d712.dir/link.txt --verbose=1
+/usr/bin/cc     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -O3 -DNDEBUG    -Wl,--gc-sections  CMakeFiles/cmTC_5d712.dir/CheckIncludeFile.c.o  -o cmTC_5d712 -rdynamic 
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 나감
+
+
+Determining if the include file stddef.h exists passed with the following output:
+Change Dir: /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_adb32/fast"
+/usr/bin/make -f CMakeFiles/cmTC_adb32.dir/build.make CMakeFiles/cmTC_adb32.dir/build
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 들어감
+Building C object CMakeFiles/cmTC_adb32.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -O3 -DNDEBUG -fPIE   -o CMakeFiles/cmTC_adb32.dir/CheckIncludeFile.c.o   -c /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_adb32
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_adb32.dir/link.txt --verbose=1
+/usr/bin/cc     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -O3 -DNDEBUG    -Wl,--gc-sections  CMakeFiles/cmTC_adb32.dir/CheckIncludeFile.c.o  -o cmTC_adb32 -rdynamic 
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 나감
+
+
+Determining size of unsigned short passed with the following output:
+Change Dir: /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_a2dfe/fast"
+/usr/bin/make -f CMakeFiles/cmTC_a2dfe.dir/build.make CMakeFiles/cmTC_a2dfe.dir/build
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 들어감
+Building C object CMakeFiles/cmTC_a2dfe.dir/CMAKE_SIZEOF_UNSIGNED_SHORT.c.o
+/usr/bin/cc    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -O3 -DNDEBUG -fPIE   -o CMakeFiles/cmTC_a2dfe.dir/CMAKE_SIZEOF_UNSIGNED_SHORT.c.o   -c /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CheckTypeSize/CMAKE_SIZEOF_UNSIGNED_SHORT.c
+Linking C executable cmTC_a2dfe
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a2dfe.dir/link.txt --verbose=1
+/usr/bin/cc     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -O3 -DNDEBUG    -Wl,--gc-sections  CMakeFiles/cmTC_a2dfe.dir/CMAKE_SIZEOF_UNSIGNED_SHORT.c.o  -o cmTC_a2dfe -rdynamic 
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 나감
+
+
+Determining if the function fseeko exists passed with the following output:
+Change Dir: /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_bc5ea/fast"
+/usr/bin/make -f CMakeFiles/cmTC_bc5ea.dir/build.make CMakeFiles/cmTC_bc5ea.dir/build
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 들어감
+Building C object CMakeFiles/cmTC_bc5ea.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -DCHECK_FUNCTION_EXISTS=fseeko -O3 -DNDEBUG -fPIE   -o CMakeFiles/cmTC_bc5ea.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+/usr/share/cmake-3.5/Modules/CheckFunctionExists.c:6:1: warning: function declaration isn’t a prototype [-Wstrict-prototypes]
+ char CHECK_FUNCTION_EXISTS();
+ ^
+Linking C executable cmTC_bc5ea
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bc5ea.dir/link.txt --verbose=1
+/usr/bin/cc     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -DCHECK_FUNCTION_EXISTS=fseeko -O3 -DNDEBUG    -Wl,--gc-sections  CMakeFiles/cmTC_bc5ea.dir/CheckFunctionExists.c.o  -o cmTC_bc5ea -rdynamic 
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 나감
+
+
+Determining if the include file unistd.h exists passed with the following output:
+Change Dir: /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_38e26/fast"
+/usr/bin/make -f CMakeFiles/cmTC_38e26.dir/build.make CMakeFiles/cmTC_38e26.dir/build
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 들어감
+Building C object CMakeFiles/cmTC_38e26.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -O3 -DNDEBUG -fPIE   -o CMakeFiles/cmTC_38e26.dir/CheckIncludeFile.c.o   -c /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_38e26
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_38e26.dir/link.txt --verbose=1
+/usr/bin/cc     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -O3 -DNDEBUG    -Wl,--gc-sections  CMakeFiles/cmTC_38e26.dir/CheckIncludeFile.c.o  -o cmTC_38e26 -rdynamic 
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 나감
+
+
+Determining if the include file assert.h exists passed with the following output:
+Change Dir: /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_31a6e/fast"
+/usr/bin/make -f CMakeFiles/cmTC_31a6e.dir/build.make CMakeFiles/cmTC_31a6e.dir/build
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 들어감
+Building C object CMakeFiles/cmTC_31a6e.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -O3 -DNDEBUG -fPIE   -o CMakeFiles/cmTC_31a6e.dir/CheckIncludeFile.c.o   -c /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_31a6e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_31a6e.dir/link.txt --verbose=1
+/usr/bin/cc     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -O3 -DNDEBUG    -Wl,--gc-sections  CMakeFiles/cmTC_31a6e.dir/CheckIncludeFile.c.o  -o cmTC_31a6e -rdynamic 
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 나감
+
+
+Determining if the include file dlfcn.h exists passed with the following output:
+Change Dir: /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_ea05d/fast"
+/usr/bin/make -f CMakeFiles/cmTC_ea05d.dir/build.make CMakeFiles/cmTC_ea05d.dir/build
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 들어감
+Building C object CMakeFiles/cmTC_ea05d.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -O3 -DNDEBUG -fPIE   -o CMakeFiles/cmTC_ea05d.dir/CheckIncludeFile.c.o   -c /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_ea05d
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ea05d.dir/link.txt --verbose=1
+/usr/bin/cc     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -O3 -DNDEBUG    -Wl,--gc-sections  CMakeFiles/cmTC_ea05d.dir/CheckIncludeFile.c.o  -o cmTC_ea05d -rdynamic 
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 나감
+
+
+Determining if the include file fcntl.h exists passed with the following output:
+Change Dir: /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_108e0/fast"
+/usr/bin/make -f CMakeFiles/cmTC_108e0.dir/build.make CMakeFiles/cmTC_108e0.dir/build
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 들어감
+Building C object CMakeFiles/cmTC_108e0.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -O3 -DNDEBUG -fPIE   -o CMakeFiles/cmTC_108e0.dir/CheckIncludeFile.c.o   -c /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_108e0
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_108e0.dir/link.txt --verbose=1
+/usr/bin/cc     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -O3 -DNDEBUG    -Wl,--gc-sections  CMakeFiles/cmTC_108e0.dir/CheckIncludeFile.c.o  -o cmTC_108e0 -rdynamic 
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 나감
+
+
+Determining if the include file inttypes.h exists passed with the following output:
+Change Dir: /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_e5959/fast"
+/usr/bin/make -f CMakeFiles/cmTC_e5959.dir/build.make CMakeFiles/cmTC_e5959.dir/build
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 들어감
+Building C object CMakeFiles/cmTC_e5959.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -O3 -DNDEBUG -fPIE   -o CMakeFiles/cmTC_e5959.dir/CheckIncludeFile.c.o   -c /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_e5959
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e5959.dir/link.txt --verbose=1
+/usr/bin/cc     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -O3 -DNDEBUG    -Wl,--gc-sections  CMakeFiles/cmTC_e5959.dir/CheckIncludeFile.c.o  -o cmTC_e5959 -rdynamic 
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 나감
+
+
+Determining if the include file limits.h exists passed with the following output:
+Change Dir: /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_4c145/fast"
+/usr/bin/make -f CMakeFiles/cmTC_4c145.dir/build.make CMakeFiles/cmTC_4c145.dir/build
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 들어감
+Building C object CMakeFiles/cmTC_4c145.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -O3 -DNDEBUG -fPIE   -o CMakeFiles/cmTC_4c145.dir/CheckIncludeFile.c.o   -c /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_4c145
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4c145.dir/link.txt --verbose=1
+/usr/bin/cc     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -O3 -DNDEBUG    -Wl,--gc-sections  CMakeFiles/cmTC_4c145.dir/CheckIncludeFile.c.o  -o cmTC_4c145 -rdynamic 
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 나감
+
+
+Determining if the include file memory.h exists passed with the following output:
+Change Dir: /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_1d700/fast"
+/usr/bin/make -f CMakeFiles/cmTC_1d700.dir/build.make CMakeFiles/cmTC_1d700.dir/build
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 들어감
+Building C object CMakeFiles/cmTC_1d700.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -O3 -DNDEBUG -fPIE   -o CMakeFiles/cmTC_1d700.dir/CheckIncludeFile.c.o   -c /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_1d700
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1d700.dir/link.txt --verbose=1
+/usr/bin/cc     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -O3 -DNDEBUG    -Wl,--gc-sections  CMakeFiles/cmTC_1d700.dir/CheckIncludeFile.c.o  -o cmTC_1d700 -rdynamic 
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 나감
+
+
+Determining if the include file search.h exists passed with the following output:
+Change Dir: /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_1aad2/fast"
+/usr/bin/make -f CMakeFiles/cmTC_1aad2.dir/build.make CMakeFiles/cmTC_1aad2.dir/build
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 들어감
+Building C object CMakeFiles/cmTC_1aad2.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -O3 -DNDEBUG -fPIE   -o CMakeFiles/cmTC_1aad2.dir/CheckIncludeFile.c.o   -c /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_1aad2
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1aad2.dir/link.txt --verbose=1
+/usr/bin/cc     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -O3 -DNDEBUG    -Wl,--gc-sections  CMakeFiles/cmTC_1aad2.dir/CheckIncludeFile.c.o  -o cmTC_1aad2 -rdynamic 
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 나감
+
+
+Determining if the include file string.h exists passed with the following output:
+Change Dir: /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_224cd/fast"
+/usr/bin/make -f CMakeFiles/cmTC_224cd.dir/build.make CMakeFiles/cmTC_224cd.dir/build
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 들어감
+Building C object CMakeFiles/cmTC_224cd.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -O3 -DNDEBUG -fPIE   -o CMakeFiles/cmTC_224cd.dir/CheckIncludeFile.c.o   -c /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_224cd
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_224cd.dir/link.txt --verbose=1
+/usr/bin/cc     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -O3 -DNDEBUG    -Wl,--gc-sections  CMakeFiles/cmTC_224cd.dir/CheckIncludeFile.c.o  -o cmTC_224cd -rdynamic 
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 나감
+
+
+Determining if the include file strings.h exists passed with the following output:
+Change Dir: /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_02520/fast"
+/usr/bin/make -f CMakeFiles/cmTC_02520.dir/build.make CMakeFiles/cmTC_02520.dir/build
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 들어감
+Building C object CMakeFiles/cmTC_02520.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -O3 -DNDEBUG -fPIE   -o CMakeFiles/cmTC_02520.dir/CheckIncludeFile.c.o   -c /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_02520
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_02520.dir/link.txt --verbose=1
+/usr/bin/cc     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -O3 -DNDEBUG    -Wl,--gc-sections  CMakeFiles/cmTC_02520.dir/CheckIncludeFile.c.o  -o cmTC_02520 -rdynamic 
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 나감
+
+
+Determining if the include file sys/time.h exists passed with the following output:
+Change Dir: /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_38d80/fast"
+/usr/bin/make -f CMakeFiles/cmTC_38d80.dir/build.make CMakeFiles/cmTC_38d80.dir/build
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 들어감
+Building C object CMakeFiles/cmTC_38d80.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -O3 -DNDEBUG -fPIE   -o CMakeFiles/cmTC_38d80.dir/CheckIncludeFile.c.o   -c /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_38d80
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_38d80.dir/link.txt --verbose=1
+/usr/bin/cc     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -O3 -DNDEBUG    -Wl,--gc-sections  CMakeFiles/cmTC_38d80.dir/CheckIncludeFile.c.o  -o cmTC_38d80 -rdynamic 
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 나감
+
+
+Determining if the include file unistd.h exists passed with the following output:
+Change Dir: /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_814e6/fast"
+/usr/bin/make -f CMakeFiles/cmTC_814e6.dir/build.make CMakeFiles/cmTC_814e6.dir/build
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 들어감
+Building C object CMakeFiles/cmTC_814e6.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -O3 -DNDEBUG -fPIE   -o CMakeFiles/cmTC_814e6.dir/CheckIncludeFile.c.o   -c /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_814e6
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_814e6.dir/link.txt --verbose=1
+/usr/bin/cc     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -O3 -DNDEBUG    -Wl,--gc-sections  CMakeFiles/cmTC_814e6.dir/CheckIncludeFile.c.o  -o cmTC_814e6 -rdynamic 
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 나감
+
+
+Performing C SOURCE FILE Test C_HAS_inline succeeded with the following output:
+Change Dir: /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_22e5f/fast"
+/usr/bin/make -f CMakeFiles/cmTC_22e5f.dir/build.make CMakeFiles/cmTC_22e5f.dir/build
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 들어감
+Building C object CMakeFiles/cmTC_22e5f.dir/src.c.o
+/usr/bin/cc  -Dinline=inline  -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -DC_HAS_inline -O3 -DNDEBUG -fPIE   -o CMakeFiles/cmTC_22e5f.dir/src.c.o   -c /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp/src.c
+/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp/src.c:3:29: warning: function declaration isn’t a prototype [-Wstrict-prototypes]
+         static inline foo_t static_foo() {return 0;}
+                             ^
+/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp/src.c:4:15: warning: function declaration isn’t a prototype [-Wstrict-prototypes]
+         foo_t foo(){return 0;}
+               ^
+/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp/src.c: In function ‘main’:
+/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp/src.c:5:22: warning: unused parameter ‘argc’ [-Wunused-parameter]
+         int main(int argc, char *argv[]) {return 0;}
+                      ^
+/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp/src.c:5:34: warning: unused parameter ‘argv’ [-Wunused-parameter]
+         int main(int argc, char *argv[]) {return 0;}
+                                  ^
+Linking C executable cmTC_22e5f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_22e5f.dir/link.txt --verbose=1
+/usr/bin/cc     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -DC_HAS_inline -O3 -DNDEBUG    -Wl,--gc-sections  CMakeFiles/cmTC_22e5f.dir/src.c.o  -o cmTC_22e5f -rdynamic 
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 나감
+
+Source file was:
+
+        typedef int foo_t;
+        static inline foo_t static_foo() {return 0;}
+        foo_t foo(){return 0;}
+        int main(int argc, char *argv[]) {return 0;}
+Determining size of signed short passed with the following output:
+Change Dir: /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_51996/fast"
+/usr/bin/make -f CMakeFiles/cmTC_51996.dir/build.make CMakeFiles/cmTC_51996.dir/build
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 들어감
+Building C object CMakeFiles/cmTC_51996.dir/SIZEOF_SIGNED_SHORT.c.o
+/usr/bin/cc    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -O3 -DNDEBUG -fPIE   -o CMakeFiles/cmTC_51996.dir/SIZEOF_SIGNED_SHORT.c.o   -c /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CheckTypeSize/SIZEOF_SIGNED_SHORT.c
+Linking C executable cmTC_51996
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_51996.dir/link.txt --verbose=1
+/usr/bin/cc     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -O3 -DNDEBUG    -Wl,--gc-sections  CMakeFiles/cmTC_51996.dir/SIZEOF_SIGNED_SHORT.c.o  -o cmTC_51996 -rdynamic 
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 나감
+
+
+Determining size of unsigned short passed with the following output:
+Change Dir: /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_4192e/fast"
+/usr/bin/make -f CMakeFiles/cmTC_4192e.dir/build.make CMakeFiles/cmTC_4192e.dir/build
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 들어감
+Building C object CMakeFiles/cmTC_4192e.dir/SIZEOF_UNSIGNED_SHORT.c.o
+/usr/bin/cc    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -O3 -DNDEBUG -fPIE   -o CMakeFiles/cmTC_4192e.dir/SIZEOF_UNSIGNED_SHORT.c.o   -c /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CheckTypeSize/SIZEOF_UNSIGNED_SHORT.c
+Linking C executable cmTC_4192e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4192e.dir/link.txt --verbose=1
+/usr/bin/cc     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -O3 -DNDEBUG    -Wl,--gc-sections  CMakeFiles/cmTC_4192e.dir/SIZEOF_UNSIGNED_SHORT.c.o  -o cmTC_4192e -rdynamic 
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 나감
+
+
+Determining size of signed int passed with the following output:
+Change Dir: /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_6eabf/fast"
+/usr/bin/make -f CMakeFiles/cmTC_6eabf.dir/build.make CMakeFiles/cmTC_6eabf.dir/build
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 들어감
+Building C object CMakeFiles/cmTC_6eabf.dir/SIZEOF_SIGNED_INT.c.o
+/usr/bin/cc    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -O3 -DNDEBUG -fPIE   -o CMakeFiles/cmTC_6eabf.dir/SIZEOF_SIGNED_INT.c.o   -c /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CheckTypeSize/SIZEOF_SIGNED_INT.c
+Linking C executable cmTC_6eabf
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6eabf.dir/link.txt --verbose=1
+/usr/bin/cc     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -O3 -DNDEBUG    -Wl,--gc-sections  CMakeFiles/cmTC_6eabf.dir/SIZEOF_SIGNED_INT.c.o  -o cmTC_6eabf -rdynamic 
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 나감
+
+
+Determining size of unsigned int passed with the following output:
+Change Dir: /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_9d221/fast"
+/usr/bin/make -f CMakeFiles/cmTC_9d221.dir/build.make CMakeFiles/cmTC_9d221.dir/build
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 들어감
+Building C object CMakeFiles/cmTC_9d221.dir/SIZEOF_UNSIGNED_INT.c.o
+/usr/bin/cc    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -O3 -DNDEBUG -fPIE   -o CMakeFiles/cmTC_9d221.dir/SIZEOF_UNSIGNED_INT.c.o   -c /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CheckTypeSize/SIZEOF_UNSIGNED_INT.c
+Linking C executable cmTC_9d221
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9d221.dir/link.txt --verbose=1
+/usr/bin/cc     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -O3 -DNDEBUG    -Wl,--gc-sections  CMakeFiles/cmTC_9d221.dir/SIZEOF_UNSIGNED_INT.c.o  -o cmTC_9d221 -rdynamic 
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 나감
+
+
+Determining size of signed long passed with the following output:
+Change Dir: /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_0a321/fast"
+/usr/bin/make -f CMakeFiles/cmTC_0a321.dir/build.make CMakeFiles/cmTC_0a321.dir/build
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 들어감
+Building C object CMakeFiles/cmTC_0a321.dir/SIZEOF_SIGNED_LONG.c.o
+/usr/bin/cc    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -O3 -DNDEBUG -fPIE   -o CMakeFiles/cmTC_0a321.dir/SIZEOF_SIGNED_LONG.c.o   -c /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CheckTypeSize/SIZEOF_SIGNED_LONG.c
+Linking C executable cmTC_0a321
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0a321.dir/link.txt --verbose=1
+/usr/bin/cc     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -O3 -DNDEBUG    -Wl,--gc-sections  CMakeFiles/cmTC_0a321.dir/SIZEOF_SIGNED_LONG.c.o  -o cmTC_0a321 -rdynamic 
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 나감
+
+
+Determining size of unsigned long passed with the following output:
+Change Dir: /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_c4f3c/fast"
+/usr/bin/make -f CMakeFiles/cmTC_c4f3c.dir/build.make CMakeFiles/cmTC_c4f3c.dir/build
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 들어감
+Building C object CMakeFiles/cmTC_c4f3c.dir/SIZEOF_UNSIGNED_LONG.c.o
+/usr/bin/cc    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -O3 -DNDEBUG -fPIE   -o CMakeFiles/cmTC_c4f3c.dir/SIZEOF_UNSIGNED_LONG.c.o   -c /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CheckTypeSize/SIZEOF_UNSIGNED_LONG.c
+Linking C executable cmTC_c4f3c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c4f3c.dir/link.txt --verbose=1
+/usr/bin/cc     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -O3 -DNDEBUG    -Wl,--gc-sections  CMakeFiles/cmTC_c4f3c.dir/SIZEOF_UNSIGNED_LONG.c.o  -o cmTC_c4f3c -rdynamic 
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 나감
+
+
+Determining size of signed long long passed with the following output:
+Change Dir: /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_b99d5/fast"
+/usr/bin/make -f CMakeFiles/cmTC_b99d5.dir/build.make CMakeFiles/cmTC_b99d5.dir/build
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 들어감
+Building C object CMakeFiles/cmTC_b99d5.dir/SIZEOF_SIGNED_LONG_LONG.c.o
+/usr/bin/cc    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -O3 -DNDEBUG -fPIE   -o CMakeFiles/cmTC_b99d5.dir/SIZEOF_SIGNED_LONG_LONG.c.o   -c /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CheckTypeSize/SIZEOF_SIGNED_LONG_LONG.c
+Linking C executable cmTC_b99d5
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b99d5.dir/link.txt --verbose=1
+/usr/bin/cc     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -O3 -DNDEBUG    -Wl,--gc-sections  CMakeFiles/cmTC_b99d5.dir/SIZEOF_SIGNED_LONG_LONG.c.o  -o cmTC_b99d5 -rdynamic 
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 나감
+
+
+Determining size of unsigned long long passed with the following output:
+Change Dir: /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_ac18e/fast"
+/usr/bin/make -f CMakeFiles/cmTC_ac18e.dir/build.make CMakeFiles/cmTC_ac18e.dir/build
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 들어감
+Building C object CMakeFiles/cmTC_ac18e.dir/SIZEOF_UNSIGNED_LONG_LONG.c.o
+/usr/bin/cc    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -O3 -DNDEBUG -fPIE   -o CMakeFiles/cmTC_ac18e.dir/SIZEOF_UNSIGNED_LONG_LONG.c.o   -c /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CheckTypeSize/SIZEOF_UNSIGNED_LONG_LONG.c
+Linking C executable cmTC_ac18e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ac18e.dir/link.txt --verbose=1
+/usr/bin/cc     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -O3 -DNDEBUG    -Wl,--gc-sections  CMakeFiles/cmTC_ac18e.dir/SIZEOF_UNSIGNED_LONG_LONG.c.o  -o cmTC_ac18e -rdynamic 
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 나감
+
+
+Determining size of unsigned char * passed with the following output:
+Change Dir: /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_ee201/fast"
+/usr/bin/make -f CMakeFiles/cmTC_ee201.dir/build.make CMakeFiles/cmTC_ee201.dir/build
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 들어감
+Building C object CMakeFiles/cmTC_ee201.dir/SIZEOF_UNSIGNED_CHAR_P.c.o
+/usr/bin/cc    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -O3 -DNDEBUG -fPIE   -o CMakeFiles/cmTC_ee201.dir/SIZEOF_UNSIGNED_CHAR_P.c.o   -c /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CheckTypeSize/SIZEOF_UNSIGNED_CHAR_P.c
+Linking C executable cmTC_ee201
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ee201.dir/link.txt --verbose=1
+/usr/bin/cc     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -O3 -DNDEBUG    -Wl,--gc-sections  CMakeFiles/cmTC_ee201.dir/SIZEOF_UNSIGNED_CHAR_P.c.o  -o cmTC_ee201 -rdynamic 
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 나감
+
+
+Determining size of size_t passed with the following output:
+Change Dir: /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_24771/fast"
+/usr/bin/make -f CMakeFiles/cmTC_24771.dir/build.make CMakeFiles/cmTC_24771.dir/build
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 들어감
+Building C object CMakeFiles/cmTC_24771.dir/SIZEOF_SIZE_T.c.o
+/usr/bin/cc    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -O3 -DNDEBUG -fPIE   -o CMakeFiles/cmTC_24771.dir/SIZEOF_SIZE_T.c.o   -c /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CheckTypeSize/SIZEOF_SIZE_T.c
+Linking C executable cmTC_24771
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_24771.dir/link.txt --verbose=1
+/usr/bin/cc     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -O3 -DNDEBUG    -Wl,--gc-sections  CMakeFiles/cmTC_24771.dir/SIZEOF_SIZE_T.c.o  -o cmTC_24771 -rdynamic 
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 나감
+
+
+Determining size of ptrdiff_t passed with the following output:
+Change Dir: /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_12c38/fast"
+/usr/bin/make -f CMakeFiles/cmTC_12c38.dir/build.make CMakeFiles/cmTC_12c38.dir/build
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 들어감
+Building C object CMakeFiles/cmTC_12c38.dir/SIZEOF_PTRDIFF_T.c.o
+/usr/bin/cc    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -O3 -DNDEBUG -fPIE   -o CMakeFiles/cmTC_12c38.dir/SIZEOF_PTRDIFF_T.c.o   -c /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CheckTypeSize/SIZEOF_PTRDIFF_T.c
+Linking C executable cmTC_12c38
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_12c38.dir/link.txt --verbose=1
+/usr/bin/cc     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -O3 -DNDEBUG    -Wl,--gc-sections  CMakeFiles/cmTC_12c38.dir/SIZEOF_PTRDIFF_T.c.o  -o cmTC_12c38 -rdynamic 
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 나감
+
+
+Determining if the function floor exists passed with the following output:
+Change Dir: /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_4d3ba/fast"
+/usr/bin/make -f CMakeFiles/cmTC_4d3ba.dir/build.make CMakeFiles/cmTC_4d3ba.dir/build
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 들어감
+Building C object CMakeFiles/cmTC_4d3ba.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -DCHECK_FUNCTION_EXISTS=floor -O3 -DNDEBUG -fPIE   -o CMakeFiles/cmTC_4d3ba.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+/usr/share/cmake-3.5/Modules/CheckFunctionExists.c:6:1: warning: function declaration isn’t a prototype [-Wstrict-prototypes]
+ char CHECK_FUNCTION_EXISTS();
+ ^
+<command-line>:0:23: warning: conflicting types for built-in function ‘floor’
+/usr/share/cmake-3.5/Modules/CheckFunctionExists.c:6:6: note: in expansion of macro ‘CHECK_FUNCTION_EXISTS’
+ char CHECK_FUNCTION_EXISTS();
+      ^
+Linking C executable cmTC_4d3ba
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4d3ba.dir/link.txt --verbose=1
+/usr/bin/cc     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -DCHECK_FUNCTION_EXISTS=floor -O3 -DNDEBUG    -Wl,--gc-sections  CMakeFiles/cmTC_4d3ba.dir/CheckFunctionExists.c.o  -o cmTC_4d3ba -rdynamic -lm 
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 나감
+
+
+Determining if the function pow exists passed with the following output:
+Change Dir: /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_1d720/fast"
+/usr/bin/make -f CMakeFiles/cmTC_1d720.dir/build.make CMakeFiles/cmTC_1d720.dir/build
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 들어감
+Building C object CMakeFiles/cmTC_1d720.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -DCHECK_FUNCTION_EXISTS=pow -O3 -DNDEBUG -fPIE   -o CMakeFiles/cmTC_1d720.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+/usr/share/cmake-3.5/Modules/CheckFunctionExists.c:6:1: warning: function declaration isn’t a prototype [-Wstrict-prototypes]
+ char CHECK_FUNCTION_EXISTS();
+ ^
+<command-line>:0:23: warning: conflicting types for built-in function ‘pow’
+/usr/share/cmake-3.5/Modules/CheckFunctionExists.c:6:6: note: in expansion of macro ‘CHECK_FUNCTION_EXISTS’
+ char CHECK_FUNCTION_EXISTS();
+      ^
+Linking C executable cmTC_1d720
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1d720.dir/link.txt --verbose=1
+/usr/bin/cc     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -DCHECK_FUNCTION_EXISTS=pow -O3 -DNDEBUG    -Wl,--gc-sections  CMakeFiles/cmTC_1d720.dir/CheckFunctionExists.c.o  -o cmTC_1d720 -rdynamic -lm 
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 나감
+
+
+Determining if the function sqrt exists passed with the following output:
+Change Dir: /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_e60b2/fast"
+/usr/bin/make -f CMakeFiles/cmTC_e60b2.dir/build.make CMakeFiles/cmTC_e60b2.dir/build
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 들어감
+Building C object CMakeFiles/cmTC_e60b2.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -DCHECK_FUNCTION_EXISTS=sqrt -O3 -DNDEBUG -fPIE   -o CMakeFiles/cmTC_e60b2.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+/usr/share/cmake-3.5/Modules/CheckFunctionExists.c:6:1: warning: function declaration isn’t a prototype [-Wstrict-prototypes]
+ char CHECK_FUNCTION_EXISTS();
+ ^
+<command-line>:0:23: warning: conflicting types for built-in function ‘sqrt’
+/usr/share/cmake-3.5/Modules/CheckFunctionExists.c:6:6: note: in expansion of macro ‘CHECK_FUNCTION_EXISTS’
+ char CHECK_FUNCTION_EXISTS();
+      ^
+Linking C executable cmTC_e60b2
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e60b2.dir/link.txt --verbose=1
+/usr/bin/cc     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -DCHECK_FUNCTION_EXISTS=sqrt -O3 -DNDEBUG    -Wl,--gc-sections  CMakeFiles/cmTC_e60b2.dir/CheckFunctionExists.c.o  -o cmTC_e60b2 -rdynamic -lm 
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 나감
+
+
+Determining if the function isascii exists passed with the following output:
+Change Dir: /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_5d266/fast"
+/usr/bin/make -f CMakeFiles/cmTC_5d266.dir/build.make CMakeFiles/cmTC_5d266.dir/build
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 들어감
+Building C object CMakeFiles/cmTC_5d266.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -DCHECK_FUNCTION_EXISTS=isascii -O3 -DNDEBUG -fPIE   -o CMakeFiles/cmTC_5d266.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+/usr/share/cmake-3.5/Modules/CheckFunctionExists.c:6:1: warning: function declaration isn’t a prototype [-Wstrict-prototypes]
+ char CHECK_FUNCTION_EXISTS();
+ ^
+<command-line>:0:23: warning: conflicting types for built-in function ‘isascii’
+/usr/share/cmake-3.5/Modules/CheckFunctionExists.c:6:6: note: in expansion of macro ‘CHECK_FUNCTION_EXISTS’
+ char CHECK_FUNCTION_EXISTS();
+      ^
+Linking C executable cmTC_5d266
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5d266.dir/link.txt --verbose=1
+/usr/bin/cc     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -DCHECK_FUNCTION_EXISTS=isascii -O3 -DNDEBUG    -Wl,--gc-sections  CMakeFiles/cmTC_5d266.dir/CheckFunctionExists.c.o  -o cmTC_5d266 -rdynamic 
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 나감
+
+
+Determining if the function memset exists passed with the following output:
+Change Dir: /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_fda14/fast"
+/usr/bin/make -f CMakeFiles/cmTC_fda14.dir/build.make CMakeFiles/cmTC_fda14.dir/build
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 들어감
+Building C object CMakeFiles/cmTC_fda14.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -DCHECK_FUNCTION_EXISTS=memset -O3 -DNDEBUG -fPIE   -o CMakeFiles/cmTC_fda14.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+/usr/share/cmake-3.5/Modules/CheckFunctionExists.c:6:1: warning: function declaration isn’t a prototype [-Wstrict-prototypes]
+ char CHECK_FUNCTION_EXISTS();
+ ^
+<command-line>:0:23: warning: conflicting types for built-in function ‘memset’
+/usr/share/cmake-3.5/Modules/CheckFunctionExists.c:6:6: note: in expansion of macro ‘CHECK_FUNCTION_EXISTS’
+ char CHECK_FUNCTION_EXISTS();
+      ^
+Linking C executable cmTC_fda14
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fda14.dir/link.txt --verbose=1
+/usr/bin/cc     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -DCHECK_FUNCTION_EXISTS=memset -O3 -DNDEBUG    -Wl,--gc-sections  CMakeFiles/cmTC_fda14.dir/CheckFunctionExists.c.o  -o cmTC_fda14 -rdynamic 
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 나감
+
+
+Determining if the function mmap exists passed with the following output:
+Change Dir: /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_c75de/fast"
+/usr/bin/make -f CMakeFiles/cmTC_c75de.dir/build.make CMakeFiles/cmTC_c75de.dir/build
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 들어감
+Building C object CMakeFiles/cmTC_c75de.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -DCHECK_FUNCTION_EXISTS=mmap -O3 -DNDEBUG -fPIE   -o CMakeFiles/cmTC_c75de.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+/usr/share/cmake-3.5/Modules/CheckFunctionExists.c:6:1: warning: function declaration isn’t a prototype [-Wstrict-prototypes]
+ char CHECK_FUNCTION_EXISTS();
+ ^
+Linking C executable cmTC_c75de
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c75de.dir/link.txt --verbose=1
+/usr/bin/cc     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -DCHECK_FUNCTION_EXISTS=mmap -O3 -DNDEBUG    -Wl,--gc-sections  CMakeFiles/cmTC_c75de.dir/CheckFunctionExists.c.o  -o cmTC_c75de -rdynamic 
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 나감
+
+
+Determining if the function getopt exists passed with the following output:
+Change Dir: /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_562c0/fast"
+/usr/bin/make -f CMakeFiles/cmTC_562c0.dir/build.make CMakeFiles/cmTC_562c0.dir/build
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 들어감
+Building C object CMakeFiles/cmTC_562c0.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -DCHECK_FUNCTION_EXISTS=getopt -O3 -DNDEBUG -fPIE   -o CMakeFiles/cmTC_562c0.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+/usr/share/cmake-3.5/Modules/CheckFunctionExists.c:6:1: warning: function declaration isn’t a prototype [-Wstrict-prototypes]
+ char CHECK_FUNCTION_EXISTS();
+ ^
+Linking C executable cmTC_562c0
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_562c0.dir/link.txt --verbose=1
+/usr/bin/cc     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -DCHECK_FUNCTION_EXISTS=getopt -O3 -DNDEBUG    -Wl,--gc-sections  CMakeFiles/cmTC_562c0.dir/CheckFunctionExists.c.o  -o cmTC_562c0 -rdynamic 
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 나감
+
+
+Determining if the function memmove exists passed with the following output:
+Change Dir: /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_1199a/fast"
+/usr/bin/make -f CMakeFiles/cmTC_1199a.dir/build.make CMakeFiles/cmTC_1199a.dir/build
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 들어감
+Building C object CMakeFiles/cmTC_1199a.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -DCHECK_FUNCTION_EXISTS=memmove -O3 -DNDEBUG -fPIE   -o CMakeFiles/cmTC_1199a.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+/usr/share/cmake-3.5/Modules/CheckFunctionExists.c:6:1: warning: function declaration isn’t a prototype [-Wstrict-prototypes]
+ char CHECK_FUNCTION_EXISTS();
+ ^
+<command-line>:0:23: warning: conflicting types for built-in function ‘memmove’
+/usr/share/cmake-3.5/Modules/CheckFunctionExists.c:6:6: note: in expansion of macro ‘CHECK_FUNCTION_EXISTS’
+ char CHECK_FUNCTION_EXISTS();
+      ^
+Linking C executable cmTC_1199a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1199a.dir/link.txt --verbose=1
+/usr/bin/cc     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -DCHECK_FUNCTION_EXISTS=memmove -O3 -DNDEBUG    -Wl,--gc-sections  CMakeFiles/cmTC_1199a.dir/CheckFunctionExists.c.o  -o cmTC_1199a -rdynamic 
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 나감
+
+
+Determining if the function strcasecmp exists passed with the following output:
+Change Dir: /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_58ee5/fast"
+/usr/bin/make -f CMakeFiles/cmTC_58ee5.dir/build.make CMakeFiles/cmTC_58ee5.dir/build
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 들어감
+Building C object CMakeFiles/cmTC_58ee5.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -DCHECK_FUNCTION_EXISTS=strcasecmp -O3 -DNDEBUG -fPIE   -o CMakeFiles/cmTC_58ee5.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+/usr/share/cmake-3.5/Modules/CheckFunctionExists.c:6:1: warning: function declaration isn’t a prototype [-Wstrict-prototypes]
+ char CHECK_FUNCTION_EXISTS();
+ ^
+<command-line>:0:23: warning: conflicting types for built-in function ‘strcasecmp’
+/usr/share/cmake-3.5/Modules/CheckFunctionExists.c:6:6: note: in expansion of macro ‘CHECK_FUNCTION_EXISTS’
+ char CHECK_FUNCTION_EXISTS();
+      ^
+Linking C executable cmTC_58ee5
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_58ee5.dir/link.txt --verbose=1
+/usr/bin/cc     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -DCHECK_FUNCTION_EXISTS=strcasecmp -O3 -DNDEBUG    -Wl,--gc-sections  CMakeFiles/cmTC_58ee5.dir/CheckFunctionExists.c.o  -o cmTC_58ee5 -rdynamic 
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 나감
+
+
+Determining if the function strchr exists passed with the following output:
+Change Dir: /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_133d0/fast"
+/usr/bin/make -f CMakeFiles/cmTC_133d0.dir/build.make CMakeFiles/cmTC_133d0.dir/build
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 들어감
+Building C object CMakeFiles/cmTC_133d0.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -DCHECK_FUNCTION_EXISTS=strchr -O3 -DNDEBUG -fPIE   -o CMakeFiles/cmTC_133d0.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+/usr/share/cmake-3.5/Modules/CheckFunctionExists.c:6:1: warning: function declaration isn’t a prototype [-Wstrict-prototypes]
+ char CHECK_FUNCTION_EXISTS();
+ ^
+<command-line>:0:23: warning: conflicting types for built-in function ‘strchr’
+/usr/share/cmake-3.5/Modules/CheckFunctionExists.c:6:6: note: in expansion of macro ‘CHECK_FUNCTION_EXISTS’
+ char CHECK_FUNCTION_EXISTS();
+      ^
+Linking C executable cmTC_133d0
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_133d0.dir/link.txt --verbose=1
+/usr/bin/cc     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -DCHECK_FUNCTION_EXISTS=strchr -O3 -DNDEBUG    -Wl,--gc-sections  CMakeFiles/cmTC_133d0.dir/CheckFunctionExists.c.o  -o cmTC_133d0 -rdynamic 
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 나감
+
+
+Determining if the function strrchr exists passed with the following output:
+Change Dir: /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_4a420/fast"
+/usr/bin/make -f CMakeFiles/cmTC_4a420.dir/build.make CMakeFiles/cmTC_4a420.dir/build
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 들어감
+Building C object CMakeFiles/cmTC_4a420.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -DCHECK_FUNCTION_EXISTS=strrchr -O3 -DNDEBUG -fPIE   -o CMakeFiles/cmTC_4a420.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+/usr/share/cmake-3.5/Modules/CheckFunctionExists.c:6:1: warning: function declaration isn’t a prototype [-Wstrict-prototypes]
+ char CHECK_FUNCTION_EXISTS();
+ ^
+<command-line>:0:23: warning: conflicting types for built-in function ‘strrchr’
+/usr/share/cmake-3.5/Modules/CheckFunctionExists.c:6:6: note: in expansion of macro ‘CHECK_FUNCTION_EXISTS’
+ char CHECK_FUNCTION_EXISTS();
+      ^
+Linking C executable cmTC_4a420
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4a420.dir/link.txt --verbose=1
+/usr/bin/cc     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -DCHECK_FUNCTION_EXISTS=strrchr -O3 -DNDEBUG    -Wl,--gc-sections  CMakeFiles/cmTC_4a420.dir/CheckFunctionExists.c.o  -o cmTC_4a420 -rdynamic 
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 나감
+
+
+Determining if the function strstr exists passed with the following output:
+Change Dir: /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_cf523/fast"
+/usr/bin/make -f CMakeFiles/cmTC_cf523.dir/build.make CMakeFiles/cmTC_cf523.dir/build
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 들어감
+Building C object CMakeFiles/cmTC_cf523.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -DCHECK_FUNCTION_EXISTS=strstr -O3 -DNDEBUG -fPIE   -o CMakeFiles/cmTC_cf523.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+/usr/share/cmake-3.5/Modules/CheckFunctionExists.c:6:1: warning: function declaration isn’t a prototype [-Wstrict-prototypes]
+ char CHECK_FUNCTION_EXISTS();
+ ^
+<command-line>:0:23: warning: conflicting types for built-in function ‘strstr’
+/usr/share/cmake-3.5/Modules/CheckFunctionExists.c:6:6: note: in expansion of macro ‘CHECK_FUNCTION_EXISTS’
+ char CHECK_FUNCTION_EXISTS();
+      ^
+Linking C executable cmTC_cf523
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cf523.dir/link.txt --verbose=1
+/usr/bin/cc     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -DCHECK_FUNCTION_EXISTS=strstr -O3 -DNDEBUG    -Wl,--gc-sections  CMakeFiles/cmTC_cf523.dir/CheckFunctionExists.c.o  -o cmTC_cf523 -rdynamic 
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 나감
+
+
+Determining if the function strtol exists passed with the following output:
+Change Dir: /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_52928/fast"
+/usr/bin/make -f CMakeFiles/cmTC_52928.dir/build.make CMakeFiles/cmTC_52928.dir/build
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 들어감
+Building C object CMakeFiles/cmTC_52928.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -DCHECK_FUNCTION_EXISTS=strtol -O3 -DNDEBUG -fPIE   -o CMakeFiles/cmTC_52928.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+/usr/share/cmake-3.5/Modules/CheckFunctionExists.c:6:1: warning: function declaration isn’t a prototype [-Wstrict-prototypes]
+ char CHECK_FUNCTION_EXISTS();
+ ^
+Linking C executable cmTC_52928
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_52928.dir/link.txt --verbose=1
+/usr/bin/cc     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -DCHECK_FUNCTION_EXISTS=strtol -O3 -DNDEBUG    -Wl,--gc-sections  CMakeFiles/cmTC_52928.dir/CheckFunctionExists.c.o  -o cmTC_52928 -rdynamic 
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 나감
+
+
+Determining if the function strtol exists passed with the following output:
+Change Dir: /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_088c4/fast"
+/usr/bin/make -f CMakeFiles/cmTC_088c4.dir/build.make CMakeFiles/cmTC_088c4.dir/build
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 들어감
+Building C object CMakeFiles/cmTC_088c4.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -DCHECK_FUNCTION_EXISTS=strtol -O3 -DNDEBUG -fPIE   -o CMakeFiles/cmTC_088c4.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+/usr/share/cmake-3.5/Modules/CheckFunctionExists.c:6:1: warning: function declaration isn’t a prototype [-Wstrict-prototypes]
+ char CHECK_FUNCTION_EXISTS();
+ ^
+Linking C executable cmTC_088c4
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_088c4.dir/link.txt --verbose=1
+/usr/bin/cc     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -DCHECK_FUNCTION_EXISTS=strtol -O3 -DNDEBUG    -Wl,--gc-sections  CMakeFiles/cmTC_088c4.dir/CheckFunctionExists.c.o  -o cmTC_088c4 -rdynamic 
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 나감
+
+
+Determining if the function strtoull exists passed with the following output:
+Change Dir: /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_5486f/fast"
+/usr/bin/make -f CMakeFiles/cmTC_5486f.dir/build.make CMakeFiles/cmTC_5486f.dir/build
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 들어감
+Building C object CMakeFiles/cmTC_5486f.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -DCHECK_FUNCTION_EXISTS=strtoull -O3 -DNDEBUG -fPIE   -o CMakeFiles/cmTC_5486f.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+/usr/share/cmake-3.5/Modules/CheckFunctionExists.c:6:1: warning: function declaration isn’t a prototype [-Wstrict-prototypes]
+ char CHECK_FUNCTION_EXISTS();
+ ^
+Linking C executable cmTC_5486f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5486f.dir/link.txt --verbose=1
+/usr/bin/cc     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -DCHECK_FUNCTION_EXISTS=strtoull -O3 -DNDEBUG    -Wl,--gc-sections  CMakeFiles/cmTC_5486f.dir/CheckFunctionExists.c.o  -o cmTC_5486f -rdynamic 
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 나감
+
+
+Determining if the function lfind exists passed with the following output:
+Change Dir: /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_fd4fe/fast"
+/usr/bin/make -f CMakeFiles/cmTC_fd4fe.dir/build.make CMakeFiles/cmTC_fd4fe.dir/build
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 들어감
+Building C object CMakeFiles/cmTC_fd4fe.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -DCHECK_FUNCTION_EXISTS=lfind -O3 -DNDEBUG -fPIE   -o CMakeFiles/cmTC_fd4fe.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+/usr/share/cmake-3.5/Modules/CheckFunctionExists.c:6:1: warning: function declaration isn’t a prototype [-Wstrict-prototypes]
+ char CHECK_FUNCTION_EXISTS();
+ ^
+Linking C executable cmTC_fd4fe
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fd4fe.dir/link.txt --verbose=1
+/usr/bin/cc     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -DCHECK_FUNCTION_EXISTS=lfind -O3 -DNDEBUG    -Wl,--gc-sections  CMakeFiles/cmTC_fd4fe.dir/CheckFunctionExists.c.o  -o cmTC_fd4fe -rdynamic 
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 나감
+
+
+Performing C SOURCE FILE Test HAVE_SNPRINTF succeeded with the following output:
+Change Dir: /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_58f33/fast"
+/usr/bin/make -f CMakeFiles/cmTC_58f33.dir/build.make CMakeFiles/cmTC_58f33.dir/build
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 들어감
+Building C object CMakeFiles/cmTC_58f33.dir/src.c.o
+/usr/bin/cc    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -DHAVE_SNPRINTF -O3 -DNDEBUG -fPIE   -o CMakeFiles/cmTC_58f33.dir/src.c.o   -c /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_58f33
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_58f33.dir/link.txt --verbose=1
+/usr/bin/cc     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -DHAVE_SNPRINTF -O3 -DNDEBUG    -Wl,--gc-sections  CMakeFiles/cmTC_58f33.dir/src.c.o  -o cmTC_58f33 -rdynamic 
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 나감
+
+Source file was:
+
+#include <stdio.h>
+int main(void) {
+  char buf[10];
+  snprintf(buf, 10, "Test %d", 1);
+  return 0;
+}
+Determining if the include file semaphore.h exists passed with the following output:
+Change Dir: /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_59748/fast"
+/usr/bin/make -f CMakeFiles/cmTC_59748.dir/build.make CMakeFiles/cmTC_59748.dir/build
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 들어감
+Building C object CMakeFiles/cmTC_59748.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -O3 -DNDEBUG -fPIE   -o CMakeFiles/cmTC_59748.dir/CheckIncludeFile.c.o   -c /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_59748
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_59748.dir/link.txt --verbose=1
+/usr/bin/cc     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -O3 -DNDEBUG    -Wl,--gc-sections  CMakeFiles/cmTC_59748.dir/CheckIncludeFile.c.o  -o cmTC_59748 -rdynamic 
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 나감
+
+
+Determining if the include file linux/videodev2.h exists passed with the following output:
+Change Dir: /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_80ff6/fast"
+/usr/bin/make -f CMakeFiles/cmTC_80ff6.dir/build.make CMakeFiles/cmTC_80ff6.dir/build
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 들어감
+Building C object CMakeFiles/cmTC_80ff6.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -O3 -DNDEBUG -fPIE   -o CMakeFiles/cmTC_80ff6.dir/CheckIncludeFile.c.o   -c /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_80ff6
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_80ff6.dir/link.txt --verbose=1
+/usr/bin/cc     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -O3 -DNDEBUG    -Wl,--gc-sections  CMakeFiles/cmTC_80ff6.dir/CheckIncludeFile.c.o  -o cmTC_80ff6 -rdynamic 
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 나감
+
+
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_a2077/fast"
+/usr/bin/make -f CMakeFiles/cmTC_a2077.dir/build.make CMakeFiles/cmTC_a2077.dir/build
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 들어감
+Building C object CMakeFiles/cmTC_a2077.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -O3 -DNDEBUG -fPIE   -o CMakeFiles/cmTC_a2077.dir/CheckIncludeFile.c.o   -c /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_a2077
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a2077.dir/link.txt --verbose=1
+/usr/bin/cc     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -O3 -DNDEBUG    -Wl,--gc-sections  CMakeFiles/cmTC_a2077.dir/CheckIncludeFile.c.o  -o cmTC_a2077 -rdynamic 
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 나감
+
+
+Determining if the pthread_create exist passed with the following output:
+Change Dir: /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_08a0f/fast"
+/usr/bin/make -f CMakeFiles/cmTC_08a0f.dir/build.make CMakeFiles/cmTC_08a0f.dir/build
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 들어감
+Building C object CMakeFiles/cmTC_08a0f.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -O3 -DNDEBUG -fPIE   -o CMakeFiles/cmTC_08a0f.dir/CheckSymbolExists.c.o   -c /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_08a0f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_08a0f.dir/link.txt --verbose=1
+/usr/bin/cc     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -O3 -DNDEBUG    -Wl,--gc-sections  CMakeFiles/cmTC_08a0f.dir/CheckSymbolExists.c.o  -o cmTC_08a0f -rdynamic 
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 나감
+
+File /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function dlerror exists in the dl passed with the following output:
+Change Dir: /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_8af02/fast"
+/usr/bin/make -f CMakeFiles/cmTC_8af02.dir/build.make CMakeFiles/cmTC_8af02.dir/build
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 들어감
+Building C object CMakeFiles/cmTC_8af02.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -DCHECK_FUNCTION_EXISTS=dlerror -O3 -DNDEBUG -fPIE   -o CMakeFiles/cmTC_8af02.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+/usr/share/cmake-3.5/Modules/CheckFunctionExists.c:6:1: warning: function declaration isn’t a prototype [-Wstrict-prototypes]
+ char CHECK_FUNCTION_EXISTS();
+ ^
+Linking C executable cmTC_8af02
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8af02.dir/link.txt --verbose=1
+/usr/bin/cc     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -DCHECK_FUNCTION_EXISTS=dlerror -O3 -DNDEBUG    -Wl,--gc-sections  CMakeFiles/cmTC_8af02.dir/CheckFunctionExists.c.o  -o cmTC_8af02 -rdynamic -ldl 
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 나감
+
+
+Determining if the include file linux/videodev2.h exists passed with the following output:
+Change Dir: /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_c52e0/fast"
+/usr/bin/make -f CMakeFiles/cmTC_c52e0.dir/build.make CMakeFiles/cmTC_c52e0.dir/build
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 들어감
+Building C object CMakeFiles/cmTC_c52e0.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -O3 -DNDEBUG -fPIE   -o CMakeFiles/cmTC_c52e0.dir/CheckIncludeFile.c.o   -c /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_c52e0
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c52e0.dir/link.txt --verbose=1
+/usr/bin/cc     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -O3 -DNDEBUG    -Wl,--gc-sections  CMakeFiles/cmTC_c52e0.dir/CheckIncludeFile.c.o  -o cmTC_c52e0 -rdynamic 
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 나감
+
+
+Determining if the include file linux/videodev2.h exists passed with the following output:
+Change Dir: /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_42d8d/fast"
+/usr/bin/make -f CMakeFiles/cmTC_42d8d.dir/build.make CMakeFiles/cmTC_42d8d.dir/build
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 들어감
+Building C object CMakeFiles/cmTC_42d8d.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -O3 -DNDEBUG -fPIE   -o CMakeFiles/cmTC_42d8d.dir/CheckIncludeFile.c.o   -c /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_42d8d
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_42d8d.dir/link.txt --verbose=1
+/usr/bin/cc     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -O3 -DNDEBUG    -Wl,--gc-sections  CMakeFiles/cmTC_42d8d.dir/CheckIncludeFile.c.o  -o cmTC_42d8d -rdynamic 
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 나감
+
+

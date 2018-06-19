@@ -1,0 +1,2 @@
+use_cache "/home/jeon/다운로드/opencv-3.4.0/.cache"
+#match_hash_in_cmake_cache "OCV_DOWNLOAD_IPPICV_HASH_3rdparty_ippicv_ippicv_2017u3_lnx_intel64_general_20170822_tgz"

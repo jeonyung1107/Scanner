@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../../lib/libopencv_videoio.a  CMakeFiles/opencv_videoio.dir/src/cap.cpp.o CMakeFiles/opencv_videoio.dir/src/cap_images.cpp.o CMakeFiles/opencv_videoio.dir/src/cap_mjpeg_encoder.cpp.o CMakeFiles/opencv_videoio.dir/src/cap_mjpeg_decoder.cpp.o CMakeFiles/opencv_videoio.dir/src/cap_v4l.cpp.o
+/usr/bin/ranlib ../../lib/libopencv_videoio.a

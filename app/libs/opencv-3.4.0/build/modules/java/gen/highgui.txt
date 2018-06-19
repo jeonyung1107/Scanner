@@ -1,0 +1,20 @@
+PORTED FUNCs LIST (10 of 10):
+
+ Rect selectROI(Mat img, bool showCrosshair = true, bool fromCenter = false)
+ Rect selectROI(String windowName, Mat img, bool showCrosshair = true, bool fromCenter = false)
+ int waitKeyEx(int delay = 0)
+ void addText(Mat img, String text, Point org, String nameFont, int pointSize = -1, Scalar color = Scalar::all(0), int weight = QT_FONT_NORMAL, int style = QT_STYLE_NORMAL, int spacing = 0)
+ void displayOverlay(String winname, String text, int delayms = 0)
+ void displayStatusBar(String winname, String text, int delayms = 0)
+ void selectROIs(String windowName, Mat img, vector_Rect& boundingBoxes, bool showCrosshair = true, bool fromCenter = false)
+ void setTrackbarMax(String trackbarname, String winname, int maxval)
+ void setTrackbarMin(String trackbarname, String winname, int minval)
+ void setWindowTitle(String winname, String title)
+
+SKIPPED FUNCs LIST (0 of 10):
+
+
+0 def args - 3 funcs
+1 def args - 3 funcs
+2 def args - 3 funcs
+5 def args - 1 funcs

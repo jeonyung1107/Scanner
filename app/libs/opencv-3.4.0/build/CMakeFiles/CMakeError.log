@@ -1,0 +1,977 @@
+Compilation failed:
+    source file: '/home/jeon/다운로드/opencv-3.4.0/cmake/checks/cxx11.cpp'
+    check option: ''
+===== BUILD LOG =====
+Change Dir: /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_90239/fast"
+/usr/bin/make -f CMakeFiles/cmTC_90239.dir/build.make CMakeFiles/cmTC_90239.dir/build
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 들어감
+Building CXX object CMakeFiles/cmTC_90239.dir/cxx11.cpp.o
+/usr/bin/c++     -fPIE   -o CMakeFiles/cmTC_90239.dir/cxx11.cpp.o -c /home/jeon/다운로드/opencv-3.4.0/cmake/checks/cxx11.cpp
+/home/jeon/다운로드/opencv-3.4.0/cmake/checks/cxx11.cpp:4:2: error: #error "C++11 is not supported"
+ #error "C++11 is not supported"
+  ^
+/home/jeon/다운로드/opencv-3.4.0/cmake/checks/cxx11.cpp: In function ‘int main()’:
+/home/jeon/다운로드/opencv-3.4.0/cmake/checks/cxx11.cpp:11:10: error: ‘res’ does not name a type
+     auto res = test();
+          ^
+/home/jeon/다운로드/opencv-3.4.0/cmake/checks/cxx11.cpp:12:12: error: ‘res’ was not declared in this scope
+     return res;
+            ^
+CMakeFiles/cmTC_90239.dir/build.make:65: 'CMakeFiles/cmTC_90239.dir/cxx11.cpp.o' 타겟에 대한 명령이 실패했습니다
+make[1]: *** [CMakeFiles/cmTC_90239.dir/cxx11.cpp.o] 오류 1
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 나감
+Makefile:126: 'cmTC_90239/fast' 타겟에 대한 명령이 실패했습니다
+make: *** [cmTC_90239/fast] 오류 2
+
+===== END =====
+
+Build output check failed:
+    Regex: 'command line option .* is valid for .* but not for C\+\+'
+    Output line: 'cc1plus: warning: command line option ‘-Wmissing-prototypes’ is valid for C/ObjC but not for C++'
+Compilation failed:
+    source file: '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp/src.cxx'
+    check option: ' -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations  -Wmissing-prototypes'
+===== BUILD LOG =====
+Change Dir: /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_b511a/fast"
+/usr/bin/make -f CMakeFiles/cmTC_b511a.dir/build.make CMakeFiles/cmTC_b511a.dir/build
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 들어감
+Building CXX object CMakeFiles/cmTC_b511a.dir/src.cxx.o
+/usr/bin/c++     -O3 -DNDEBUG -fPIE   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -o CMakeFiles/cmTC_b511a.dir/src.cxx.o -c /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp/src.cxx
+cc1plus: warning: command line option ‘-Wmissing-prototypes’ is valid for C/ObjC but not for C++
+/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp/src.cxx:1:0: warning: ignoring #pragma   [-Wunknown-pragmas]
+ #pragma
+ ^
+Linking CXX executable cmTC_b511a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b511a.dir/link.txt --verbose=1
+/usr/bin/c++     -O3 -DNDEBUG    CMakeFiles/cmTC_b511a.dir/src.cxx.o  -o cmTC_b511a -rdynamic 
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 나감
+
+===== END =====
+
+Build output check failed:
+    Regex: 'command line option .* is valid for .* but not for C\+\+'
+    Output line: 'cc1plus: warning: command line option ‘-Wstrict-prototypes’ is valid for C/ObjC but not for C++'
+Compilation failed:
+    source file: '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp/src.cxx'
+    check option: ' -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations  -Wstrict-prototypes'
+===== BUILD LOG =====
+Change Dir: /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_438ef/fast"
+/usr/bin/make -f CMakeFiles/cmTC_438ef.dir/build.make CMakeFiles/cmTC_438ef.dir/build
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 들어감
+Building CXX object CMakeFiles/cmTC_438ef.dir/src.cxx.o
+/usr/bin/c++     -O3 -DNDEBUG -fPIE   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wstrict-prototypes -o CMakeFiles/cmTC_438ef.dir/src.cxx.o -c /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp/src.cxx
+cc1plus: warning: command line option ‘-Wstrict-prototypes’ is valid for C/ObjC but not for C++
+/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp/src.cxx:1:0: warning: ignoring #pragma   [-Wunknown-pragmas]
+ #pragma
+ ^
+Linking CXX executable cmTC_438ef
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_438ef.dir/link.txt --verbose=1
+/usr/bin/c++     -O3 -DNDEBUG    CMakeFiles/cmTC_438ef.dir/src.cxx.o  -o cmTC_438ef -rdynamic 
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 나감
+
+===== END =====
+
+Build output check failed:
+    Regex: 'command line option .* is valid for .* but not for C'
+    Output line: 'cc1: warning: command line option ‘-Wsign-promo’ is valid for C++/ObjC++ but not for C'
+Compilation failed:
+    source file: '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp/src.c'
+    check option: ' -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow  -Wsign-promo'
+===== BUILD LOG =====
+Change Dir: /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_fbe72/fast"
+/usr/bin/make -f CMakeFiles/cmTC_fbe72.dir/build.make CMakeFiles/cmTC_fbe72.dir/build
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 들어감
+Building C object CMakeFiles/cmTC_fbe72.dir/src.c.o
+/usr/bin/cc    -O3 -DNDEBUG -fPIE   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -o CMakeFiles/cmTC_fbe72.dir/src.c.o   -c /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp/src.c
+cc1: warning: command line option ‘-Wsign-promo’ is valid for C++/ObjC++ but not for C
+/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp/src.c:1:0: warning: ignoring #pragma   [-Wunknown-pragmas]
+ #pragma
+ ^
+Linking C executable cmTC_fbe72
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fbe72.dir/link.txt --verbose=1
+/usr/bin/cc    -O3 -DNDEBUG    CMakeFiles/cmTC_fbe72.dir/src.c.o  -o cmTC_fbe72 -rdynamic 
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 나감
+
+===== END =====
+
+Build output check failed:
+    Regex: 'command line option .* is valid for .* but not for C'
+    Output line: 'cc1: warning: command line option ‘-Wno-delete-non-virtual-dtor’ is valid for C++/ObjC++ but not for C'
+Compilation failed:
+    source file: '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp/src.c'
+    check option: ' -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing  -Wno-delete-non-virtual-dtor'
+===== BUILD LOG =====
+Change Dir: /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_4be75/fast"
+/usr/bin/make -f CMakeFiles/cmTC_4be75.dir/build.make CMakeFiles/cmTC_4be75.dir/build
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 들어감
+Building C object CMakeFiles/cmTC_4be75.dir/src.c.o
+/usr/bin/cc    -O3 -DNDEBUG -fPIE   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-delete-non-virtual-dtor -o CMakeFiles/cmTC_4be75.dir/src.c.o   -c /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp/src.c
+cc1: warning: command line option ‘-Wno-delete-non-virtual-dtor’ is valid for C++/ObjC++ but not for C
+/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp/src.c:1:0: warning: ignoring #pragma   [-Wunknown-pragmas]
+ #pragma
+ ^
+Linking C executable cmTC_4be75
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4be75.dir/link.txt --verbose=1
+/usr/bin/cc    -O3 -DNDEBUG    CMakeFiles/cmTC_4be75.dir/src.c.o  -o cmTC_4be75 -rdynamic 
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 나감
+
+===== END =====
+
+Build output check failed:
+    Regex: 'unrecognized .*option'
+    Output line: 'cc1plus: warning: unrecognized command line option ‘-Wno-unnamed-type-template-args’'
+Compilation failed:
+    source file: '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp/src.cxx'
+    check option: ' -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winit-self -Wno-narrowing -Wno-delete-non-virtual-dtor  -Wno-unnamed-type-template-args'
+===== BUILD LOG =====
+Change Dir: /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_6c2d7/fast"
+/usr/bin/make -f CMakeFiles/cmTC_6c2d7.dir/build.make CMakeFiles/cmTC_6c2d7.dir/build
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 들어감
+Building CXX object CMakeFiles/cmTC_6c2d7.dir/src.cxx.o
+/usr/bin/c++     -O3 -DNDEBUG -fPIE   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winit-self -Wno-narrowing -Wno-delete-non-virtual-dtor -Wno-unnamed-type-template-args -o CMakeFiles/cmTC_6c2d7.dir/src.cxx.o -c /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp/src.cxx
+/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp/src.cxx:1:0: warning: ignoring #pragma   [-Wunknown-pragmas]
+ #pragma
+ ^
+cc1plus: warning: unrecognized command line option ‘-Wno-unnamed-type-template-args’
+Linking CXX executable cmTC_6c2d7
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6c2d7.dir/link.txt --verbose=1
+/usr/bin/c++     -O3 -DNDEBUG    CMakeFiles/cmTC_6c2d7.dir/src.cxx.o  -o cmTC_6c2d7 -rdynamic 
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 나감
+
+===== END =====
+
+Build output check failed:
+    Regex: 'unrecognized .*option'
+    Output line: 'cc1: warning: unrecognized command line option ‘-Wno-unnamed-type-template-args’'
+Compilation failed:
+    source file: '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp/src.c'
+    check option: ' -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing  -Wno-unnamed-type-template-args'
+===== BUILD LOG =====
+Change Dir: /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_facf2/fast"
+/usr/bin/make -f CMakeFiles/cmTC_facf2.dir/build.make CMakeFiles/cmTC_facf2.dir/build
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 들어감
+Building C object CMakeFiles/cmTC_facf2.dir/src.c.o
+/usr/bin/cc    -O3 -DNDEBUG -fPIE   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-unnamed-type-template-args -o CMakeFiles/cmTC_facf2.dir/src.c.o   -c /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp/src.c
+/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp/src.c:1:0: warning: ignoring #pragma   [-Wunknown-pragmas]
+ #pragma
+ ^
+cc1: warning: unrecognized command line option ‘-Wno-unnamed-type-template-args’
+Linking C executable cmTC_facf2
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_facf2.dir/link.txt --verbose=1
+/usr/bin/cc    -O3 -DNDEBUG    CMakeFiles/cmTC_facf2.dir/src.c.o  -o cmTC_facf2 -rdynamic 
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 나감
+
+===== END =====
+
+Build output check failed:
+    Regex: 'unrecognized .*option'
+    Output line: 'cc1plus: warning: unrecognized command line option ‘-Wno-implicit-fallthrough’'
+Compilation failed:
+    source file: '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp/src.cxx'
+    check option: ' -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winit-self -Wno-narrowing -Wno-delete-non-virtual-dtor -Wno-comment  -Wno-implicit-fallthrough'
+===== BUILD LOG =====
+Change Dir: /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_2bd03/fast"
+/usr/bin/make -f CMakeFiles/cmTC_2bd03.dir/build.make CMakeFiles/cmTC_2bd03.dir/build
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 들어감
+Building CXX object CMakeFiles/cmTC_2bd03.dir/src.cxx.o
+/usr/bin/c++     -O3 -DNDEBUG -fPIE   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winit-self -Wno-narrowing -Wno-delete-non-virtual-dtor -Wno-comment -Wno-implicit-fallthrough -o CMakeFiles/cmTC_2bd03.dir/src.cxx.o -c /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp/src.cxx
+/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp/src.cxx:1:0: warning: ignoring #pragma   [-Wunknown-pragmas]
+ #pragma
+ ^
+cc1plus: warning: unrecognized command line option ‘-Wno-implicit-fallthrough’
+Linking CXX executable cmTC_2bd03
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2bd03.dir/link.txt --verbose=1
+/usr/bin/c++     -O3 -DNDEBUG    CMakeFiles/cmTC_2bd03.dir/src.cxx.o  -o cmTC_2bd03 -rdynamic 
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 나감
+
+===== END =====
+
+Build output check failed:
+    Regex: 'unrecognized .*option'
+    Output line: 'cc1: warning: unrecognized command line option ‘-Wno-implicit-fallthrough’'
+Compilation failed:
+    source file: '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp/src.c'
+    check option: ' -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment  -Wno-implicit-fallthrough'
+===== BUILD LOG =====
+Change Dir: /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_a66b4/fast"
+/usr/bin/make -f CMakeFiles/cmTC_a66b4.dir/build.make CMakeFiles/cmTC_a66b4.dir/build
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 들어감
+Building C object CMakeFiles/cmTC_a66b4.dir/src.c.o
+/usr/bin/cc    -O3 -DNDEBUG -fPIE   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -Wno-implicit-fallthrough -o CMakeFiles/cmTC_a66b4.dir/src.c.o   -c /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp/src.c
+/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp/src.c:1:0: warning: ignoring #pragma   [-Wunknown-pragmas]
+ #pragma
+ ^
+cc1: warning: unrecognized command line option ‘-Wno-implicit-fallthrough’
+Linking C executable cmTC_a66b4
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a66b4.dir/link.txt --verbose=1
+/usr/bin/cc    -O3 -DNDEBUG    CMakeFiles/cmTC_a66b4.dir/src.c.o  -o cmTC_a66b4 -rdynamic 
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 나감
+
+===== END =====
+
+Build output check failed:
+    Regex: 'command line option .* is valid for .* but not for C'
+    Output line: 'cc1: warning: command line option ‘-fvisibility-inlines-hidden’ is valid for C++/ObjC++ but not for C'
+Compilation failed:
+    source file: '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp/src.c'
+    check option: ' -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -fvisibility-inlines-hidden'
+===== BUILD LOG =====
+Change Dir: /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_36176/fast"
+/usr/bin/make -f CMakeFiles/cmTC_36176.dir/build.make CMakeFiles/cmTC_36176.dir/build
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 들어감
+Building C object CMakeFiles/cmTC_36176.dir/src.c.o
+/usr/bin/cc    -O3 -DNDEBUG -fPIE   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections -msse -msse2 -msse3 -fvisibility=hidden -fvisibility-inlines-hidden -o CMakeFiles/cmTC_36176.dir/src.c.o   -c /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp/src.c
+cc1: warning: command line option ‘-fvisibility-inlines-hidden’ is valid for C++/ObjC++ but not for C
+/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp/src.c:1:0: warning: ignoring #pragma   [-Wunknown-pragmas]
+ #pragma
+ ^
+Linking C executable cmTC_36176
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_36176.dir/link.txt --verbose=1
+/usr/bin/cc    -O3 -DNDEBUG    CMakeFiles/cmTC_36176.dir/src.c.o  -o cmTC_36176 -rdynamic 
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 나감
+
+===== END =====
+
+Determining if the system is big endian passed with the following output:
+Change Dir: /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_9473b/fast"
+/usr/bin/make -f CMakeFiles/cmTC_9473b.dir/build.make CMakeFiles/cmTC_9473b.dir/build
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 들어감
+Building C object CMakeFiles/cmTC_9473b.dir/TestEndianess.c.o
+/usr/bin/cc    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -O3 -DNDEBUG -fPIE   -o CMakeFiles/cmTC_9473b.dir/TestEndianess.c.o   -c /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp/TestEndianess.c
+Linking C executable cmTC_9473b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9473b.dir/link.txt --verbose=1
+/usr/bin/cc     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -O3 -DNDEBUG    -Wl,--gc-sections  CMakeFiles/cmTC_9473b.dir/TestEndianess.c.o  -o cmTC_9473b -rdynamic 
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 나감
+
+TestEndianess.c:
+/* A 16 bit integer is required. */
+typedef unsigned short cmakeint16;
+
+/* On a little endian machine, these 16bit ints will give "THIS IS LITTLE ENDIAN."
+   On a big endian machine the characters will be exchanged pairwise. */
+const cmakeint16 info_little[] =  {0x4854, 0x5349, 0x4920, 0x2053, 0x494c, 0x5454, 0x454c, 0x4520, 0x444e, 0x4149, 0x2e4e, 0x0000};
+
+/* on a big endian machine, these 16bit ints will give "THIS IS BIG ENDIAN."
+   On a little endian machine the characters will be exchanged pairwise. */
+const cmakeint16 info_big[] =     {0x5448, 0x4953, 0x2049, 0x5320, 0x4249, 0x4720, 0x454e, 0x4449, 0x414e, 0x2e2e, 0x0000};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_little[argc];
+  require += info_big[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining size of off64_t failed with the following output:
+Change Dir: /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_bc332/fast"
+/usr/bin/make -f CMakeFiles/cmTC_bc332.dir/build.make CMakeFiles/cmTC_bc332.dir/build
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 들어감
+Building C object CMakeFiles/cmTC_bc332.dir/OFF64_T.c.o
+/usr/bin/cc    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -O3 -DNDEBUG -fPIE   -o CMakeFiles/cmTC_bc332.dir/OFF64_T.c.o   -c /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CheckTypeSize/OFF64_T.c
+/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CheckTypeSize/OFF64_T.c:17:22: error: ‘off64_t’ undeclared here (not in a function)
+ #define SIZE (sizeof(off64_t))
+                      ^
+/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CheckTypeSize/OFF64_T.c:19:12: note: in expansion of macro ‘SIZE’
+   ('0' + ((SIZE / 10000)%10)),
+            ^
+CMakeFiles/cmTC_bc332.dir/build.make:65: 'CMakeFiles/cmTC_bc332.dir/OFF64_T.c.o' 타겟에 대한 명령이 실패했습니다
+make[1]: *** [CMakeFiles/cmTC_bc332.dir/OFF64_T.c.o] 오류 1
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 나감
+Makefile:126: 'cmTC_bc332/fast' 타겟에 대한 명령이 실패했습니다
+make: *** [cmTC_bc332/fast] 오류 2
+
+/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CheckTypeSize/OFF64_T.c:
+#include <sys/types.h>
+#include <stdint.h>
+#include <stddef.h>
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#endif
+
+#define SIZE (sizeof(off64_t))
+char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Build output check failed:
+    Regex: 'unrecognized .*option'
+    Output line: 'cc1: warning: unrecognized command line option ‘-Wno-shorten-64-to-32’'
+Compilation failed:
+    source file: '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp/src.c'
+    check option: ' -Wno-shorten-64-to-32'
+===== BUILD LOG =====
+Change Dir: /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_64e86/fast"
+/usr/bin/make -f CMakeFiles/cmTC_64e86.dir/build.make CMakeFiles/cmTC_64e86.dir/build
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 들어감
+Building C object CMakeFiles/cmTC_64e86.dir/src.c.o
+/usr/bin/cc    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -O3 -DNDEBUG -fPIE   -Wno-shorten-64-to-32 -o CMakeFiles/cmTC_64e86.dir/src.c.o   -c /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp/src.c
+/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp/src.c:1:0: warning: ignoring #pragma   [-Wunknown-pragmas]
+ #pragma
+ ^
+cc1: warning: unrecognized command line option ‘-Wno-shorten-64-to-32’
+Linking C executable cmTC_64e86
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_64e86.dir/link.txt --verbose=1
+/usr/bin/cc     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -O3 -DNDEBUG    -Wl,--gc-sections  CMakeFiles/cmTC_64e86.dir/src.c.o  -o cmTC_64e86 -rdynamic 
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 나감
+
+===== END =====
+
+Build output check failed:
+    Regex: 'unrecognized .*option'
+    Output line: 'cc1: warning: unrecognized command line option ‘-Wno-shift-negative-value’'
+Compilation failed:
+    source file: '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp/src.c'
+    check option: ' -Wno-shift-negative-value'
+===== BUILD LOG =====
+Change Dir: /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_8fe16/fast"
+/usr/bin/make -f CMakeFiles/cmTC_8fe16.dir/build.make CMakeFiles/cmTC_8fe16.dir/build
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 들어감
+Building C object CMakeFiles/cmTC_8fe16.dir/src.c.o
+/usr/bin/cc    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security    -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -Wno-attributes -Wno-strict-prototypes -Wno-missing-prototypes -Wno-missing-declarations  -O3 -DNDEBUG -fPIE   -Wno-shift-negative-value -o CMakeFiles/cmTC_8fe16.dir/src.c.o   -c /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp/src.c
+/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp/src.c:1:0: warning: ignoring #pragma   [-Wunknown-pragmas]
+ #pragma
+ ^
+cc1: warning: unrecognized command line option ‘-Wno-shift-negative-value’
+Linking C executable cmTC_8fe16
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8fe16.dir/link.txt --verbose=1
+/usr/bin/cc     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security    -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -Wno-attributes -Wno-strict-prototypes -Wno-missing-prototypes -Wno-missing-declarations  -O3 -DNDEBUG    -Wl,--gc-sections  CMakeFiles/cmTC_8fe16.dir/src.c.o  -o cmTC_8fe16 -rdynamic 
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 나감
+
+===== END =====
+
+Determining if the include file io.h exists failed with the following output:
+Change Dir: /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_7d4ae/fast"
+/usr/bin/make -f CMakeFiles/cmTC_7d4ae.dir/build.make CMakeFiles/cmTC_7d4ae.dir/build
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 들어감
+Building C object CMakeFiles/cmTC_7d4ae.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -O3 -DNDEBUG -fPIE   -o CMakeFiles/cmTC_7d4ae.dir/CheckIncludeFile.c.o   -c /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:16: fatal error: io.h: 그런 파일이나 디렉터리가 없습니다
+compilation terminated.
+CMakeFiles/cmTC_7d4ae.dir/build.make:65: 'CMakeFiles/cmTC_7d4ae.dir/CheckIncludeFile.c.o' 타겟에 대한 명령이 실패했습니다
+make[1]: *** [CMakeFiles/cmTC_7d4ae.dir/CheckIncludeFile.c.o] 오류 1
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 나감
+Makefile:126: 'cmTC_7d4ae/fast' 타겟에 대한 명령이 실패했습니다
+make: *** [cmTC_7d4ae/fast] 오류 2
+
+
+Determining size of INT8 failed with the following output:
+Change Dir: /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_e4924/fast"
+/usr/bin/make -f CMakeFiles/cmTC_e4924.dir/build.make CMakeFiles/cmTC_e4924.dir/build
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 들어감
+Building C object CMakeFiles/cmTC_e4924.dir/int8.c.o
+/usr/bin/cc    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -O3 -DNDEBUG -fPIE   -o CMakeFiles/cmTC_e4924.dir/int8.c.o   -c /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CheckTypeSize/int8.c
+/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CheckTypeSize/int8.c:17:22: error: ‘INT8’ undeclared here (not in a function)
+ #define SIZE (sizeof(INT8))
+                      ^
+/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CheckTypeSize/int8.c:19:12: note: in expansion of macro ‘SIZE’
+   ('0' + ((SIZE / 10000)%10)),
+            ^
+CMakeFiles/cmTC_e4924.dir/build.make:65: 'CMakeFiles/cmTC_e4924.dir/int8.c.o' 타겟에 대한 명령이 실패했습니다
+make[1]: *** [CMakeFiles/cmTC_e4924.dir/int8.c.o] 오류 1
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 나감
+Makefile:126: 'cmTC_e4924/fast' 타겟에 대한 명령이 실패했습니다
+make: *** [cmTC_e4924/fast] 오류 2
+
+/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CheckTypeSize/int8.c:
+#include <sys/types.h>
+#include <stdint.h>
+#include <stddef.h>
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#endif
+
+#define SIZE (sizeof(INT8))
+char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining size of INT16 failed with the following output:
+Change Dir: /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_be7fa/fast"
+/usr/bin/make -f CMakeFiles/cmTC_be7fa.dir/build.make CMakeFiles/cmTC_be7fa.dir/build
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 들어감
+Building C object CMakeFiles/cmTC_be7fa.dir/int16.c.o
+/usr/bin/cc    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -O3 -DNDEBUG -fPIE   -o CMakeFiles/cmTC_be7fa.dir/int16.c.o   -c /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CheckTypeSize/int16.c
+/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CheckTypeSize/int16.c:17:22: error: ‘INT16’ undeclared here (not in a function)
+ #define SIZE (sizeof(INT16))
+                      ^
+/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CheckTypeSize/int16.c:19:12: note: in expansion of macro ‘SIZE’
+   ('0' + ((SIZE / 10000)%10)),
+            ^
+CMakeFiles/cmTC_be7fa.dir/build.make:65: 'CMakeFiles/cmTC_be7fa.dir/int16.c.o' 타겟에 대한 명령이 실패했습니다
+make[1]: *** [CMakeFiles/cmTC_be7fa.dir/int16.c.o] 오류 1
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 나감
+Makefile:126: 'cmTC_be7fa/fast' 타겟에 대한 명령이 실패했습니다
+make: *** [cmTC_be7fa/fast] 오류 2
+
+/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CheckTypeSize/int16.c:
+#include <sys/types.h>
+#include <stdint.h>
+#include <stddef.h>
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#endif
+
+#define SIZE (sizeof(INT16))
+char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining size of INT32 failed with the following output:
+Change Dir: /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_b5238/fast"
+/usr/bin/make -f CMakeFiles/cmTC_b5238.dir/build.make CMakeFiles/cmTC_b5238.dir/build
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 들어감
+Building C object CMakeFiles/cmTC_b5238.dir/int32.c.o
+/usr/bin/cc    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -O3 -DNDEBUG -fPIE   -o CMakeFiles/cmTC_b5238.dir/int32.c.o   -c /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CheckTypeSize/int32.c
+/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CheckTypeSize/int32.c:17:22: error: ‘INT32’ undeclared here (not in a function)
+ #define SIZE (sizeof(INT32))
+                      ^
+/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CheckTypeSize/int32.c:19:12: note: in expansion of macro ‘SIZE’
+   ('0' + ((SIZE / 10000)%10)),
+            ^
+CMakeFiles/cmTC_b5238.dir/build.make:65: 'CMakeFiles/cmTC_b5238.dir/int32.c.o' 타겟에 대한 명령이 실패했습니다
+make[1]: *** [CMakeFiles/cmTC_b5238.dir/int32.c.o] 오류 1
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 나감
+Makefile:126: 'cmTC_b5238/fast' 타겟에 대한 명령이 실패했습니다
+make: *** [cmTC_b5238/fast] 오류 2
+
+/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CheckTypeSize/int32.c:
+#include <sys/types.h>
+#include <stdint.h>
+#include <stddef.h>
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#endif
+
+#define SIZE (sizeof(INT32))
+char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining if the function setmode exists failed with the following output:
+Change Dir: /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_d3b9a/fast"
+/usr/bin/make -f CMakeFiles/cmTC_d3b9a.dir/build.make CMakeFiles/cmTC_d3b9a.dir/build
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 들어감
+Building C object CMakeFiles/cmTC_d3b9a.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -DCHECK_FUNCTION_EXISTS=setmode -O3 -DNDEBUG -fPIE   -o CMakeFiles/cmTC_d3b9a.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+/usr/share/cmake-3.5/Modules/CheckFunctionExists.c:6:1: warning: function declaration isn’t a prototype [-Wstrict-prototypes]
+ char CHECK_FUNCTION_EXISTS();
+ ^
+Linking C executable cmTC_d3b9a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d3b9a.dir/link.txt --verbose=1
+/usr/bin/cc     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -DCHECK_FUNCTION_EXISTS=setmode -O3 -DNDEBUG    -Wl,--gc-sections  CMakeFiles/cmTC_d3b9a.dir/CheckFunctionExists.c.o  -o cmTC_d3b9a -rdynamic 
+CMakeFiles/cmTC_d3b9a.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text.startup.main+0xe): undefined reference to `setmode'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_d3b9a.dir/build.make:97: 'cmTC_d3b9a' 타겟에 대한 명령이 실패했습니다
+make[1]: *** [cmTC_d3b9a] 오류 1
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 나감
+Makefile:126: 'cmTC_d3b9a/fast' 타겟에 대한 명령이 실패했습니다
+make: *** [cmTC_d3b9a/fast] 오류 2
+
+
+Determining if the system is big endian passed with the following output:
+Change Dir: /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_304f8/fast"
+/usr/bin/make -f CMakeFiles/cmTC_304f8.dir/build.make CMakeFiles/cmTC_304f8.dir/build
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 들어감
+Building C object CMakeFiles/cmTC_304f8.dir/TestEndianess.c.o
+/usr/bin/cc    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -O3 -DNDEBUG -fPIE   -o CMakeFiles/cmTC_304f8.dir/TestEndianess.c.o   -c /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp/TestEndianess.c
+Linking C executable cmTC_304f8
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_304f8.dir/link.txt --verbose=1
+/usr/bin/cc     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -O3 -DNDEBUG    -Wl,--gc-sections  CMakeFiles/cmTC_304f8.dir/TestEndianess.c.o  -o cmTC_304f8 -rdynamic 
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 나감
+
+TestEndianess.c:
+/* A 16 bit integer is required. */
+typedef unsigned short cmakeint16;
+
+/* On a little endian machine, these 16bit ints will give "THIS IS LITTLE ENDIAN."
+   On a big endian machine the characters will be exchanged pairwise. */
+const cmakeint16 info_little[] =  {0x4854, 0x5349, 0x4920, 0x2053, 0x494c, 0x5454, 0x454c, 0x4520, 0x444e, 0x4149, 0x2e4e, 0x0000};
+
+/* on a big endian machine, these 16bit ints will give "THIS IS BIG ENDIAN."
+   On a little endian machine the characters will be exchanged pairwise. */
+const cmakeint16 info_big[] =     {0x5448, 0x4953, 0x2049, 0x5320, 0x4249, 0x4720, 0x454e, 0x4449, 0x414e, 0x2e2e, 0x0000};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_little[argc];
+  require += info_big[argc];
+  (void)argv;
+  return require;
+}
+
+
+Build output check failed:
+    Regex: 'unrecognized .*option'
+    Output line: 'cc1: warning: unrecognized command line option ‘-Wno-misleading-indentation’'
+Compilation failed:
+    source file: '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp/src.c'
+    check option: ' -Wno-misleading-indentation'
+===== BUILD LOG =====
+Change Dir: /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_2af0f/fast"
+/usr/bin/make -f CMakeFiles/cmTC_2af0f.dir/build.make CMakeFiles/cmTC_2af0f.dir/build
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 들어감
+Building C object CMakeFiles/cmTC_2af0f.dir/src.c.o
+/usr/bin/cc    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security   -Wstrict-prototypes  -Winit-self -Wpointer-arith  -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -Wno-unused-but-set-variable -Wno-missing-prototypes -Wno-missing-declarations -Wno-undef -Wno-unused -Wno-sign-compare -Wno-cast-align -Wno-shadow -Wno-maybe-uninitialized -Wno-pointer-to-int-cast -Wno-int-to-pointer-cast  -O3 -DNDEBUG -fPIE   -Wno-misleading-indentation -o CMakeFiles/cmTC_2af0f.dir/src.c.o   -c /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp/src.c
+/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp/src.c:1:0: warning: ignoring #pragma   [-Wunknown-pragmas]
+ #pragma
+ ^
+cc1: warning: unrecognized command line option ‘-Wno-misleading-indentation’
+Linking C executable cmTC_2af0f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2af0f.dir/link.txt --verbose=1
+/usr/bin/cc     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security   -Wstrict-prototypes  -Winit-self -Wpointer-arith  -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -Wno-unused-but-set-variable -Wno-missing-prototypes -Wno-missing-declarations -Wno-undef -Wno-unused -Wno-sign-compare -Wno-cast-align -Wno-shadow -Wno-maybe-uninitialized -Wno-pointer-to-int-cast -Wno-int-to-pointer-cast  -O3 -DNDEBUG    -Wl,--gc-sections  CMakeFiles/cmTC_2af0f.dir/src.c.o  -o cmTC_2af0f -rdynamic 
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 나감
+
+===== END =====
+
+Build output check failed:
+    Regex: 'unrecognized .*option'
+    Output line: 'cc1: warning: unrecognized command line option ‘-Wno-pointer-compare’'
+Compilation failed:
+    source file: '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp/src.c'
+    check option: ' -Wno-pointer-compare'
+===== BUILD LOG =====
+Change Dir: /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_3c084/fast"
+/usr/bin/make -f CMakeFiles/cmTC_3c084.dir/build.make CMakeFiles/cmTC_3c084.dir/build
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 들어감
+Building C object CMakeFiles/cmTC_3c084.dir/src.c.o
+/usr/bin/cc    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security   -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith  -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -Wno-implicit-function-declaration -Wno-uninitialized -Wno-missing-prototypes -Wno-unused-but-set-parameter -Wno-missing-declarations -Wno-unused -Wno-shadow -Wno-sign-compare -Wno-strict-overflow  -O3 -DNDEBUG -fPIE   -Wno-pointer-compare -o CMakeFiles/cmTC_3c084.dir/src.c.o   -c /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp/src.c
+/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp/src.c:1:0: warning: ignoring #pragma   [-Wunknown-pragmas]
+ #pragma
+ ^
+cc1: warning: unrecognized command line option ‘-Wno-pointer-compare’
+Linking C executable cmTC_3c084
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3c084.dir/link.txt --verbose=1
+/usr/bin/cc     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security   -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith  -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -Wno-implicit-function-declaration -Wno-uninitialized -Wno-missing-prototypes -Wno-unused-but-set-parameter -Wno-missing-declarations -Wno-unused -Wno-shadow -Wno-sign-compare -Wno-strict-overflow  -O3 -DNDEBUG    -Wl,--gc-sections  CMakeFiles/cmTC_3c084.dir/src.c.o  -o cmTC_3c084 -rdynamic 
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 나감
+
+===== END =====
+
+Build output check failed:
+    Regex: 'unrecognized .*option'
+    Output line: 'cc1: warning: unrecognized command line option ‘-Wno-absolute-value’'
+Compilation failed:
+    source file: '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp/src.c'
+    check option: ' -Wno-absolute-value'
+===== BUILD LOG =====
+Change Dir: /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_611b6/fast"
+/usr/bin/make -f CMakeFiles/cmTC_611b6.dir/build.make CMakeFiles/cmTC_611b6.dir/build
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 들어감
+Building C object CMakeFiles/cmTC_611b6.dir/src.c.o
+/usr/bin/cc    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security   -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith  -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -Wno-implicit-function-declaration -Wno-uninitialized -Wno-missing-prototypes -Wno-unused-but-set-parameter -Wno-missing-declarations -Wno-unused -Wno-shadow -Wno-sign-compare -Wno-strict-overflow  -O3 -DNDEBUG -fPIE   -Wno-absolute-value -o CMakeFiles/cmTC_611b6.dir/src.c.o   -c /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp/src.c
+/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp/src.c:1:0: warning: ignoring #pragma   [-Wunknown-pragmas]
+ #pragma
+ ^
+cc1: warning: unrecognized command line option ‘-Wno-absolute-value’
+Linking C executable cmTC_611b6
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_611b6.dir/link.txt --verbose=1
+/usr/bin/cc     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security   -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith  -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -Wno-implicit-function-declaration -Wno-uninitialized -Wno-missing-prototypes -Wno-unused-but-set-parameter -Wno-missing-declarations -Wno-unused -Wno-shadow -Wno-sign-compare -Wno-strict-overflow  -O3 -DNDEBUG    -Wl,--gc-sections  CMakeFiles/cmTC_611b6.dir/src.c.o  -o cmTC_611b6 -rdynamic 
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 나감
+
+===== END =====
+
+Build output check failed:
+    Regex: 'unrecognized .*option'
+    Output line: 'cc1plus: warning: unrecognized command line option ‘-Wno-misleading-indentation’'
+Compilation failed:
+    source file: '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp/src.cxx'
+    check option: ' -Wno-misleading-indentation'
+===== BUILD LOG =====
+Change Dir: /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_53368/fast"
+/usr/bin/make -f CMakeFiles/cmTC_53368.dir/build.make CMakeFiles/cmTC_53368.dir/build
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 들어감
+Building CXX object CMakeFiles/cmTC_53368.dir/src.cxx.o
+/usr/bin/c++     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security   -Winit-self -Wpointer-arith  -Wsign-promo  -Winit-self -Wno-narrowing -Wno-delete-non-virtual-dtor -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -fvisibility-inlines-hidden -Wno-shadow -Wno-unused -Wno-sign-compare -Wno-undef -Wno-missing-declarations -Wno-uninitialized -Wno-switch -Wno-parentheses -Wno-array-bounds -Wno-extra -Wno-deprecated-declarations  -O3 -DNDEBUG -fPIE   -Wno-misleading-indentation -o CMakeFiles/cmTC_53368.dir/src.cxx.o -c /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp/src.cxx
+/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp/src.cxx:1:0: warning: ignoring #pragma   [-Wunknown-pragmas]
+ #pragma
+ ^
+cc1plus: warning: unrecognized command line option ‘-Wno-misleading-indentation’
+Linking CXX executable cmTC_53368
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_53368.dir/link.txt --verbose=1
+/usr/bin/c++      -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security   -Winit-self -Wpointer-arith  -Wsign-promo  -Winit-self -Wno-narrowing -Wno-delete-non-virtual-dtor -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -fvisibility-inlines-hidden -Wno-shadow -Wno-unused -Wno-sign-compare -Wno-undef -Wno-missing-declarations -Wno-uninitialized -Wno-switch -Wno-parentheses -Wno-array-bounds -Wno-extra -Wno-deprecated-declarations  -O3 -DNDEBUG    -Wl,--gc-sections  CMakeFiles/cmTC_53368.dir/src.cxx.o  -o cmTC_53368 -rdynamic 
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 나감
+
+===== END =====
+
+Determining if the include file linux/videodev.h exists failed with the following output:
+Change Dir: /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_3b0cc/fast"
+/usr/bin/make -f CMakeFiles/cmTC_3b0cc.dir/build.make CMakeFiles/cmTC_3b0cc.dir/build
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 들어감
+Building C object CMakeFiles/cmTC_3b0cc.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -O3 -DNDEBUG -fPIE   -o CMakeFiles/cmTC_3b0cc.dir/CheckIncludeFile.c.o   -c /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:28: fatal error: linux/videodev.h: 그런 파일이나 디렉터리가 없습니다
+compilation terminated.
+CMakeFiles/cmTC_3b0cc.dir/build.make:65: 'CMakeFiles/cmTC_3b0cc.dir/CheckIncludeFile.c.o' 타겟에 대한 명령이 실패했습니다
+make[1]: *** [CMakeFiles/cmTC_3b0cc.dir/CheckIncludeFile.c.o] 오류 1
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 나감
+Makefile:126: 'cmTC_3b0cc/fast' 타겟에 대한 명령이 실패했습니다
+make: *** [cmTC_3b0cc/fast] 오류 2
+
+
+Determining if the include file sys/videoio.h exists failed with the following output:
+Change Dir: /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_05e9a/fast"
+/usr/bin/make -f CMakeFiles/cmTC_05e9a.dir/build.make CMakeFiles/cmTC_05e9a.dir/build
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 들어감
+Building C object CMakeFiles/cmTC_05e9a.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -O3 -DNDEBUG -fPIE   -o CMakeFiles/cmTC_05e9a.dir/CheckIncludeFile.c.o   -c /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:25: fatal error: sys/videoio.h: 그런 파일이나 디렉터리가 없습니다
+compilation terminated.
+CMakeFiles/cmTC_05e9a.dir/build.make:65: 'CMakeFiles/cmTC_05e9a.dir/CheckIncludeFile.c.o' 타겟에 대한 명령이 실패했습니다
+make[1]: *** [CMakeFiles/cmTC_05e9a.dir/CheckIncludeFile.c.o] 오류 1
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 나감
+Makefile:126: 'cmTC_05e9a/fast' 타겟에 대한 명령이 실패했습니다
+make: *** [cmTC_05e9a/fast] 오류 2
+
+
+Build output check failed:
+    Regex: 'command line option .* is valid for .* but not for C\+\+'
+    Output line: 'cc1plus: warning: command line option ‘-Wno-missing-prototypes’ is valid for C/ObjC but not for C++'
+Compilation failed:
+    source file: '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp/src.cxx'
+    check option: ' -Wno-missing-prototypes'
+===== BUILD LOG =====
+Change Dir: /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_6b577/fast"
+/usr/bin/make -f CMakeFiles/cmTC_6b577.dir/build.make CMakeFiles/cmTC_6b577.dir/build
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 들어감
+Building CXX object CMakeFiles/cmTC_6b577.dir/src.cxx.o
+/usr/bin/c++     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winit-self -Wno-narrowing -Wno-delete-non-virtual-dtor -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -fvisibility-inlines-hidden -Wno-deprecated  -O3 -DNDEBUG -fPIE   -Wno-missing-prototypes -o CMakeFiles/cmTC_6b577.dir/src.cxx.o -c /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp/src.cxx
+cc1plus: warning: command line option ‘-Wno-missing-prototypes’ is valid for C/ObjC but not for C++
+/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp/src.cxx:1:0: warning: ignoring #pragma   [-Wunknown-pragmas]
+ #pragma
+ ^
+Linking CXX executable cmTC_6b577
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6b577.dir/link.txt --verbose=1
+/usr/bin/c++      -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winit-self -Wno-narrowing -Wno-delete-non-virtual-dtor -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -fvisibility-inlines-hidden -Wno-deprecated  -O3 -DNDEBUG    -Wl,--gc-sections  CMakeFiles/cmTC_6b577.dir/src.cxx.o  -o cmTC_6b577 -rdynamic 
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 나감
+
+===== END =====
+
+Build output check failed:
+    Regex: 'unrecognized .*option'
+    Output line: 'cc1plus: warning: unrecognized command line option ‘-Wno-tautological-undefined-compare’'
+Compilation failed:
+    source file: '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp/src.cxx'
+    check option: ' -Wno-tautological-undefined-compare'
+===== BUILD LOG =====
+Change Dir: /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_3be69/fast"
+/usr/bin/make -f CMakeFiles/cmTC_3be69.dir/build.make CMakeFiles/cmTC_3be69.dir/build
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 들어감
+Building CXX object CMakeFiles/cmTC_3be69.dir/src.cxx.o
+/usr/bin/c++     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security   -Winit-self -Wpointer-arith   -Wuninitialized -Winit-self -Wno-narrowing -Wno-delete-non-virtual-dtor -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -fvisibility-inlines-hidden -Wno-deprecated -Wno-missing-declarations -Wno-shadow -Wno-unused-parameter -Wno-unused-local-typedefs -Wno-sign-compare -Wno-sign-promo -Wno-undef  -O3 -DNDEBUG -fPIE   -Wno-tautological-undefined-compare -o CMakeFiles/cmTC_3be69.dir/src.cxx.o -c /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp/src.cxx
+/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp/src.cxx:1:0: warning: ignoring #pragma   [-Wunknown-pragmas]
+ #pragma
+ ^
+cc1plus: warning: unrecognized command line option ‘-Wno-tautological-undefined-compare’
+Linking CXX executable cmTC_3be69
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3be69.dir/link.txt --verbose=1
+/usr/bin/c++      -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security   -Winit-self -Wpointer-arith   -Wuninitialized -Winit-self -Wno-narrowing -Wno-delete-non-virtual-dtor -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -fvisibility-inlines-hidden -Wno-deprecated -Wno-missing-declarations -Wno-shadow -Wno-unused-parameter -Wno-unused-local-typedefs -Wno-sign-compare -Wno-sign-promo -Wno-undef  -O3 -DNDEBUG    -Wl,--gc-sections  CMakeFiles/cmTC_3be69.dir/src.cxx.o  -o cmTC_3be69 -rdynamic 
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 나감
+
+===== END =====
+
+Build output check failed:
+    Regex: 'unrecognized .*option'
+    Output line: 'cc1plus: warning: unrecognized command line option ‘-Wno-unused-const-variable’'
+Compilation failed:
+    source file: '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp/src.cxx'
+    check option: ' -Wno-unused-const-variable'
+===== BUILD LOG =====
+Change Dir: /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_29481/fast"
+/usr/bin/make -f CMakeFiles/cmTC_29481.dir/build.make CMakeFiles/cmTC_29481.dir/build
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 들어감
+Building CXX object CMakeFiles/cmTC_29481.dir/src.cxx.o
+/usr/bin/c++     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security   -Winit-self -Wpointer-arith   -Wuninitialized -Winit-self -Wno-narrowing -Wno-delete-non-virtual-dtor -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -fvisibility-inlines-hidden -Wno-deprecated -Wno-missing-declarations -Wno-shadow -Wno-unused-parameter -Wno-unused-local-typedefs -Wno-sign-compare -Wno-sign-promo -Wno-undef -Wno-ignored-qualifiers -Wno-extra -Wno-unused-function  -O3 -DNDEBUG -fPIE   -Wno-unused-const-variable -o CMakeFiles/cmTC_29481.dir/src.cxx.o -c /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp/src.cxx
+/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp/src.cxx:1:0: warning: ignoring #pragma   [-Wunknown-pragmas]
+ #pragma
+ ^
+cc1plus: warning: unrecognized command line option ‘-Wno-unused-const-variable’
+Linking CXX executable cmTC_29481
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_29481.dir/link.txt --verbose=1
+/usr/bin/c++      -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security   -Winit-self -Wpointer-arith   -Wuninitialized -Winit-self -Wno-narrowing -Wno-delete-non-virtual-dtor -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -fvisibility-inlines-hidden -Wno-deprecated -Wno-missing-declarations -Wno-shadow -Wno-unused-parameter -Wno-unused-local-typedefs -Wno-sign-compare -Wno-sign-promo -Wno-undef -Wno-ignored-qualifiers -Wno-extra -Wno-unused-function  -O3 -DNDEBUG    -Wl,--gc-sections  CMakeFiles/cmTC_29481.dir/src.cxx.o  -o cmTC_29481 -rdynamic 
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 나감
+
+===== END =====
+
+Build output check failed:
+    Regex: 'unrecognized .*option'
+    Output line: 'cc1plus: warning: unrecognized command line option ‘-Wno-shorten-64-to-32’'
+Compilation failed:
+    source file: '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp/src.cxx'
+    check option: ' -Wno-shorten-64-to-32'
+===== BUILD LOG =====
+Change Dir: /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_cbe81/fast"
+/usr/bin/make -f CMakeFiles/cmTC_cbe81.dir/build.make CMakeFiles/cmTC_cbe81.dir/build
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 들어감
+Building CXX object CMakeFiles/cmTC_cbe81.dir/src.cxx.o
+/usr/bin/c++     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security   -Winit-self -Wpointer-arith   -Wuninitialized -Winit-self -Wno-narrowing -Wno-delete-non-virtual-dtor -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -fvisibility-inlines-hidden -Wno-deprecated -Wno-missing-declarations -Wno-shadow -Wno-unused-parameter -Wno-unused-local-typedefs -Wno-sign-compare -Wno-sign-promo -Wno-undef -Wno-ignored-qualifiers -Wno-extra -Wno-unused-function  -O3 -DNDEBUG -fPIE   -Wno-shorten-64-to-32 -o CMakeFiles/cmTC_cbe81.dir/src.cxx.o -c /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp/src.cxx
+/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp/src.cxx:1:0: warning: ignoring #pragma   [-Wunknown-pragmas]
+ #pragma
+ ^
+cc1plus: warning: unrecognized command line option ‘-Wno-shorten-64-to-32’
+Linking CXX executable cmTC_cbe81
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cbe81.dir/link.txt --verbose=1
+/usr/bin/c++      -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security   -Winit-self -Wpointer-arith   -Wuninitialized -Winit-self -Wno-narrowing -Wno-delete-non-virtual-dtor -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -fvisibility-inlines-hidden -Wno-deprecated -Wno-missing-declarations -Wno-shadow -Wno-unused-parameter -Wno-unused-local-typedefs -Wno-sign-compare -Wno-sign-promo -Wno-undef -Wno-ignored-qualifiers -Wno-extra -Wno-unused-function  -O3 -DNDEBUG    -Wl,--gc-sections  CMakeFiles/cmTC_cbe81.dir/src.cxx.o  -o cmTC_cbe81 -rdynamic 
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 나감
+
+===== END =====
+
+Determining if the include file linux/videodev.h exists failed with the following output:
+Change Dir: /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_f9218/fast"
+/usr/bin/make -f CMakeFiles/cmTC_f9218.dir/build.make CMakeFiles/cmTC_f9218.dir/build
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 들어감
+Building C object CMakeFiles/cmTC_f9218.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -O3 -DNDEBUG -fPIE   -o CMakeFiles/cmTC_f9218.dir/CheckIncludeFile.c.o   -c /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:28: fatal error: linux/videodev.h: 그런 파일이나 디렉터리가 없습니다
+compilation terminated.
+CMakeFiles/cmTC_f9218.dir/build.make:65: 'CMakeFiles/cmTC_f9218.dir/CheckIncludeFile.c.o' 타겟에 대한 명령이 실패했습니다
+make[1]: *** [CMakeFiles/cmTC_f9218.dir/CheckIncludeFile.c.o] 오류 1
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 나감
+Makefile:126: 'cmTC_f9218/fast' 타겟에 대한 명령이 실패했습니다
+make: *** [cmTC_f9218/fast] 오류 2
+
+
+Determining if the include file sys/videoio.h exists failed with the following output:
+Change Dir: /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_6fa01/fast"
+/usr/bin/make -f CMakeFiles/cmTC_6fa01.dir/build.make CMakeFiles/cmTC_6fa01.dir/build
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 들어감
+Building C object CMakeFiles/cmTC_6fa01.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -O3 -DNDEBUG -fPIE   -o CMakeFiles/cmTC_6fa01.dir/CheckIncludeFile.c.o   -c /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:25: fatal error: sys/videoio.h: 그런 파일이나 디렉터리가 없습니다
+compilation terminated.
+CMakeFiles/cmTC_6fa01.dir/build.make:65: 'CMakeFiles/cmTC_6fa01.dir/CheckIncludeFile.c.o' 타겟에 대한 명령이 실패했습니다
+make[1]: *** [CMakeFiles/cmTC_6fa01.dir/CheckIncludeFile.c.o] 오류 1
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 나감
+Makefile:126: 'cmTC_6fa01/fast' 타겟에 대한 명령이 실패했습니다
+make: *** [cmTC_6fa01/fast] 오류 2
+
+
+Determining if the include file linux/videodev.h exists failed with the following output:
+Change Dir: /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_9353f/fast"
+/usr/bin/make -f CMakeFiles/cmTC_9353f.dir/build.make CMakeFiles/cmTC_9353f.dir/build
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 들어감
+Building C object CMakeFiles/cmTC_9353f.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -O3 -DNDEBUG -fPIE   -o CMakeFiles/cmTC_9353f.dir/CheckIncludeFile.c.o   -c /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:28: fatal error: linux/videodev.h: 그런 파일이나 디렉터리가 없습니다
+compilation terminated.
+CMakeFiles/cmTC_9353f.dir/build.make:65: 'CMakeFiles/cmTC_9353f.dir/CheckIncludeFile.c.o' 타겟에 대한 명령이 실패했습니다
+make[1]: *** [CMakeFiles/cmTC_9353f.dir/CheckIncludeFile.c.o] 오류 1
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 나감
+Makefile:126: 'cmTC_9353f/fast' 타겟에 대한 명령이 실패했습니다
+make: *** [cmTC_9353f/fast] 오류 2
+
+
+Determining if the include file sys/videoio.h exists failed with the following output:
+Change Dir: /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_98109/fast"
+/usr/bin/make -f CMakeFiles/cmTC_98109.dir/build.make CMakeFiles/cmTC_98109.dir/build
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 들어감
+Building C object CMakeFiles/cmTC_98109.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -O3 -DNDEBUG -fPIE   -o CMakeFiles/cmTC_98109.dir/CheckIncludeFile.c.o   -c /home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:25: fatal error: sys/videoio.h: 그런 파일이나 디렉터리가 없습니다
+compilation terminated.
+CMakeFiles/cmTC_98109.dir/build.make:65: 'CMakeFiles/cmTC_98109.dir/CheckIncludeFile.c.o' 타겟에 대한 명령이 실패했습니다
+make[1]: *** [CMakeFiles/cmTC_98109.dir/CheckIncludeFile.c.o] 오류 1
+make[1]: 디렉터리 '/home/jeon/다운로드/opencv-3.4.0/build/CMakeFiles/CMakeTmp' 나감
+Makefile:126: 'cmTC_98109/fast' 타겟에 대한 명령이 실패했습니다
+make: *** [cmTC_98109/fast] 오류 2
+
+

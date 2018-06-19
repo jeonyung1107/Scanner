@@ -1,0 +1,863 @@
+ok: class CLASS ::.Highgui : , name: Highgui, base: 
+
+
+===== Header: /home/jeon/다운로드/opencv-3.4.0/modules/highgui/include/opencv2/highgui/highgui_c.h =====
+Namespaces: set([''])
+
+--- Incoming ---
+[u'const CV_FONT_LIGHT', u'25', [], [], None, '']
+ok: CONST CV_FONT_LIGHT=25
+
+--- Incoming ---
+[u'const CV_FONT_NORMAL', u'50', [], [], None, '']
+ok: CONST CV_FONT_NORMAL=50
+
+--- Incoming ---
+[u'const CV_FONT_DEMIBOLD', u'63', [], [], None, '']
+ok: CONST CV_FONT_DEMIBOLD=63
+
+--- Incoming ---
+[u'const CV_FONT_BOLD', u'75', [], [], None, '']
+ok: CONST CV_FONT_BOLD=75
+
+--- Incoming ---
+[u'const CV_FONT_BLACK', u'87', [], [], None, '']
+ok: CONST CV_FONT_BLACK=87
+
+--- Incoming ---
+[u'const CV_STYLE_NORMAL', u'0', [], [], None, '']
+ok: CONST CV_STYLE_NORMAL=0
+
+--- Incoming ---
+[u'const CV_STYLE_ITALIC', u'1', [], [], None, '']
+ok: CONST CV_STYLE_ITALIC=1
+
+--- Incoming ---
+[u'const CV_STYLE_OBLIQUE', u'2', [], [], None, '']
+ok: CONST CV_STYLE_OBLIQUE=2
+
+--- Incoming ---
+[u'const CV_PUSH_BUTTON', u'0', [], [], None, '']
+ignored: CONST CV_PUSH_BUTTON=0
+
+--- Incoming ---
+[u'const CV_CHECKBOX', u'1', [], [], None, '']
+ignored: CONST CV_CHECKBOX=1
+
+--- Incoming ---
+[u'const CV_RADIOBOX', u'2', [], [], None, '']
+ignored: CONST CV_RADIOBOX=2
+
+--- Incoming ---
+[u'const CV_WND_PROP_FULLSCREEN', u'0', [], [], None, '']
+ignored: CONST CV_WND_PROP_FULLSCREEN=0
+
+--- Incoming ---
+[u'const CV_WND_PROP_AUTOSIZE', u'1', [], [], None, '']
+ignored: CONST CV_WND_PROP_AUTOSIZE=1
+
+--- Incoming ---
+[u'const CV_WND_PROP_ASPECTRATIO', u'2', [], [], None, '']
+ignored: CONST CV_WND_PROP_ASPECTRATIO=2
+
+--- Incoming ---
+[u'const CV_WND_PROP_OPENGL', u'3', [], [], None, '']
+ignored: CONST CV_WND_PROP_OPENGL=3
+
+--- Incoming ---
+[u'const CV_WND_PROP_VISIBLE', u'4', [], [], None, '']
+ignored: CONST CV_WND_PROP_VISIBLE=4
+
+--- Incoming ---
+[u'const CV_WINDOW_NORMAL', u'0x00000000', [], [], None, '']
+ignored: CONST CV_WINDOW_NORMAL=0x00000000
+
+--- Incoming ---
+[u'const CV_WINDOW_AUTOSIZE', u'0x00000001', [], [], None, '']
+ignored: CONST CV_WINDOW_AUTOSIZE=0x00000001
+
+--- Incoming ---
+[u'const CV_WINDOW_OPENGL', u'0x00001000', [], [], None, '']
+ignored: CONST CV_WINDOW_OPENGL=0x00001000
+
+--- Incoming ---
+[u'const CV_GUI_EXPANDED', u'0x00000000', [], [], None, '']
+ignored: CONST CV_GUI_EXPANDED=0x00000000
+
+--- Incoming ---
+[u'const CV_GUI_NORMAL', u'0x00000010', [], [], None, '']
+ignored: CONST CV_GUI_NORMAL=0x00000010
+
+--- Incoming ---
+[u'const CV_WINDOW_FULLSCREEN', u'1', [], [], None, '']
+ignored: CONST CV_WINDOW_FULLSCREEN=1
+
+--- Incoming ---
+[u'const CV_WINDOW_FREERATIO', u'0x00000100', [], [], None, '']
+ignored: CONST CV_WINDOW_FREERATIO=0x00000100
+
+--- Incoming ---
+[u'const CV_WINDOW_KEEPRATIO', u'0x00000000', [], [], None, '']
+ignored: CONST CV_WINDOW_KEEPRATIO=0x00000000
+
+--- Incoming ---
+[u'const CV_EVENT_MOUSEMOVE', u'0', [], [], None, '']
+ignored: CONST CV_EVENT_MOUSEMOVE=0
+
+--- Incoming ---
+[u'const CV_EVENT_LBUTTONDOWN', u'1', [], [], None, '']
+ignored: CONST CV_EVENT_LBUTTONDOWN=1
+
+--- Incoming ---
+[u'const CV_EVENT_RBUTTONDOWN', u'2', [], [], None, '']
+ignored: CONST CV_EVENT_RBUTTONDOWN=2
+
+--- Incoming ---
+[u'const CV_EVENT_MBUTTONDOWN', u'3', [], [], None, '']
+ignored: CONST CV_EVENT_MBUTTONDOWN=3
+
+--- Incoming ---
+[u'const CV_EVENT_LBUTTONUP', u'4', [], [], None, '']
+ignored: CONST CV_EVENT_LBUTTONUP=4
+
+--- Incoming ---
+[u'const CV_EVENT_RBUTTONUP', u'5', [], [], None, '']
+ignored: CONST CV_EVENT_RBUTTONUP=5
+
+--- Incoming ---
+[u'const CV_EVENT_MBUTTONUP', u'6', [], [], None, '']
+ignored: CONST CV_EVENT_MBUTTONUP=6
+
+--- Incoming ---
+[u'const CV_EVENT_LBUTTONDBLCLK', u'7', [], [], None, '']
+ignored: CONST CV_EVENT_LBUTTONDBLCLK=7
+
+--- Incoming ---
+[u'const CV_EVENT_RBUTTONDBLCLK', u'8', [], [], None, '']
+ignored: CONST CV_EVENT_RBUTTONDBLCLK=8
+
+--- Incoming ---
+[u'const CV_EVENT_MBUTTONDBLCLK', u'9', [], [], None, '']
+ignored: CONST CV_EVENT_MBUTTONDBLCLK=9
+
+--- Incoming ---
+[u'const CV_EVENT_MOUSEWHEEL', u'10', [], [], None, '']
+ignored: CONST CV_EVENT_MOUSEWHEEL=10
+
+--- Incoming ---
+[u'const CV_EVENT_MOUSEHWHEEL', u'11', [], [], None, '']
+ignored: CONST CV_EVENT_MOUSEHWHEEL=11
+
+--- Incoming ---
+[u'const CV_EVENT_FLAG_LBUTTON', u'1', [], [], None, '']
+ignored: CONST CV_EVENT_FLAG_LBUTTON=1
+
+--- Incoming ---
+[u'const CV_EVENT_FLAG_RBUTTON', u'2', [], [], None, '']
+ignored: CONST CV_EVENT_FLAG_RBUTTON=2
+
+--- Incoming ---
+[u'const CV_EVENT_FLAG_MBUTTON', u'4', [], [], None, '']
+ignored: CONST CV_EVENT_FLAG_MBUTTON=4
+
+--- Incoming ---
+[u'const CV_EVENT_FLAG_CTRLKEY', u'8', [], [], None, '']
+ignored: CONST CV_EVENT_FLAG_CTRLKEY=8
+
+--- Incoming ---
+[u'const CV_EVENT_FLAG_SHIFTKEY', u'16', [], [], None, '']
+ignored: CONST CV_EVENT_FLAG_SHIFTKEY=16
+
+--- Incoming ---
+[u'const CV_EVENT_FLAG_ALTKEY', u'32', [], [], None, '']
+ignored: CONST CV_EVENT_FLAG_ALTKEY=32
+
+
+===== Header: /home/jeon/다운로드/opencv-3.4.0/modules/highgui/include/opencv2/highgui.hpp =====
+Namespaces: set(['', u'cv'])
+
+--- Incoming ---
+[u'const cv.WINDOW_NORMAL', u'0x00000000', [], [], None, '']
+ignored: CONST WINDOW_NORMAL=0x00000000
+
+--- Incoming ---
+[u'const cv.WINDOW_AUTOSIZE', u'0x00000001', [], [], None, '']
+ignored: CONST WINDOW_AUTOSIZE=0x00000001
+
+--- Incoming ---
+[u'const cv.WINDOW_OPENGL', u'0x00001000', [], [], None, '']
+ignored: CONST WINDOW_OPENGL=0x00001000
+
+--- Incoming ---
+[u'const cv.WINDOW_FULLSCREEN', u'1', [], [], None, '']
+ignored: CONST WINDOW_FULLSCREEN=1
+
+--- Incoming ---
+[u'const cv.WINDOW_FREERATIO', u'0x00000100', [], [], None, '']
+ignored: CONST WINDOW_FREERATIO=0x00000100
+
+--- Incoming ---
+[u'const cv.WINDOW_KEEPRATIO', u'0x00000000', [], [], None, '']
+ignored: CONST WINDOW_KEEPRATIO=0x00000000
+
+--- Incoming ---
+[u'const cv.WINDOW_GUI_EXPANDED', u'0x00000000', [], [], None, '']
+ignored: CONST WINDOW_GUI_EXPANDED=0x00000000
+
+--- Incoming ---
+[u'const cv.WINDOW_GUI_NORMAL', u'0x00000010', [], [], None, '']
+ignored: CONST WINDOW_GUI_NORMAL=0x00000010
+
+--- Incoming ---
+[u'const cv.WND_PROP_FULLSCREEN', u'0', [], [], None, '']
+ignored: CONST WND_PROP_FULLSCREEN=0
+
+--- Incoming ---
+[u'const cv.WND_PROP_AUTOSIZE', u'1', [], [], None, '']
+ignored: CONST WND_PROP_AUTOSIZE=1
+
+--- Incoming ---
+[u'const cv.WND_PROP_ASPECT_RATIO', u'2', [], [], None, '']
+ignored: CONST WND_PROP_ASPECT_RATIO=2
+
+--- Incoming ---
+[u'const cv.WND_PROP_OPENGL', u'3', [], [], None, '']
+ignored: CONST WND_PROP_OPENGL=3
+
+--- Incoming ---
+[u'const cv.WND_PROP_VISIBLE', u'4', [], [], None, '']
+ignored: CONST WND_PROP_VISIBLE=4
+
+--- Incoming ---
+[u'const cv.EVENT_MOUSEMOVE', u'0', [], [], None, '']
+ignored: CONST EVENT_MOUSEMOVE=0
+
+--- Incoming ---
+[u'const cv.EVENT_LBUTTONDOWN', u'1', [], [], None, '']
+ignored: CONST EVENT_LBUTTONDOWN=1
+
+--- Incoming ---
+[u'const cv.EVENT_RBUTTONDOWN', u'2', [], [], None, '']
+ignored: CONST EVENT_RBUTTONDOWN=2
+
+--- Incoming ---
+[u'const cv.EVENT_MBUTTONDOWN', u'3', [], [], None, '']
+ignored: CONST EVENT_MBUTTONDOWN=3
+
+--- Incoming ---
+[u'const cv.EVENT_LBUTTONUP', u'4', [], [], None, '']
+ignored: CONST EVENT_LBUTTONUP=4
+
+--- Incoming ---
+[u'const cv.EVENT_RBUTTONUP', u'5', [], [], None, '']
+ignored: CONST EVENT_RBUTTONUP=5
+
+--- Incoming ---
+[u'const cv.EVENT_MBUTTONUP', u'6', [], [], None, '']
+ignored: CONST EVENT_MBUTTONUP=6
+
+--- Incoming ---
+[u'const cv.EVENT_LBUTTONDBLCLK', u'7', [], [], None, '']
+ignored: CONST EVENT_LBUTTONDBLCLK=7
+
+--- Incoming ---
+[u'const cv.EVENT_RBUTTONDBLCLK', u'8', [], [], None, '']
+ignored: CONST EVENT_RBUTTONDBLCLK=8
+
+--- Incoming ---
+[u'const cv.EVENT_MBUTTONDBLCLK', u'9', [], [], None, '']
+ignored: CONST EVENT_MBUTTONDBLCLK=9
+
+--- Incoming ---
+[u'const cv.EVENT_MOUSEWHEEL', u'10', [], [], None, '']
+ignored: CONST EVENT_MOUSEWHEEL=10
+
+--- Incoming ---
+[u'const cv.EVENT_MOUSEHWHEEL', u'11', [], [], None, '']
+ignored: CONST EVENT_MOUSEHWHEEL=11
+
+--- Incoming ---
+[u'const cv.EVENT_FLAG_LBUTTON', u'1', [], [], None, '']
+ignored: CONST EVENT_FLAG_LBUTTON=1
+
+--- Incoming ---
+[u'const cv.EVENT_FLAG_RBUTTON', u'2', [], [], None, '']
+ignored: CONST EVENT_FLAG_RBUTTON=2
+
+--- Incoming ---
+[u'const cv.EVENT_FLAG_MBUTTON', u'4', [], [], None, '']
+ignored: CONST EVENT_FLAG_MBUTTON=4
+
+--- Incoming ---
+[u'const cv.EVENT_FLAG_CTRLKEY', u'8', [], [], None, '']
+ignored: CONST EVENT_FLAG_CTRLKEY=8
+
+--- Incoming ---
+[u'const cv.EVENT_FLAG_SHIFTKEY', u'16', [], [], None, '']
+ignored: CONST EVENT_FLAG_SHIFTKEY=16
+
+--- Incoming ---
+[u'const cv.EVENT_FLAG_ALTKEY', u'32', [], [], None, '']
+ignored: CONST EVENT_FLAG_ALTKEY=32
+
+--- Incoming ---
+[u'const cv.QT_FONT_LIGHT', u'25', [], [], None, '']
+ok: CONST QT_FONT_LIGHT=25
+
+--- Incoming ---
+[u'const cv.QT_FONT_NORMAL', u'50', [], [], None, '']
+ok: CONST QT_FONT_NORMAL=50
+
+--- Incoming ---
+[u'const cv.QT_FONT_DEMIBOLD', u'63', [], [], None, '']
+ok: CONST QT_FONT_DEMIBOLD=63
+
+--- Incoming ---
+[u'const cv.QT_FONT_BOLD', u'75', [], [], None, '']
+ok: CONST QT_FONT_BOLD=75
+
+--- Incoming ---
+[u'const cv.QT_FONT_BLACK', u'87', [], [], None, '']
+ok: CONST QT_FONT_BLACK=87
+
+--- Incoming ---
+[u'const cv.QT_STYLE_NORMAL', u'0', [], [], None, '']
+ok: CONST QT_STYLE_NORMAL=0
+
+--- Incoming ---
+[u'const cv.QT_STYLE_ITALIC', u'1', [], [], None, '']
+ok: CONST QT_STYLE_ITALIC=1
+
+--- Incoming ---
+[u'const cv.QT_STYLE_OBLIQUE', u'2', [], [], None, '']
+ok: CONST QT_STYLE_OBLIQUE=2
+
+--- Incoming ---
+[u'const cv.QT_PUSH_BUTTON', u'0', [], [], None, '']
+ok: CONST QT_PUSH_BUTTON=0
+
+--- Incoming ---
+[u'const cv.QT_CHECKBOX', u'1', [], [], None, '']
+ok: CONST QT_CHECKBOX=1
+
+--- Incoming ---
+[u'const cv.QT_RADIOBOX', u'2', [], [], None, '']
+ok: CONST QT_RADIOBOX=2
+
+--- Incoming ---
+[u'const cv.QT_NEW_BUTTONBAR', u'1024', [], [], None, '']
+ok: CONST QT_NEW_BUTTONBAR=1024
+
+--- Incoming ---
+[   u'cv.namedWindow',
+    u'void',
+    [],
+    [   [u'String', u'winname', u'', ['/C', '/Ref']],
+        [u'int', u'flags', u'WINDOW_AUTOSIZE', []]],
+    u'void',
+    u'@brief Creates a window.\n\nThe function namedWindow creates a window that can be used as a placeholder for images and\ntrackbars. Created windows are referred to by their names.\n\nIf a window with the same name already exists, the function does nothing.\n\nYou can call cv::destroyWindow or cv::destroyAllWindows to close the window and de-allocate any associated\nmemory usage. For a simple program, you do not really have to call these functions because all the\nresources and windows of the application are closed automatically by the operating system upon exit.\n\n@note\n\nQt backend supports additional flags:\n-   **WINDOW_NORMAL or WINDOW_AUTOSIZE:** WINDOW_NORMAL enables you to resize the\nwindow, whereas WINDOW_AUTOSIZE adjusts automatically the window size to fit the\ndisplayed image (see imshow ), and you cannot change the window size manually.\n-   **WINDOW_FREERATIO or WINDOW_KEEPRATIO:** WINDOW_FREERATIO adjusts the image\nwith no respect to its ratio, whereas WINDOW_KEEPRATIO keeps the image ratio.\n-   **WINDOW_GUI_NORMAL or WINDOW_GUI_EXPANDED:** WINDOW_GUI_NORMAL is the old way to draw the window\nwithout statusbar and toolbar, whereas WINDOW_GUI_EXPANDED is a new enhanced GUI.\nBy default, flags == WINDOW_AUTOSIZE | WINDOW_KEEPRATIO | WINDOW_GUI_EXPANDED\n\n@param winname Name of the window in the window caption that may be used as a window identifier.\n@param flags Flags of the window. The supported flags are: (cv::WindowFlags)']
+docstring: @brief Creates a window.
+
+The function namedWindow creates a window that can be used as a placeholder for images and
+trackbars. Created windows are referred to by their names.
+
+If a window with the same name already exists, the function does nothing.
+
+You can call cv::destroyWindow or cv::destroyAllWindows to close the window and de-allocate any associated
+memory usage. For a simple program, you do not really have to call these functions because all the
+resources and windows of the application are closed automatically by the operating system upon exit.
+
+@note
+
+Qt backend supports additional flags:
+-   **WINDOW_NORMAL or WINDOW_AUTOSIZE:** WINDOW_NORMAL enables you to resize the
+window, whereas WINDOW_AUTOSIZE adjusts automatically the window size to fit the
+displayed image (see imshow ), and you cannot change the window size manually.
+-   **WINDOW_FREERATIO or WINDOW_KEEPRATIO:** WINDOW_FREERATIO adjusts the image
+with no respect to its ratio, whereas WINDOW_KEEPRATIO keeps the image ratio.
+-   **WINDOW_GUI_NORMAL or WINDOW_GUI_EXPANDED:** WINDOW_GUI_NORMAL is the old way to draw the window
+without statusbar and toolbar, whereas WINDOW_GUI_EXPANDED is a new enhanced GUI.
+By default, flags == WINDOW_AUTOSIZE | WINDOW_KEEPRATIO | WINDOW_GUI_EXPANDED
+
+@param winname Name of the window in the window caption that may be used as a window identifier.
+@param flags Flags of the window. The supported flags are: (cv::WindowFlags)
+manual: FUNC <void cv..namedWindow [ARG String winname=, ARG int flags=WINDOW_AUTOSIZE]>
+
+--- Incoming ---
+[   u'cv.destroyWindow',
+    u'void',
+    [],
+    [[u'String', u'winname', u'', ['/C', '/Ref']]],
+    u'void',
+    u'@brief Destroys the specified window.\n\nThe function destroyWindow destroys the window with the given name.\n\n@param winname Name of the window to be destroyed.']
+docstring: @brief Destroys the specified window.
+
+The function destroyWindow destroys the window with the given name.
+
+@param winname Name of the window to be destroyed.
+manual: FUNC <void cv..destroyWindow [ARG String winname=]>
+
+--- Incoming ---
+[   u'cv.destroyAllWindows',
+    u'void',
+    [],
+    [],
+    u'void',
+    u'@brief Destroys all of the HighGUI windows.\n\nThe function destroyAllWindows destroys all of the opened HighGUI windows.']
+docstring: @brief Destroys all of the HighGUI windows.
+
+The function destroyAllWindows destroys all of the opened HighGUI windows.
+manual: FUNC <void cv..destroyAllWindows []>
+
+--- Incoming ---
+[u'cv.startWindowThread', u'int', [], [], u'int', '']
+manual: FUNC <int cv..startWindowThread []>
+
+--- Incoming ---
+[   u'cv.waitKeyEx',
+    u'int',
+    [],
+    [[u'int', u'delay', u'0', []]],
+    u'int',
+    u'@brief Similar to #waitKey, but returns full key code.\n\n@note\n\nKey code is implementation specific and depends on used backend: QT/GTK/Win32/etc']
+docstring: @brief Similar to #waitKey, but returns full key code.
+
+@note
+
+Key code is implementation specific and depends on used backend: QT/GTK/Win32/etc
+ok: FUNC <int cv..waitKeyEx [ARG int delay=0]>
+
+--- Incoming ---
+[   u'cv.waitKey',
+    u'int',
+    [],
+    [[u'int', u'delay', u'0', []]],
+    u'int',
+    u'@brief Waits for a pressed key.\n\nThe function waitKey waits for a key event infinitely (when \\f$\\texttt{delay}\\leq 0\\f$ ) or for delay\nmilliseconds, when it is positive. Since the OS has a minimum time between switching threads, the\nfunction will not wait exactly delay ms, it will wait at least delay ms, depending on what else is\nrunning on your computer at that time. It returns the code of the pressed key or -1 if no key was\npressed before the specified time had elapsed.\n\n@note\n\nThis function is the only method in HighGUI that can fetch and handle events, so it needs to be\ncalled periodically for normal event processing unless HighGUI is used within an environment that\ntakes care of event processing.\n\n@note\n\nThe function only works if there is at least one HighGUI window created and the window is active.\nIf there are several HighGUI windows, any of them can be active.\n\n@param delay Delay in milliseconds. 0 is the special value that means "forever".']
+docstring: @brief Waits for a pressed key.
+
+The function waitKey waits for a key event infinitely (when \f$\texttt{delay}\leq 0\f$ ) or for delay
+milliseconds, when it is positive. Since the OS has a minimum time between switching threads, the
+function will not wait exactly delay ms, it will wait at least delay ms, depending on what else is
+running on your computer at that time. It returns the code of the pressed key or -1 if no key was
+pressed before the specified time had elapsed.
+
+@note
+
+This function is the only method in HighGUI that can fetch and handle events, so it needs to be
+called periodically for normal event processing unless HighGUI is used within an environment that
+takes care of event processing.
+
+@note
+
+The function only works if there is at least one HighGUI window created and the window is active.
+If there are several HighGUI windows, any of them can be active.
+
+@param delay Delay in milliseconds. 0 is the special value that means "forever".
+manual: FUNC <int cv..waitKey [ARG int delay=0]>
+
+--- Incoming ---
+[   u'cv.imshow',
+    u'void',
+    [],
+    [[u'String', u'winname', u'', ['/C', '/Ref']], ['Mat', u'mat', '', []]],
+    u'void',
+    u'@brief Displays an image in the specified window.\n\nThe function imshow displays an image in the specified window. If the window was created with the\ncv::WINDOW_AUTOSIZE flag, the image is shown with its original size, however it is still limited by the screen resolution.\nOtherwise, the image is scaled to fit the window. The function may scale the image, depending on its depth:\n\n-   If the image is 8-bit unsigned, it is displayed as is.\n-   If the image is 16-bit unsigned or 32-bit integer, the pixels are divided by 256. That is, the\nvalue range [0,255\\*256] is mapped to [0,255].\n-   If the image is 32-bit or 64-bit floating-point, the pixel values are multiplied by 255. That is, the\nvalue range [0,1] is mapped to [0,255].\n\nIf window was created with OpenGL support, cv::imshow also support ogl::Buffer , ogl::Texture2D and\ncuda::GpuMat as input.\n\nIf the window was not created before this function, it is assumed creating a window with cv::WINDOW_AUTOSIZE.\n\nIf you need to show an image that is bigger than the screen resolution, you will need to call namedWindow("", WINDOW_NORMAL) before the imshow.\n\n@note This function should be followed by cv::waitKey function which displays the image for specified\nmilliseconds. Otherwise, it won\'t display the image. For example, **waitKey(0)** will display the window\ninfinitely until any keypress (it is suitable for image display). **waitKey(25)** will display a frame\nfor 25 ms, after which display will be automatically closed. (If you put it in a loop to read\nvideos, it will display the video frame-by-frame)\n\n@note\n\n[__Windows Backend Only__] Pressing Ctrl+C will copy the image to the clipboard.\n\n[__Windows Backend Only__] Pressing Ctrl+S will show a dialog to save the image.\n\n@param winname Name of the window.\n@param mat Image to be shown.']
+docstring: @brief Displays an image in the specified window.
+
+The function imshow displays an image in the specified window. If the window was created with the
+cv::WINDOW_AUTOSIZE flag, the image is shown with its original size, however it is still limited by the screen resolution.
+Otherwise, the image is scaled to fit the window. The function may scale the image, depending on its depth:
+
+-   If the image is 8-bit unsigned, it is displayed as is.
+-   If the image is 16-bit unsigned or 32-bit integer, the pixels are divided by 256. That is, the
+value range [0,255\*256] is mapped to [0,255].
+-   If the image is 32-bit or 64-bit floating-point, the pixel values are multiplied by 255. That is, the
+value range [0,1] is mapped to [0,255].
+
+If window was created with OpenGL support, cv::imshow also support ogl::Buffer , ogl::Texture2D and
+cuda::GpuMat as input.
+
+If the window was not created before this function, it is assumed creating a window with cv::WINDOW_AUTOSIZE.
+
+If you need to show an image that is bigger than the screen resolution, you will need to call namedWindow("", WINDOW_NORMAL) before the imshow.
+
+@note This function should be followed by cv::waitKey function which displays the image for specified
+milliseconds. Otherwise, it won't display the image. For example, **waitKey(0)** will display the window
+infinitely until any keypress (it is suitable for image display). **waitKey(25)** will display a frame
+for 25 ms, after which display will be automatically closed. (If you put it in a loop to read
+videos, it will display the video frame-by-frame)
+
+@note
+
+[__Windows Backend Only__] Pressing Ctrl+C will copy the image to the clipboard.
+
+[__Windows Backend Only__] Pressing Ctrl+S will show a dialog to save the image.
+
+@param winname Name of the window.
+@param mat Image to be shown.
+manual: FUNC <void cv..imshow [ARG String winname=, ARG Mat mat=]>
+
+--- Incoming ---
+[   u'cv.resizeWindow',
+    u'void',
+    [],
+    [   [u'String', u'winname', u'', ['/C', '/Ref']],
+        [u'int', u'width', u'', []],
+        [u'int', u'height', u'', []]],
+    u'void',
+    u'@brief Resizes window to the specified size\n\n@note\n\n-   The specified window size is for the image area. Toolbars are not counted.\n-   Only windows created without cv::WINDOW_AUTOSIZE flag can be resized.\n\n@param winname Window name.\n@param width The new window width.\n@param height The new window height.']
+docstring: @brief Resizes window to the specified size
+
+@note
+
+-   The specified window size is for the image area. Toolbars are not counted.
+-   Only windows created without cv::WINDOW_AUTOSIZE flag can be resized.
+
+@param winname Window name.
+@param width The new window width.
+@param height The new window height.
+manual: FUNC <void cv..resizeWindow [ARG String winname=, ARG int width=, ARG int height=]>
+
+--- Incoming ---
+[   u'cv.resizeWindow',
+    u'void',
+    [],
+    [   [u'String', u'winname', u'', ['/C', '/Ref']],
+        [u'Size', u'size', u'', ['/C', '/Ref']]],
+    u'void',
+    u'@overload\n@param winname Window name.\n@param size The new window size.']
+docstring: @overload
+@param winname Window name.
+@param size The new window size.
+manual: FUNC <void cv..resizeWindow [ARG String winname=, ARG Size size=]>
+
+--- Incoming ---
+[   u'cv.moveWindow',
+    u'void',
+    [],
+    [   [u'String', u'winname', u'', ['/C', '/Ref']],
+        [u'int', u'x', u'', []],
+        [u'int', u'y', u'', []]],
+    u'void',
+    u'@brief Moves window to the specified position\n\n@param winname Name of the window.\n@param x The new x-coordinate of the window.\n@param y The new y-coordinate of the window.']
+docstring: @brief Moves window to the specified position
+
+@param winname Name of the window.
+@param x The new x-coordinate of the window.
+@param y The new y-coordinate of the window.
+manual: FUNC <void cv..moveWindow [ARG String winname=, ARG int x=, ARG int y=]>
+
+--- Incoming ---
+[   u'cv.setWindowProperty',
+    u'void',
+    [],
+    [   [u'String', u'winname', u'', ['/C', '/Ref']],
+        [u'int', u'prop_id', u'', []],
+        [u'double', u'prop_value', u'', []]],
+    u'void',
+    u'@brief Changes parameters of a window dynamically.\n\nThe function setWindowProperty enables changing properties of a window.\n\n@param winname Name of the window.\n@param prop_id Window property to edit. The supported operation flags are: (cv::WindowPropertyFlags)\n@param prop_value New value of the window property. The supported flags are: (cv::WindowFlags)']
+docstring: @brief Changes parameters of a window dynamically.
+
+The function setWindowProperty enables changing properties of a window.
+
+@param winname Name of the window.
+@param prop_id Window property to edit. The supported operation flags are: (cv::WindowPropertyFlags)
+@param prop_value New value of the window property. The supported flags are: (cv::WindowFlags)
+manual: FUNC <void cv..setWindowProperty [ARG String winname=, ARG int prop_id=, ARG double prop_value=]>
+
+--- Incoming ---
+[   u'cv.setWindowTitle',
+    u'void',
+    [],
+    [   [u'String', u'winname', u'', ['/C', '/Ref']],
+        [u'String', u'title', u'', ['/C', '/Ref']]],
+    u'void',
+    u'@brief Updates window title\n@param winname Name of the window.\n@param title New title.']
+docstring: @brief Updates window title
+@param winname Name of the window.
+@param title New title.
+ok: FUNC <void cv..setWindowTitle [ARG String winname=, ARG String title=]>
+
+--- Incoming ---
+[   u'cv.getWindowProperty',
+    u'double',
+    [],
+    [   [u'String', u'winname', u'', ['/C', '/Ref']],
+        [u'int', u'prop_id', u'', []]],
+    u'double',
+    u'@brief Provides parameters of a window.\n\nThe function getWindowProperty returns properties of a window.\n\n@param winname Name of the window.\n@param prop_id Window property to retrieve. The following operation flags are available: (cv::WindowPropertyFlags)\n\n@sa setWindowProperty']
+docstring: @brief Provides parameters of a window.
+
+The function getWindowProperty returns properties of a window.
+
+@param winname Name of the window.
+@param prop_id Window property to retrieve. The following operation flags are available: (cv::WindowPropertyFlags)
+
+@sa setWindowProperty
+manual: FUNC <double cv..getWindowProperty [ARG String winname=, ARG int prop_id=]>
+
+--- Incoming ---
+[   u'cv.selectROI',
+    u'Rect',
+    [],
+    [   [u'String', u'windowName', u'', ['/C', '/Ref']],
+        ['Mat', u'img', '', []],
+        [u'bool', u'showCrosshair', u'true', []],
+        [u'bool', u'fromCenter', u'false', []]],
+    u'Rect',
+    u"@brief Selects ROI on the given image.\nFunction creates a window and allows user to select a ROI using mouse.\nControls: use `space` or `enter` to finish selection, use key `c` to cancel selection (function will return the zero cv::Rect).\n\n@param windowName name of the window where selection process will be shown.\n@param img image to select a ROI.\n@param showCrosshair if true crosshair of selection rectangle will be shown.\n@param fromCenter if true center of selection will match initial mouse position. In opposite case a corner of\nselection rectangle will correspont to the initial mouse position.\n@return selected ROI or empty rect if selection canceled.\n\n@note The function sets it's own mouse callback for specified window using cv::setMouseCallback(windowName, ...).\nAfter finish of work an empty callback will be set for the used window."]
+docstring: @brief Selects ROI on the given image.
+Function creates a window and allows user to select a ROI using mouse.
+Controls: use `space` or `enter` to finish selection, use key `c` to cancel selection (function will return the zero cv::Rect).
+
+@param windowName name of the window where selection process will be shown.
+@param img image to select a ROI.
+@param showCrosshair if true crosshair of selection rectangle will be shown.
+@param fromCenter if true center of selection will match initial mouse position. In opposite case a corner of
+selection rectangle will correspont to the initial mouse position.
+@return selected ROI or empty rect if selection canceled.
+
+@note The function sets it's own mouse callback for specified window using cv::setMouseCallback(windowName, ...).
+After finish of work an empty callback will be set for the used window.
+ok: FUNC <Rect cv..selectROI [ARG String windowName=, ARG Mat img=, ARG bool showCrosshair=true, ARG bool fromCenter=false]>
+
+--- Incoming ---
+[   u'cv.selectROI',
+    u'Rect',
+    [],
+    [   ['Mat', u'img', '', []],
+        [u'bool', u'showCrosshair', u'true', []],
+        [u'bool', u'fromCenter', u'false', []]],
+    u'Rect',
+    u'@overload']
+docstring: @overload
+ok: FUNC <Rect cv..selectROI [ARG Mat img=, ARG bool showCrosshair=true, ARG bool fromCenter=false]>
+
+--- Incoming ---
+[   u'cv.selectROIs',
+    u'void',
+    [],
+    [   [u'String', u'windowName', u'', ['/C', '/Ref']],
+        ['Mat', u'img', '', []],
+        [u'vector_Rect', u'boundingBoxes', u'', ['/O', '/Ref']],
+        [u'bool', u'showCrosshair', u'true', []],
+        [u'bool', u'fromCenter', u'false', []]],
+    u'void',
+    u"@brief Selects ROIs on the given image.\nFunction creates a window and allows user to select a ROIs using mouse.\nControls: use `space` or `enter` to finish current selection and start a new one,\nuse `esc` to terminate multiple ROI selection process.\n\n@param windowName name of the window where selection process will be shown.\n@param img image to select a ROI.\n@param boundingBoxes selected ROIs.\n@param showCrosshair if true crosshair of selection rectangle will be shown.\n@param fromCenter if true center of selection will match initial mouse position. In opposite case a corner of\nselection rectangle will correspont to the initial mouse position.\n\n@note The function sets it's own mouse callback for specified window using cv::setMouseCallback(windowName, ...).\nAfter finish of work an empty callback will be set for the used window."]
+docstring: @brief Selects ROIs on the given image.
+Function creates a window and allows user to select a ROIs using mouse.
+Controls: use `space` or `enter` to finish current selection and start a new one,
+use `esc` to terminate multiple ROI selection process.
+
+@param windowName name of the window where selection process will be shown.
+@param img image to select a ROI.
+@param boundingBoxes selected ROIs.
+@param showCrosshair if true crosshair of selection rectangle will be shown.
+@param fromCenter if true center of selection will match initial mouse position. In opposite case a corner of
+selection rectangle will correspont to the initial mouse position.
+
+@note The function sets it's own mouse callback for specified window using cv::setMouseCallback(windowName, ...).
+After finish of work an empty callback will be set for the used window.
+ok: FUNC <void cv..selectROIs [ARG String windowName=, ARG Mat img=, ARG vector_Rect boundingBoxes=, ARG bool showCrosshair=true, ARG bool fromCenter=false]>
+
+--- Incoming ---
+[   u'cv.getTrackbarPos',
+    u'int',
+    [],
+    [   [u'String', u'trackbarname', u'', ['/C', '/Ref']],
+        [u'String', u'winname', u'', ['/C', '/Ref']]],
+    u'int',
+    u'@brief Returns the trackbar position.\n\nThe function returns the current position of the specified trackbar.\n\n@note\n\n[__Qt Backend Only__] winname can be empty (or NULL) if the trackbar is attached to the control\npanel.\n\n@param trackbarname Name of the trackbar.\n@param winname Name of the window that is the parent of the trackbar.']
+docstring: @brief Returns the trackbar position.
+
+The function returns the current position of the specified trackbar.
+
+@note
+
+[__Qt Backend Only__] winname can be empty (or NULL) if the trackbar is attached to the control
+panel.
+
+@param trackbarname Name of the trackbar.
+@param winname Name of the window that is the parent of the trackbar.
+manual: FUNC <int cv..getTrackbarPos [ARG String trackbarname=, ARG String winname=]>
+
+--- Incoming ---
+[   u'cv.setTrackbarPos',
+    u'void',
+    [],
+    [   [u'String', u'trackbarname', u'', ['/C', '/Ref']],
+        [u'String', u'winname', u'', ['/C', '/Ref']],
+        [u'int', u'pos', u'', []]],
+    u'void',
+    u'@brief Sets the trackbar position.\n\nThe function sets the position of the specified trackbar in the specified window.\n\n@note\n\n[__Qt Backend Only__] winname can be empty (or NULL) if the trackbar is attached to the control\npanel.\n\n@param trackbarname Name of the trackbar.\n@param winname Name of the window that is the parent of trackbar.\n@param pos New position.']
+docstring: @brief Sets the trackbar position.
+
+The function sets the position of the specified trackbar in the specified window.
+
+@note
+
+[__Qt Backend Only__] winname can be empty (or NULL) if the trackbar is attached to the control
+panel.
+
+@param trackbarname Name of the trackbar.
+@param winname Name of the window that is the parent of trackbar.
+@param pos New position.
+manual: FUNC <void cv..setTrackbarPos [ARG String trackbarname=, ARG String winname=, ARG int pos=]>
+
+--- Incoming ---
+[   u'cv.setTrackbarMax',
+    u'void',
+    [],
+    [   [u'String', u'trackbarname', u'', ['/C', '/Ref']],
+        [u'String', u'winname', u'', ['/C', '/Ref']],
+        [u'int', u'maxval', u'', []]],
+    u'void',
+    u'@brief Sets the trackbar maximum position.\n\nThe function sets the maximum position of the specified trackbar in the specified window.\n\n@note\n\n[__Qt Backend Only__] winname can be empty (or NULL) if the trackbar is attached to the control\npanel.\n\n@param trackbarname Name of the trackbar.\n@param winname Name of the window that is the parent of trackbar.\n@param maxval New maximum position.']
+docstring: @brief Sets the trackbar maximum position.
+
+The function sets the maximum position of the specified trackbar in the specified window.
+
+@note
+
+[__Qt Backend Only__] winname can be empty (or NULL) if the trackbar is attached to the control
+panel.
+
+@param trackbarname Name of the trackbar.
+@param winname Name of the window that is the parent of trackbar.
+@param maxval New maximum position.
+ok: FUNC <void cv..setTrackbarMax [ARG String trackbarname=, ARG String winname=, ARG int maxval=]>
+
+--- Incoming ---
+[   u'cv.setTrackbarMin',
+    u'void',
+    [],
+    [   [u'String', u'trackbarname', u'', ['/C', '/Ref']],
+        [u'String', u'winname', u'', ['/C', '/Ref']],
+        [u'int', u'minval', u'', []]],
+    u'void',
+    u'@brief Sets the trackbar minimum position.\n\nThe function sets the minimum position of the specified trackbar in the specified window.\n\n@note\n\n[__Qt Backend Only__] winname can be empty (or NULL) if the trackbar is attached to the control\npanel.\n\n@param trackbarname Name of the trackbar.\n@param winname Name of the window that is the parent of trackbar.\n@param minval New minimum position.']
+docstring: @brief Sets the trackbar minimum position.
+
+The function sets the minimum position of the specified trackbar in the specified window.
+
+@note
+
+[__Qt Backend Only__] winname can be empty (or NULL) if the trackbar is attached to the control
+panel.
+
+@param trackbarname Name of the trackbar.
+@param winname Name of the window that is the parent of trackbar.
+@param minval New minimum position.
+ok: FUNC <void cv..setTrackbarMin [ARG String trackbarname=, ARG String winname=, ARG int minval=]>
+
+--- Incoming ---
+[   u'cv.addText',
+    u'void',
+    [],
+    [   [u'Mat', u'img', u'', ['/C', '/Ref']],
+        [u'String', u'text', u'', ['/C', '/Ref']],
+        [u'Point', u'org', u'', []],
+        [u'String', u'nameFont', u'', ['/C', '/Ref']],
+        [u'int', u'pointSize', u'-1', []],
+        [u'Scalar', u'color', u'Scalar::all(0)', []],
+        [u'int', u'weight', u'QT_FONT_NORMAL', []],
+        [u'int', u'style', u'QT_STYLE_NORMAL', []],
+        [u'int', u'spacing', u'0', []]],
+    u'void',
+    u'@brief Draws a text on the image.\n\n@param img 8-bit 3-channel image where the text should be drawn.\n@param text Text to write on an image.\n@param org Point(x,y) where the text should start on an image.\n@param nameFont Name of the font. The name should match the name of a system font (such as\n*Times*). If the font is not found, a default one is used.\n@param pointSize Size of the font. If not specified, equal zero or negative, the point size of the\nfont is set to a system-dependent default value. Generally, this is 12 points.\n@param color Color of the font in BGRA where A = 255 is fully transparent.\n@param weight Font weight. Available operation flags are : cv::QtFontWeights You can also specify a positive integer for better control.\n@param style Font style. Available operation flags are : cv::QtFontStyles\n@param spacing Spacing between characters. It can be negative or positive.']
+docstring: @brief Draws a text on the image.
+
+@param img 8-bit 3-channel image where the text should be drawn.
+@param text Text to write on an image.
+@param org Point(x,y) where the text should start on an image.
+@param nameFont Name of the font. The name should match the name of a system font (such as
+*Times*). If the font is not found, a default one is used.
+@param pointSize Size of the font. If not specified, equal zero or negative, the point size of the
+font is set to a system-dependent default value. Generally, this is 12 points.
+@param color Color of the font in BGRA where A = 255 is fully transparent.
+@param weight Font weight. Available operation flags are : cv::QtFontWeights You can also specify a positive integer for better control.
+@param style Font style. Available operation flags are : cv::QtFontStyles
+@param spacing Spacing between characters. It can be negative or positive.
+ok: FUNC <void cv..addText [ARG Mat img=, ARG String text=, ARG Point org=, ARG String nameFont=, ARG int pointSize=-1, ARG Scalar color=Scalar::all(0), ARG int weight=QT_FONT_NORMAL, ARG int style=QT_STYLE_NORMAL, ARG int spacing=0]>
+
+--- Incoming ---
+[   u'cv.displayOverlay',
+    u'void',
+    [],
+    [   [u'String', u'winname', u'', ['/C', '/Ref']],
+        [u'String', u'text', u'', ['/C', '/Ref']],
+        [u'int', u'delayms', u'0', []]],
+    u'void',
+    u'@brief Displays a text on a window image as an overlay for a specified duration.\n\nThe function displayOverlay displays useful information/tips on top of the window for a certain\namount of time *delayms*. The function does not modify the image, displayed in the window, that is,\nafter the specified delay the original content of the window is restored.\n\n@param winname Name of the window.\n@param text Overlay text to write on a window image.\n@param delayms The period (in milliseconds), during which the overlay text is displayed. If this\nfunction is called before the previous overlay text timed out, the timer is restarted and the text\nis updated. If this value is zero, the text never disappears.']
+docstring: @brief Displays a text on a window image as an overlay for a specified duration.
+
+The function displayOverlay displays useful information/tips on top of the window for a certain
+amount of time *delayms*. The function does not modify the image, displayed in the window, that is,
+after the specified delay the original content of the window is restored.
+
+@param winname Name of the window.
+@param text Overlay text to write on a window image.
+@param delayms The period (in milliseconds), during which the overlay text is displayed. If this
+function is called before the previous overlay text timed out, the timer is restarted and the text
+is updated. If this value is zero, the text never disappears.
+ok: FUNC <void cv..displayOverlay [ARG String winname=, ARG String text=, ARG int delayms=0]>
+
+--- Incoming ---
+[   u'cv.displayStatusBar',
+    u'void',
+    [],
+    [   [u'String', u'winname', u'', ['/C', '/Ref']],
+        [u'String', u'text', u'', ['/C', '/Ref']],
+        [u'int', u'delayms', u'0', []]],
+    u'void',
+    u'@brief Displays a text on the window statusbar during the specified period of time.\n\nThe function displayStatusBar displays useful information/tips on top of the window for a certain\namount of time *delayms* . This information is displayed on the window statusbar (the window must be\ncreated with the CV_GUI_EXPANDED flags).\n\n@param winname Name of the window.\n@param text Text to write on the window statusbar.\n@param delayms Duration (in milliseconds) to display the text. If this function is called before\nthe previous text timed out, the timer is restarted and the text is updated. If this value is\nzero, the text never disappears.']
+docstring: @brief Displays a text on the window statusbar during the specified period of time.
+
+The function displayStatusBar displays useful information/tips on top of the window for a certain
+amount of time *delayms* . This information is displayed on the window statusbar (the window must be
+created with the CV_GUI_EXPANDED flags).
+
+@param winname Name of the window.
+@param text Text to write on the window statusbar.
+@param delayms Duration (in milliseconds) to display the text. If this function is called before
+the previous text timed out, the timer is restarted and the text is updated. If this value is
+zero, the text never disappears.
+ok: FUNC <void cv..displayStatusBar [ARG String winname=, ARG String text=, ARG int delayms=0]>
+
+
+===== Header: /home/jeon/다운로드/opencv-3.4.0/modules/highgui/include/opencv2/highgui/highgui.hpp =====
+Namespaces: set(['', u'cv'])
+Ignore header: /home/jeon/다운로드/opencv-3.4.0/modules/highgui/include/opencv2/highgui/highgui.hpp
+
+
+===== Generating... =====
+CLASS ::.Highgui : 
+[CONST CV_FONT_LIGHT=25, CONST CV_FONT_NORMAL=50, CONST CV_FONT_DEMIBOLD=63, CONST CV_FONT_BOLD=75, CONST CV_FONT_BLACK=87, CONST CV_STYLE_NORMAL=0, CONST CV_STYLE_ITALIC=1, CONST CV_STYLE_OBLIQUE=2, CONST QT_FONT_LIGHT=25, CONST QT_FONT_NORMAL=50, CONST QT_FONT_DEMIBOLD=63, CONST QT_FONT_BOLD=75, CONST QT_FONT_BLACK=87, CONST QT_STYLE_NORMAL=0, CONST QT_STYLE_ITALIC=1, CONST QT_STYLE_OBLIQUE=2, CONST QT_PUSH_BUTTON=0, CONST QT_CHECKBOX=1, CONST QT_RADIOBOX=2, CONST QT_NEW_BUTTONBAR=1024]
+FUNC <Rect cv..selectROI [ARG Mat img=, ARG bool showCrosshair=true, ARG bool fromCenter=false]>
+java: Rect selectROI(Mat img, boolean showCrosshair, boolean fromCenter)
+java: Rect selectROI(Mat img)
+FUNC <Rect cv..selectROI [ARG String windowName=, ARG Mat img=, ARG bool showCrosshair=true, ARG bool fromCenter=false]>
+java: Rect selectROI(String windowName, Mat img, boolean showCrosshair, boolean fromCenter)
+java: Rect selectROI(String windowName, Mat img)
+FUNC <int cv..waitKeyEx [ARG int delay=0]>
+java: int waitKeyEx(int delay)
+java: int waitKeyEx()
+FUNC <void cv..addText [ARG Mat img=, ARG String text=, ARG Point org=, ARG String nameFont=, ARG int pointSize=-1, ARG Scalar color=Scalar::all(0), ARG int weight=QT_FONT_NORMAL, ARG int style=QT_STYLE_NORMAL, ARG int spacing=0]>
+java: void addText(Mat img, String text, Point org, String nameFont, int pointSize, Scalar color, int weight, int style, int spacing)
+java: void addText(Mat img, String text, Point org, String nameFont)
+FUNC <void cv..displayOverlay [ARG String winname=, ARG String text=, ARG int delayms=0]>
+java: void displayOverlay(String winname, String text, int delayms)
+java: void displayOverlay(String winname, String text)
+FUNC <void cv..displayStatusBar [ARG String winname=, ARG String text=, ARG int delayms=0]>
+java: void displayStatusBar(String winname, String text, int delayms)
+java: void displayStatusBar(String winname, String text)
+FUNC <void cv..selectROIs [ARG String windowName=, ARG Mat img=, ARG vector_Rect boundingBoxes=, ARG bool showCrosshair=true, ARG bool fromCenter=false]>
+java: void selectROIs(String windowName, Mat img, MatOfRect boundingBoxes, boolean showCrosshair, boolean fromCenter)
+java: void selectROIs(String windowName, Mat img, MatOfRect boundingBoxes)
+FUNC <void cv..setTrackbarMax [ARG String trackbarname=, ARG String winname=, ARG int maxval=]>
+java: void setTrackbarMax(String trackbarname, String winname, int maxval)
+FUNC <void cv..setTrackbarMin [ARG String trackbarname=, ARG String winname=, ARG int minval=]>
+java: void setTrackbarMin(String trackbarname, String winname, int minval)
+FUNC <void cv..setWindowTitle [ARG String winname=, ARG String title=]>
+java: void setWindowTitle(String winname, String title)

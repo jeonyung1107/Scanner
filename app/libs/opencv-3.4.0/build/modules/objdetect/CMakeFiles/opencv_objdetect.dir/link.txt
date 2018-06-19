@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../../lib/libopencv_objdetect.a  CMakeFiles/opencv_objdetect.dir/src/hog.cpp.o CMakeFiles/opencv_objdetect.dir/src/main.cpp.o CMakeFiles/opencv_objdetect.dir/src/cascadedetect_convert.cpp.o CMakeFiles/opencv_objdetect.dir/src/cascadedetect.cpp.o CMakeFiles/opencv_objdetect.dir/src/detection_based_tracker.cpp.o CMakeFiles/opencv_objdetect.dir/src/haar.cpp.o CMakeFiles/opencv_objdetect.dir/opencl_kernels_objdetect.cpp.o CMakeFiles/opencv_objdetect.dir/src/haar.avx.cpp.o
+/usr/bin/ranlib ../../lib/libopencv_objdetect.a
